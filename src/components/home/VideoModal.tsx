@@ -175,8 +175,8 @@ export default function VideoModal({ isOpen, onClose }: VideoModalProps) {
             key={selectedVideo.src}
             src={selectedVideo.src}
             controls
-            autoPlay
             playsInline
+            preload="metadata"
             className="w-full max-h-[50vh] sm:max-h-[54vh] object-contain mx-auto"
           >
             Your browser does not support HTML5 video.

@@ -71,9 +71,68 @@ export default function LanguageSwitcher({
     );
   }
 
+  // Compact layout: Space-optimized for mobile header
+  if (variant === "compact") {
+    return (
+      <div ref={dropdownRef} className={cn("relative inline-block text-left flex-shrink-0", className)}>
+        <button
+          type="button"
+          onClick={() => setDropdownOpen(!dropdownOpen)}
+          className={cn(
+            "inline-flex items-center gap-1 px-2 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 whitespace-nowrap flex-shrink-0",
+            "bg-slate-50 hover:bg-slate-100 text-brand-navy-900 border border-slate-200/90 hover:border-brand-teal-300",
+            "focus:outline-none focus:ring-2 focus:ring-brand-teal-500/40 shadow-xs"
+          )}
+          aria-expanded={dropdownOpen}
+          aria-haspopup="true"
+          aria-label="Select website language"
+        >
+          <Globe className="w-3.5 h-3.5 text-brand-teal-600 flex-shrink-0" />
+          <span className="font-bold text-[11px]">{currentLang.short}</span>
+          <ChevronDown
+            className={cn(
+              "w-2.5 h-2.5 text-slate-500 transition-transform duration-200",
+              dropdownOpen && "rotate-180 text-brand-teal-600"
+            )}
+          />
+        </button>
+
+        {dropdownOpen && (
+          <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-white shadow-xl border border-slate-100 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+            <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-1">
+              Language / భాష
+            </div>
+            {LANGUAGES.map((lang) => {
+              const isSelected = locale === lang.code;
+              return (
+                <button
+                  key={lang.code}
+                  type="button"
+                  onClick={() => {
+                    setLocale(lang.code);
+                    setDropdownOpen(false);
+                  }}
+                  className={cn(
+                    "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
+                    isSelected
+                      ? "bg-brand-teal-50/80 text-brand-teal-700 font-bold"
+                      : "text-slate-700 hover:bg-slate-50 hover:text-brand-navy-900"
+                  )}
+                >
+                  <span>{lang.native}</span>
+                  {isSelected && <Check className="w-3.5 h-3.5 text-brand-teal-600" />}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   // Desktop layout: Compact Pill with Globe and direct quick switches
   return (
-    <div ref={dropdownRef} className={cn("relative inline-block text-left", className)}>
+    <div ref={dropdownRef} className={cn("relative inline-block text-left flex-shrink-0", className)}>
       <button
         type="button"
         onClick={() => setDropdownOpen(!dropdownOpen)}

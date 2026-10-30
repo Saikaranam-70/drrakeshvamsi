@@ -128,19 +128,14 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Mobile Actions: Compact Language Switcher + Ultra-Glossy Standalone Mobile Toggle Bar */}
-            <div className="flex md:hidden items-center gap-2">
-              <LanguageSwitcher variant="desktop" />
-
+            {/* Mobile Action: Mobile Drawer Button */}
+            <div className="flex md:hidden items-center flex-shrink-0">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="relative items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-b from-white/95 via-white/85 to-slate-100/80 backdrop-blur-2xl border border-white/90 shadow-[0_4px_20px_rgba(0,157,187,0.18),inset_0_2px_3px_rgba(255,255,255,1),inset_0_-1px_3px_rgba(0,27,61,0.06)] hover:shadow-[0_6px_24px_rgba(0,157,187,0.3),inset_0_2px_4px_rgba(255,255,255,1)] hover:border-brand-teal-300 active:scale-95 transition-all duration-200 group flex"
+                className="relative items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-b from-white/95 via-white/85 to-slate-100/80 backdrop-blur-2xl border border-white/90 shadow-[0_3px_12px_rgba(0,157,187,0.18)] hover:shadow-[0_4px_16px_rgba(0,157,187,0.25)] hover:border-brand-teal-300 active:scale-95 transition-all duration-200 group flex flex-shrink-0"
                 aria-label="Open navigation menu"
               >
-                {/* Glossy top specular reflection line */}
-                <div className="absolute top-1 inset-x-2 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent rounded-full opacity-90" />
-
                 {/* Modern 3-bar hamburger with glossy accents */}
                 <div className="w-5 h-4 flex flex-col justify-between items-center relative z-10">
                   <span className="w-5 h-[2.5px] bg-brand-navy-950 rounded-full group-hover:bg-brand-teal-600 transition-colors shadow-xs" />

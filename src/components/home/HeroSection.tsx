@@ -167,18 +167,18 @@ export default function HeroSection() {
               </div>
 
               {/* Doctor Signature Script Card */}
-              <div className="absolute -bottom-4 -right-2 sm:-right-4 z-30 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-xl border border-slate-100 max-w-[210px] text-left transform rotate-1 hover:rotate-0 transition-transform">
-                <div className="text-xl font-signature text-brand-navy-900 tracking-wide">
+              <div className="absolute -bottom-2 right-1 sm:-bottom-4 sm:-right-4 z-30 bg-white/95 backdrop-blur-md p-3 sm:p-4 rounded-2xl shadow-xl border border-slate-100 max-w-[190px] sm:max-w-[220px] text-left transform rotate-1 hover:rotate-0 transition-transform">
+                <div className="text-lg sm:text-xl font-signature text-brand-navy-900 tracking-wide">
                   Dr. Rakesh Vamsi
                 </div>
-                <div className="text-[9px] font-extrabold uppercase tracking-wider text-brand-teal-700 mt-0.5">
+                <div className="text-[8.5px] sm:text-[9px] font-extrabold uppercase tracking-wider text-brand-teal-700 mt-0.5">
                   {doctor.designation}
                 </div>
               </div>
 
-              {/* Logo Emblem badge */}
-              <div className="absolute -bottom-2 -left-3 sm:-left-6 z-30 bg-white p-3 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-2.5 transform -rotate-1 hover:rotate-0 transition-transform">
-                <div className="relative w-10 h-10 flex-shrink-0">
+              {/* Logo Emblem badge - top-left on mobile to prevent overlap, bottom-left on desktop */}
+              <div className="absolute top-4 left-0 sm:top-auto sm:-bottom-2 sm:-left-6 z-30 bg-white p-2.5 sm:p-3 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-2 sm:gap-2.5 transform -rotate-1 hover:rotate-0 transition-transform">
+                <div className="relative w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0">
                   <Image
                     src="/images/logo.png"
                     alt="UROANDROGUY Emblem"
@@ -190,7 +190,7 @@ export default function HeroSection() {
                   <div className="text-xs sm:text-sm font-heading font-extrabold text-brand-navy-900">
                     UROANDRO<span className="text-brand-teal-500">GUY</span>
                   </div>
-                  <div className="text-[8.5px] font-bold uppercase tracking-wider text-slate-500 mt-1">
+                  <div className="text-[8px] sm:text-[8.5px] font-bold uppercase tracking-wider text-slate-500 mt-0.5 sm:mt-1">
                     KIMS Hospital
                   </div>
                 </div>

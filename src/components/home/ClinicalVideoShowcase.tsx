@@ -113,12 +113,6 @@ export default function ClinicalVideoShowcase() {
 
   const handleSelectVideo = (video: VideoItem) => {
     setActiveVideo(video);
-    if (videoRef.current) {
-      videoRef.current.load();
-      videoRef.current.play().catch(() => {
-        // Autoplay policy fallback
-      });
-    }
   };
 
   const getTitle = (v: VideoItem) =>
@@ -189,7 +183,7 @@ export default function ClinicalVideoShowcase() {
                   src={activeVideo.src}
                   controls
                   playsInline
-                  autoPlay
+                  preload="metadata"
                   className="w-full h-full object-contain"
                 >
                   Your browser does not support HTML5 video.
