@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-navy-950: #001026;
+    --brand-navy-900: #001B3D;
+    --brand-navy-800: #002852;
+    --brand-navy-700: #003366;
+    --brand-teal-500: #009DBB;
+    --brand-cyan: #00C5DC;
+    --brand-border: #D8EDF7;
+    --brand-surface: #F5FAFC;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #1E293B;
+    overflow-x: hidden;
+  }
+
+  /* Multilingual Script Typography */
+  html[data-lang="te"] body {
+    font-family: 'Noto Sans Telugu', var(--font-jakarta), var(--font-inter), sans-serif;
+  }
+
+  html[data-lang="hi"] body {
+    font-family: 'Noto Sans Devanagari', var(--font-jakarta), var(--font-inter), sans-serif;
+  }
+
+  ::selection {
+    background-color: #009DBB;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #009DBB;
+}
+
+/* Medical Hero Glow Effects */
+.hero-glow-teal {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 197, 220, 0.22) 0%, rgba(0, 157, 187, 0.08) 45%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.hero-glow-navy {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 51, 102, 0.4) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* Card hover transitions */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(0, 27, 61, 0.12);
+  border-color: #009DBB;
+}
+
+/* Script signature styling */
+.font-signature {
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+}
+
+/* Hide spin buttons on number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
