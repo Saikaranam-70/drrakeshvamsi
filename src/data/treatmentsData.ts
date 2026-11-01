@@ -49,12 +49,12 @@ export interface TreatmentDetail {
 
 export const treatmentCategories = [
   { id: "all", name: "All Treatments", icon: "Activity" },
+  { id: "mens-health", name: "Andrology & Men's Health", icon: "User" },
+  { id: "infertility", name: "Male Infertility", icon: "Users" },
   { id: "kidney", name: "Kidney & Urinary Tract", icon: "Activity" },
   { id: "prostate", name: "Prostate Care", icon: "Shield" },
-  { id: "infertility", name: "Male Infertility", icon: "Users" },
-  { id: "mens-health", name: "Men's Health", icon: "User" },
-  { id: "oncology", name: "Urological Cancers", icon: "Ribbon" },
   { id: "robotics", name: "Laparoscopic & Robotic Surgery", icon: "Cpu" },
+  { id: "oncology", name: "Urological Cancers", icon: "Ribbon" },
   { id: "reconstructive", name: "Reconstructive Urology", icon: "Wrench" },
 ];
 
@@ -435,7 +435,108 @@ export const treatmentsData: TreatmentDetail[] = [
         answer: "Yes. Dr. Rakesh Vamsi reviews cardiovascular health carefully before prescribing therapies to ensure complete medical safety.",
       },
     ],
-    relatedSlugs: ["male-infertility", "prostate-care", "kidney-stones"],
+    relatedSlugs: ["penile-implants", "male-infertility", "prostate-care"],
+  },
+  {
+    slug: "penile-implants",
+    title: "Penile Implants (Prosthesis Surgery)",
+    category: "Men's Health",
+    shortDescription: "Permanent, discreet surgical solution for severe or medication-resistant erectile dysfunction with highest satisfaction rates.",
+    iconName: "Shield",
+    heroHeadline: "Penile Implants (Penile Prosthesis Surgery)",
+    heroDescription: "Advanced surgical solutions for severe erectile dysfunction offering reliable, on-demand firmness and natural sensation with 3-piece inflatable and malleable prostheses.",
+    quote: "Penile implants offer a permanent, worry-free solution to severe ED—restoring spontaneous intimacy, confidence, and natural sensation with over 95% patient and partner satisfaction.",
+    overview: {
+      description:
+        "A penile prosthesis (penile implant) is a proven medical device surgically placed inside the penis to allow men with severe erectile dysfunction (ED) to achieve an erection whenever desired. It is considered the definitive gold-standard solution for men whose ED has not responded to oral medications (such as PDE5 inhibitors), injections, or shockwave therapy, as well as men with diabetes, post-prostatectomy nerve injury, or Peyronie's disease.",
+      keyPoints: [
+        "Permanent, on-demand firmness whenever desired for as long as desired",
+        "Preserves completely normal penile skin sensation, orgasm, and ejaculation",
+        "Two advanced options: 3-Piece Inflatable Penile Prosthesis (IPP) and Malleable (Semi-Rigid) Implants",
+        "Highest satisfaction rate of all ED treatments (>95% patient and partner satisfaction)",
+        "Entire device is concealed completely within the body with no visible external parts",
+      ],
+    },
+    symptoms: [
+      { title: "Severe ED unresponsive to oral medications or injections", icon: "Activity", description: "Tablets or injections fail to provide sufficient rigidity for intercourse" },
+      { title: "Erectile dysfunction secondary to long-standing diabetes", icon: "Droplet", description: "Microvascular and neurological damage resisting non-surgical therapy" },
+      { title: "Post-radical prostatectomy or pelvic surgery ED", icon: "Shield", description: "Erectile nerve injury following oncology or pelvic surgical interventions" },
+      { title: "Peyronie's disease with severe curvature", icon: "AlertTriangle", description: "Plaque formation causing corporal deformity, curvature, and rigidity loss" },
+      { title: "Loss of spontaneous sexual intimacy and relationship stress", icon: "Clock", description: "Frustration with unreliable pill timing or injection side effects" },
+    ],
+    causes: [
+      { title: "Severe vascular & diabetic neuropathy", icon: "Activity", description: "Endothelial dysfunction and corporal smooth muscle fibrosis" },
+      { title: "Iatrogenic post-surgical nerve damage", icon: "Shield", description: "Cavernosal nerve injury post-radical prostatectomy or colorectal resection" },
+      { title: "Peyronie's disease fibrosis", icon: "Flame", description: "Severe tunical plaque causing curvature and vascular leak" },
+      { title: "Venous leak (Corporovenous Occlusive Dysfunction)", icon: "Droplet", description: "Inability of the tunica albuginea to trap blood within corpora" },
+    ],
+    diagnosis: [
+      { title: "Comprehensive Andrological Assessment", icon: "Stethoscope", description: "Detailed review of ED history, cardiovascular health, past medications, and patient goals." },
+      { title: "Penile Color Doppler Ultrasound", icon: "Scan", description: "Pharmacologically induced erection to evaluate arterial peak systolic velocity and venous competence." },
+      { title: "Pre-Operative Cardiopulmonary Optimization", icon: "CheckCircle", description: "HbA1c glycemic control check and anesthesia clearance to ensure maximum surgical safety." },
+    ],
+    treatmentOptions: [
+      {
+        title: "3-Piece Inflatable Penile Prosthesis (IPP)",
+        subtitle: "Gold-Standard Hydraulic Implant",
+        description:
+          "Consists of two fluid-filled cylinders placed inside the natural erection chambers, a discreet miniature pump placed in the scrotum, and a reservoir in the pelvis. Squeezing the scrotal pump transfers fluid to produce a completely natural, firm erection. Pressing the release valve deflates the penis to a natural flaccid state.",
+        recoveryTime: "24-48 hours hospital stay; active intimacy at 6 weeks",
+        isMinimallyInvasive: false,
+      },
+      {
+        title: "Malleable (Semi-Rigid) Penile Implant",
+        subtitle: "Durable & Mechanically Simple",
+        description:
+          "Consists of two flexible, silicone-coated rods that can be manually positioned upwards for intimacy and bent downwards for discreet daily activity. Highly reliable with zero mechanical parts, ideal for men with limited manual dexterity.",
+        recoveryTime: "24 hours hospital stay; recovery in 4 weeks",
+        isMinimallyInvasive: false,
+      },
+      {
+        title: "Penile Modeling for Peyronie's Disease",
+        subtitle: "Simultaneous Straightening & Rigidity",
+        description:
+          "Surgical plaque incision or modeling performed simultaneously with prosthesis insertion to correct severe curvature, restore penile length, and eliminate erectile dysfunction in a single procedure.",
+        recoveryTime: "1 to 2 days hospital stay",
+        isMinimallyInvasive: false,
+      },
+    ],
+    recoveryInfo: {
+      hospitalStay: "1 to 2 days at KIMS Hospital, Nellore, with dedicated andrology surgical care.",
+      resumingDailyLife: "Patients walk comfortably on day 1; light desk work within 5 to 7 days.",
+      dietLifestyle: "Strict glycemic management for diabetic patients, comfortable loose clothing, gentle hygiene.",
+      followUp: "Wound inspection at 1 week; clinic teaching, device activation, and green light for intimacy at 6 weeks.",
+    },
+    whenToConsult: [
+      "Erectile dysfunction has not responded to Viagra, Cialis, or other oral medications",
+      "Experiencing troublesome side effects from ED pills or injections",
+      "Severe ED following prostate surgery, rectal surgery, or longstanding diabetes",
+      "Peyronie's disease causing painful bending or inability to have intercourse",
+      "Seeking a permanent, spontaneous, one-time solution without pill dependency",
+    ],
+    faqs: [
+      {
+        question: "Will a penile implant look noticeable to others in daily life?",
+        answer:
+          "Not at all. The entire prosthesis is completely internal and concealed inside the body. In clothing, athletic wear, or locker rooms, your appearance is entirely normal and discreet.",
+      },
+      {
+        question: "Does a penile implant affect natural sensation or orgasm?",
+        answer:
+          "No. Penile implants do not alter skin sensation, glans sensitivity, or your ability to experience climax and ejaculation. You retain completely natural pleasure.",
+      },
+      {
+        question: "What is the satisfaction rate among patients and partners?",
+        answer:
+          "Penile implants boast the highest satisfaction rating among all erectile dysfunction treatments, with over 95% of patients and partners reporting excellent long-term satisfaction and restored intimacy.",
+      },
+      {
+        question: "How long does a modern penile prosthesis last?",
+        answer:
+          "Modern penile implants are exceptionally durable engineered medical devices designed to last 10 to 15+ years. If replacement is ever needed down the line, a revision procedure can be safely performed.",
+      },
+    ],
+    relatedSlugs: ["erectile-dysfunction", "male-infertility", "prostate-care"],
   },
   {
     slug: "urological-cancers",

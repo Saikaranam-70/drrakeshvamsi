@@ -56,20 +56,20 @@ export default function MobileNav({
         {/* Top Header Bar */}
         <div className="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between bg-white/5 backdrop-blur-md relative z-10">
           <div className="flex items-center gap-2.5">
-            <div className="relative w-8 h-8 rounded-lg bg-white p-0.5 shadow-sm flex-shrink-0">
+            <div className="relative w-9 h-9 rounded-full bg-white p-1 shadow-sm flex-shrink-0">
               <Image
                 src="/images/logo.png"
-                alt="UROANDROGUY"
+                alt="Dr. Rakesh Vamsi"
                 fill
-                className="object-contain"
+                className="object-contain p-0.5"
               />
             </div>
             <div>
-              <span className="font-heading font-extrabold text-base text-white tracking-tight">
-                UROANDRO<span className="text-brand-cyan">GUY</span>
+              <span className="font-heading font-extrabold text-base text-white tracking-tight block">
+                {t("common.header.doctorName", "Dr. Rakesh Vamsi")}
               </span>
-              <span className="text-[9px] uppercase font-bold text-brand-teal-300 block -mt-0.5">
-                {t("common.header.tagline", "Urology & Andrology")}
+              <span className="text-[10px] font-semibold text-brand-teal-300 block -mt-0.5">
+                {t("common.header.subtitle", "Consultant Urologist & Andrologist")}
               </span>
             </div>
           </div>

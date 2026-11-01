@@ -52,18 +52,36 @@ export default function HeroSection() {
             </div>
 
             {/* Doctor Info Card Strip */}
-            <div className="bg-white/70 backdrop-blur-sm p-4 rounded-2xl border border-brand-border/80 shadow-xs space-y-1">
-              <h2 className="text-2xl font-heading font-extrabold text-brand-navy-900 leading-tight">
-                {doctor.fullName}
-              </h2>
-              <p className="text-base font-bold text-brand-teal-600">
-                {doctor.designation}
-              </p>
-              <p className="text-sm text-slate-600 font-medium flex flex-wrap items-center gap-2 pt-0.5">
-                <span>{doctor.specialization}</span>
-                <span className="hidden sm:inline text-slate-300">|</span>
-                <span>{doctor.hospital.name}, {doctor.hospital.city}</span>
-              </p>
+            <div className="bg-white/70 backdrop-blur-sm p-4 rounded-2xl border border-brand-border/80 shadow-xs space-y-2">
+              <div>
+                <h2 className="text-2xl font-heading font-extrabold text-brand-navy-900 leading-tight">
+                  {doctor.fullName}
+                </h2>
+                <p className="text-base font-bold text-brand-teal-600">
+                  {doctor.designation}
+                </p>
+                <p className="text-sm text-slate-600 font-medium flex flex-wrap items-center gap-2 pt-0.5">
+                  <span>{doctor.specialization}</span>
+                  <span className="hidden sm:inline text-slate-300">|</span>
+                  <span>{doctor.hospital.name}, {doctor.hospital.city}</span>
+                </p>
+              </div>
+
+              {/* Andrology & Speciality Focus Tags */}
+              <div className="flex flex-wrap items-center gap-1.5 pt-1 border-t border-slate-200/60">
+                <span className="text-[11px] font-bold text-brand-teal-800 bg-brand-teal-50/90 border border-brand-teal-200/80 px-2.5 py-0.5 rounded-full">
+                  {t("home.hero.tagEd", "ED Management")}
+                </span>
+                <span className="text-[11px] font-bold text-brand-navy-950 bg-brand-cyan/25 border border-brand-cyan/50 px-2.5 py-0.5 rounded-full">
+                  {t("home.hero.tagImplants", "Penile Implants (IPP)")}
+                </span>
+                <span className="text-[11px] font-bold text-brand-teal-800 bg-brand-teal-50/90 border border-brand-teal-200/80 px-2.5 py-0.5 rounded-full">
+                  {t("home.hero.tagInfertility", "Male Infertility")}
+                </span>
+                <span className="text-[11px] font-bold text-slate-700 bg-white border border-slate-200 px-2.5 py-0.5 rounded-full">
+                  {t("home.hero.tagRobotics", "Laser & Robotic Urology")}
+                </span>
+              </div>
             </div>
 
             {/* CTA Buttons */}
@@ -178,20 +196,20 @@ export default function HeroSection() {
 
               {/* Logo Emblem badge - top-left on mobile to prevent overlap, bottom-left on desktop */}
               <div className="absolute top-4 left-0 sm:top-auto sm:-bottom-2 sm:-left-6 z-30 bg-white p-2.5 sm:p-3 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-2 sm:gap-2.5 transform -rotate-1 hover:rotate-0 transition-transform">
-                <div className="relative w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0">
+                <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border border-slate-200/80 p-0.5 shadow-2xs flex-shrink-0">
                   <Image
                     src="/images/logo.png"
-                    alt="UROANDROGUY Emblem"
+                    alt="Dr. Rakesh Vamsi"
                     fill
                     className="object-contain"
                   />
                 </div>
                 <div className="text-left leading-none">
                   <div className="text-xs sm:text-sm font-heading font-extrabold text-brand-navy-900">
-                    UROANDRO<span className="text-brand-teal-500">GUY</span>
+                    {t("common.header.doctorName", "Dr. Rakesh Vamsi")}
                   </div>
-                  <div className="text-[8px] sm:text-[8.5px] font-bold uppercase tracking-wider text-slate-500 mt-0.5 sm:mt-1">
-                    KIMS Hospital
+                  <div className="text-[8px] sm:text-[8.5px] font-bold uppercase tracking-wider text-brand-teal-600 mt-0.5 sm:mt-1">
+                    {t("common.header.tagline", "Urology & Andrology")}
                   </div>
                 </div>
               </div>

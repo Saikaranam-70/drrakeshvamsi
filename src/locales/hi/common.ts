@@ -32,6 +32,7 @@ export const hiCommon = {
   header: {
     tagline: "यूरोलॉजी एवं एंड्रोलॉजी",
     subtitle: "कंसल्टेंट यूरोलॉजिस्ट एवं एंड्रोलॉजिस्ट",
+    doctorName: "डॉ. राकेश वामसी",
   },
   footer: {
     preFooterHeading: "क्या आपको विशेषज्ञ यूरोलॉजी या एंड्रोलॉजी परामर्श की आवश्यकता है?",

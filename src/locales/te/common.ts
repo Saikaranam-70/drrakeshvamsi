@@ -32,6 +32,7 @@ export const teCommon = {
   header: {
     tagline: "యూరాలజీ & ఆండ్రాలజీ",
     subtitle: "కన్సల్టెంట్ యూరాలజిస్ట్ & ఆండ్రాలజిస్ట్",
+    doctorName: "డాక్టర్ రాకేష్ వంశీ",
   },
   footer: {
     preFooterHeading: "నిపుణులైన యూరాలజీ లేదా ఆండ్రాలజీ సంప్రదింపులు కావాలా?",

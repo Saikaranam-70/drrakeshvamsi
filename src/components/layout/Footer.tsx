@@ -63,20 +63,20 @@ export default function Footer() {
           {/* Col 1: Brand & Doctor Intro */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-14 h-12 flex-shrink-0 bg-white rounded-xl p-1 shadow-md transition-transform duration-200 group-hover:scale-105">
+              <div className="relative w-12 h-12 flex-shrink-0 bg-white rounded-full p-1 shadow-md transition-transform duration-200 group-hover:scale-105">
                 <Image
                   src="/images/logo.png"
-                  alt="UROANDROGUY"
+                  alt="Dr. Rakesh Vamsi"
                   fill
-                  className="object-contain"
+                  className="object-contain p-0.5"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-extrabold text-xl text-white tracking-tight">
-                  UROANDRO<span className="text-brand-cyan">GUY</span>
+                  {t("common.header.doctorName", "Dr. Rakesh Vamsi")}
                 </span>
-                <span className="text-[9.5px] font-bold uppercase tracking-wider text-brand-teal-300 mt-0.5">
-                  {t("common.header.tagline", "Urology & Andrology")}
+                <span className="text-[11px] font-semibold text-brand-teal-300 mt-0.5">
+                  {t("common.header.subtitle", "Consultant Urologist & Andrologist")}
                 </span>
               </div>
             </Link>

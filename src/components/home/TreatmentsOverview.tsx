@@ -11,8 +11,18 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function TreatmentsOverview() {
   const { locale, t } = useLanguage();
   const treatments = getLocalizedTreatments(locale);
-  // Display top 6 treatments on the homepage
-  const featuredTreatments = treatments.slice(0, 6);
+  // Highlight top Andrology treatments (ED, Penile Implants, Male Infertility) alongside core Urology
+  const featuredSlugs = [
+    "erectile-dysfunction",
+    "penile-implants",
+    "male-infertility",
+    "kidney-stones",
+    "prostate-care",
+    "laparoscopic-robotic-surgery",
+  ];
+  const featuredTreatments = featuredSlugs
+    .map((slug) => treatments.find((t) => t.slug === slug))
+    .filter((t): t is NonNullable<typeof t> => Boolean(t));
 
   return (
     <section className="py-20 bg-brand-surface relative">

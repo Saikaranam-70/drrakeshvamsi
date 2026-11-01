@@ -48,30 +48,24 @@ export default function Header() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-500 rounded-lg p-1 flex-shrink-0"
+              className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-500 rounded-xl p-1 flex-shrink-0"
             >
-              <div className="relative w-14 h-12 sm:w-16 sm:h-14 lg:w-[70px] lg:h-[58px] flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
+              <div className="relative w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-full bg-white shadow-xs border border-slate-200/80 p-1 flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
                 <Image
                   src="/images/logo.png"
-                  alt="UROANDROGUY Logo - Dr. Rakesh Vamsi"
+                  alt="Dr. Rakesh Vamsi - Consultant Urologist & Andrologist"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain p-0.5"
                   priority
                 />
               </div>
               <div className="flex flex-col whitespace-nowrap">
-                <div className="flex items-baseline">
-                  <span className="font-heading font-extrabold text-lg sm:text-xl lg:text-[22px] text-brand-navy-900 tracking-tight leading-none">
-                    UROANDRO<span className="text-brand-teal-500">GUY</span>
-                  </span>
-                </div>
-                <div className="flex items-center gap-1.5 mt-0.5">
-                  <span className="h-[1.5px] w-2.5 bg-brand-teal-500 rounded-full" />
-                  <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-brand-navy-700">
-                    {t("common.header.tagline", "Urology & Andrology")}
-                  </span>
-                  <span className="h-[1.5px] w-2.5 bg-brand-teal-500 rounded-full" />
-                </div>
+                <span className="font-heading font-extrabold text-base sm:text-lg lg:text-[19px] text-brand-navy-950 tracking-tight leading-tight group-hover:text-brand-teal-600 transition-colors">
+                  {t("common.header.doctorName", "Dr. Rakesh Vamsi")}
+                </span>
+                <span className="text-[11px] sm:text-xs font-semibold text-brand-teal-600 tracking-tight leading-tight mt-0.5">
+                  {t("common.header.subtitle", "Consultant Urologist & Andrologist")}
+                </span>
               </div>
             </Link>
 

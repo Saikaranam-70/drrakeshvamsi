@@ -32,6 +32,7 @@ export const enCommon = {
   header: {
     tagline: "Urology & Andrology",
     subtitle: "Consultant Urologist & Andrologist",
+    doctorName: "Dr. Rakesh Vamsi",
   },
   footer: {
     preFooterHeading: "Need Expert Urology or Andrology Consultation?",

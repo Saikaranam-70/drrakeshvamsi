@@ -28,7 +28,7 @@ export default function TreatmentsExplorer() {
         (selectedCategory === "kidney" && (item.category.includes("Kidney") || item.category.includes("కిడ్నీ") || item.category.includes("किडनी"))) ||
         (selectedCategory === "prostate" && (item.category.includes("Prostate") || item.category.includes("ప్రోస్టేట్") || item.category.includes("प्रोस्टेट"))) ||
         (selectedCategory === "infertility" && (item.category.includes("Infertility") || item.category.includes("సంతానలేమి") || item.category.includes("बांझपन"))) ||
-        (selectedCategory === "mens-health" && (item.category.includes("Men") || item.category.includes("పురుషుల") || item.category.includes("पुरुष"))) ||
+        (selectedCategory === "mens-health" && (item.category.includes("Men") || item.category.includes("Andrology") || item.category.includes("ఆండ్రాలజీ") || item.category.includes("పురుషుల") || item.category.includes("पुरुष"))) ||
         (selectedCategory === "oncology" && (item.category.includes("Cancer") || item.category.includes("క్యాన్సర్") || item.category.includes("कैंसर"))) ||
         (selectedCategory === "robotics" && (item.category.includes("Laparoscopic") || item.category.includes("లాపరోస్కోపిక్") || item.category.includes("लेप्रोस्कोपिक"))) ||
         (selectedCategory === "reconstructive" && (item.category.includes("Reconstructive") || item.category.includes("రీకన్‌స్ట్రక్టివ్") || item.category.includes("పునర్నిర్మాణ") || item.category.includes("पुनर्निर्माण")));

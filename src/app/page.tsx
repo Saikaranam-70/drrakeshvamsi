@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import HospitalStrip from "@/components/home/HospitalStrip";
+import AndrologySpotlight from "@/components/home/AndrologySpotlight";
 import TreatmentsOverview from "@/components/home/TreatmentsOverview";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import AdvancedTechnologyBanner from "@/components/home/AdvancedTechnologyBanner";
@@ -18,7 +19,10 @@ export default function HomePage() {
       {/* 2. Hospital Information Full-Width Strip */}
       <HospitalStrip />
 
-      {/* 3. Comprehensive Urology & Andrology Services */}
+      {/* 3. Dedicated Andrology Spotlight: ED, Penile Implants, Male Infertility */}
+      <AndrologySpotlight />
+
+      {/* 4. Comprehensive Urology & Andrology Services */}
       <TreatmentsOverview />
 
       {/* 4. Why Choose Us Pillars */}
