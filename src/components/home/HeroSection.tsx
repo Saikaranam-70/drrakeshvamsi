@@ -42,9 +42,9 @@ export default function HeroSection() {
               <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-brand-navy-950 tracking-tight leading-[1.1]">
                 {t("home.hero.mainHeadlinePrefix", "Expert Urology &")}{" "}
                 <span className="text-brand-teal-500">
-                  {t("home.hero.mainHeadlineHighlight", "Andrology")}
+                  {t("home.hero.mainHeadlineHighlight", "Andrology Care")}
                 </span>{" "}
-                {t("home.hero.mainHeadlineSuffix", "Care")}
+                {t("home.hero.mainHeadlineSuffix", "in Nellore")}
               </h1>
               <p className="text-lg sm:text-xl font-medium text-slate-600">
                 {t("home.hero.tagline", "Advanced. Personalized. Compassionate.")}

@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dr. Rakesh Vamsi — UROANDROGUY | KIMS Hospital Nellore",
     description:
-      "Expert Urology & Andrology Care. Advanced, personalized, compassionate.",
+      "Expert Urology & Andrology Care in Nellore. Advanced, personalized, compassionate.",
     images: ["/images/dr-rakesh-vamsi.png"],
   },
   alternates: {

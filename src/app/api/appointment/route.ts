@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { appointmentBookingSchema } from "@/lib/schemas";
 import { generateAppointmentId } from "@/lib/utils";
+import { sendAppointmentEmails } from "@/lib/emailService";
 
 export async function POST(request: Request) {
   try {
@@ -22,10 +23,31 @@ export async function POST(request: Request) {
     const appointmentReference =
       body.appointmentReference || generateAppointmentId();
 
-    // In production, this would trigger an SMS via hospital gateway or save to database.
+    const emailPayload = {
+      reference: appointmentReference,
+      fullName: validation.data.fullName,
+      phone: validation.data.phone,
+      email: validation.data.email,
+      age: validation.data.age,
+      gender: validation.data.gender,
+      consultationType: validation.data.consultationType,
+      department: validation.data.department,
+      date: validation.data.date,
+      timeSlot: validation.data.timeSlot,
+      description: validation.data.description,
+    };
+
+    // Send emails (to clinic notification recipient and patient confirmation copy)
+    const emailResult = await sendAppointmentEmails(emailPayload).catch((err) => {
+      console.error("[Appointment Route] Error dispatching email:", err);
+      return { success: false, providerUsed: "None", error: err?.message };
+    });
+
     return NextResponse.json({
       success: true,
       reference: appointmentReference,
+      emailDispatched: emailResult.success,
+      providerUsed: emailResult.providerUsed,
       message: "Appointment request received and queued for confirmation.",
       data: {
         reference: appointmentReference,
@@ -37,9 +59,11 @@ export async function POST(request: Request) {
       },
     });
   } catch (err) {
+    console.error("[Appointment Route] Server error:", err);
     return NextResponse.json(
       { success: false, message: "Internal server error" },
       { status: 500 }
     );
   }
 }
+

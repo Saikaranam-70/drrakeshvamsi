@@ -2,8 +2,8 @@ export const hiHome = {
   hero: {
     location: "किम्स हॉस्पिटल, नेल्लोर",
     mainHeadlinePrefix: "विशेषज्ञ यूरोलॉजी एवं",
-    mainHeadlineHighlight: "एंड्रोलॉजी",
-    mainHeadlineSuffix: "देखभाल",
+    mainHeadlineHighlight: "एंड्रोलॉजी देखभाल",
+    mainHeadlineSuffix: "नेल्लोर में",
     tagline: "उन्नत। व्यक्तिगत। संवेदनशील देखभाल।",
     doctorName: "डॉ. जी. राकेश वामसी",
     designation: "कंसल्टेंट यूरोलॉजिस्ट एवं एंड्रोलॉजिस्ट",

@@ -2,8 +2,8 @@ export const enHome = {
   hero: {
     location: "KIMS Hospital, Nellore",
     mainHeadlinePrefix: "Expert Urology &",
-    mainHeadlineHighlight: "Andrology",
-    mainHeadlineSuffix: "Care",
+    mainHeadlineHighlight: "Andrology Care",
+    mainHeadlineSuffix: "in Nellore",
     tagline: "Advanced. Personalized. Compassionate.",
     doctorName: "Dr. G. Rakesh Vamsi",
     designation: "Consultant Urologist & Andrologist",
