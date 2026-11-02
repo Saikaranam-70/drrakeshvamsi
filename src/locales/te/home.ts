@@ -1,8 +1,8 @@
 export const teHome = {
   hero: {
     location: "కిమ్స్ హాస్పిటల్, నెల్లూరు",
-    mainHeadlinePrefix: "అధునాతన యూరాలజీ &",
-    mainHeadlineHighlight: "ఆండ్రాలజీ సేవలు",
+    mainHeadlinePrefix: "అత్యుత్తమ",
+    mainHeadlineHighlight: "ఆండ్రాలజిస్ట్",
     mainHeadlineSuffix: "నెల్లూరులో",
     tagline: "అత్యాధునికమైనది. వ్యక్తిగతీకరించినది. దయతో కూడిన సంరక్షణ.",
     doctorName: "డాక్టర్ జి. రాకేష్ వంశీ",
