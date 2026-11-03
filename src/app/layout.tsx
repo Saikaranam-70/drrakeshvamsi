@@ -21,16 +21,25 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "https://uroandroguy.com");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://uroandroguy.com"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "UROANDROGUY | Dr. Rakesh Vamsi — Consultant Urologist & Andrologist | KIMS Hospital Nellore",
-    template: "%s | UROANDROGUY — Dr. Rakesh Vamsi",
+    default: "Dr. Rakesh Vamsi - Best Andrologist in Nellore",
+    template: "%s | Dr. Rakesh Vamsi - Best Andrologist in Nellore",
   },
   description:
     "Official website of Dr. Rakesh Vamsi, Consultant Urologist, Andrologist, Laparoscopic & Robotic Surgeon at KIMS Hospital, Nellore. Expert care for kidney stones, prostate enlargement, male infertility & laparoscopic surgery.",
   keywords: [
     "Dr. Rakesh Vamsi",
+    "Best Andrologist in Nellore",
     "UROANDROGUY",
     "Urologist in Nellore",
     "Andrologist in Nellore",
@@ -41,9 +50,9 @@ export const metadata: Metadata = {
     "Laparoscopic robotic surgeon Nellore",
     "Laser kidney stone treatment",
   ],
-  authors: [{ name: "Dr. Rakesh Vamsi", url: "https://uroandroguy.com" }],
+  authors: [{ name: "Dr. Rakesh Vamsi", url: siteUrl }],
   creator: "Dr. Rakesh Vamsi",
-  publisher: "UROANDROGUY",
+  publisher: "Dr. Rakesh Vamsi",
   robots: {
     index: true,
     follow: true,
@@ -58,9 +67,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://uroandroguy.com",
-    siteName: "UROANDROGUY - Dr. Rakesh Vamsi",
-    title: "UROANDROGUY | Dr. Rakesh Vamsi — Urology & Andrology Care",
+    url: siteUrl,
+    siteName: "Dr. Rakesh Vamsi - Best Andrologist in Nellore",
+    title: "Dr. Rakesh Vamsi - Best Andrologist in Nellore",
     description:
       "Advanced, personalized, compassionate urology and andrology care with minimally invasive and robotic surgery at KIMS Hospital, Nellore.",
     images: [
@@ -68,24 +77,24 @@ export const metadata: Metadata = {
         url: "/images/dr-rakesh-vamsi.png",
         width: 1200,
         height: 630,
-        alt: "Dr. Rakesh Vamsi - Consultant Urologist & Andrologist",
+        alt: "Dr. Rakesh Vamsi - Best Andrologist in Nellore",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Rakesh Vamsi — UROANDROGUY | KIMS Hospital Nellore",
+    title: "Dr. Rakesh Vamsi - Best Andrologist in Nellore",
     description:
       "Expert Urology & Andrology Care in Nellore. Advanced, personalized, compassionate.",
     images: ["/images/dr-rakesh-vamsi.png"],
   },
   alternates: {
-    canonical: "https://uroandroguy.com",
+    canonical: siteUrl,
     languages: {
-      "en-IN": "https://uroandroguy.com?lang=en",
-      "te-IN": "https://uroandroguy.com?lang=te",
-      "hi-IN": "https://uroandroguy.com?lang=hi",
-      "x-default": "https://uroandroguy.com",
+      "en-IN": `${siteUrl}?lang=en`,
+      "te-IN": `${siteUrl}?lang=te`,
+      "hi-IN": `${siteUrl}?lang=hi`,
+      "x-default": siteUrl,
     },
   },
 };
