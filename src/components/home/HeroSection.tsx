@@ -224,144 +224,144 @@ export default function HeroSection() {
               </button>
             </div>
 
-                  {/* 4 Value Proposition Mini-Cards (With Kidney System covering this stage on small screens) */}
-                  <div className="relative pt-2">
-                    {/* Mobile Kidney Graphic - Taller height and shifted higher up to cover all the space */}
-                    <div className="lg:hidden absolute -top-24 sm:-top-32 -right-4 sm:right-0 w-[320px] sm:w-[420px] h-[390px] sm:h-[480px] pointer-events-none z-0 opacity-90 filter drop-shadow-[0_12px_32px_rgba(23,54,75,0.15)]">
-                      <div className="relative w-full h-full">
-                        <Image
-                          src="/images/kidneys-transparent.png"
-                          alt="Kidney and Urinary System - Dr. Rakesh Vamsi"
-                          fill
-                          className="object-contain object-right scale-110"
-                          priority
-                        />
-                      </div>
-                    </div>
-
-                        {/* 4 Value Proposition Mini-Cards Grid (Sitting cleanly in front) */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 relative z-10">
-                          {/* Card 1 */}
-                          <div className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white/95 backdrop-blur-2xs border border-[#E5DFD3] shadow-xs">
-                            <div className="w-7 h-7 text-[#B99A62] flex items-center justify-center mb-1">
-                              <Users className="w-5 h-5 text-[#B99A62]" />
-                            </div>
-                            <span className="text-[11px] sm:text-xs font-bold text-[#17364B] leading-tight">
-                              Patient-Centered<br />Approach
-                            </span>
-                          </div>
-
-                            {/* Card 2 */}
-                            <div className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white/95 backdrop-blur-2xs border border-[#E5DFD3] shadow-xs">
-                              <div className="w-7 h-7 text-[#B99A62] flex items-center justify-center mb-1">
-                                <ShieldCheck className="w-5 h-5 text-[#B99A62]" />
-                              </div>
-                              <span className="text-[11px] sm:text-xs font-bold text-[#17364B] leading-tight">
-                                Advanced<br />Treatment Options
-                              </span>
-                            </div>
-
-                              {/* Card 3 */}
-                              <div className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white/95 backdrop-blur-2xs border border-[#E5DFD3] shadow-xs">
-                                <div className="w-7 h-7 text-[#B99A62] flex items-center justify-center mb-1">
-                                  <svg className="w-5 h-5 text-[#B99A62]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M6 18h8" />
-                                    <path d="M3 22h18" />
-                                    <path d="M14 22a7 7 0 1 0 0-14h-1" />
-                                    <path d="M9 14h2" />
-                                    <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" />
-                                    <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
-                                  </svg>
-                                </div>
-                                <span className="text-[11px] sm:text-xs font-bold text-[#17364B] leading-tight">
-                                  Minimally Invasive &<br />Robotic Surgery
-                                </span>
-                              </div>
-
-                              {/* Card 4 */}
-                              <div className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white/95 backdrop-blur-2xs border border-[#E5DFD3] shadow-xs">
-                                <div className="w-7 h-7 text-[#B99A62] flex items-center justify-center mb-1">
-                                  <Heart className="w-5 h-5 text-[#B99A62]" />
-                                </div>
-                                <span className="text-[11px] sm:text-xs font-bold text-[#17364B] leading-tight">
-                                  Compassionate<br />Care
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* ---------------------------------------------------- */}
-                        {/* RIGHT COLUMN: Doctor Arch Frame & Signature Capsule  */}
-                        {/* ---------------------------------------------------- */}
-                        <div className="lg:col-span-6 relative flex justify-center items-center mt-8 lg:mt-0">
-                          {/* Arch Framing Container - Generously Proportioned to match reference */}
-                          <div className="relative w-[340px] h-[460px] sm:w-[440px] sm:h-[540px] lg:w-[480px] lg:h-[580px] flex items-center justify-center">
-
-                            {/* The Arch Body with Rich Golden 3.5px Border */}
-                            <div className="absolute inset-0 rounded-t-full rounded-b-[44px] bg-gradient-to-b from-[#E0EFF0] via-[#EAF4F5] to-[#F5F2EB] border-[3.5px] border-[#B99A62] shadow-[0_16px_40px_rgba(23,54,75,0.12)] overflow-hidden">
-                              {/* Subtle Radial Top Light Glow */}
-                              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.8),transparent_65%)] pointer-events-none" />
-
-                              {/* Doctor Cutout Photo - Close-up Medium Shot filling the arch like in the reference image */}
-                              <div className="relative w-full h-[122%] transform translate-y-2 flex items-end justify-center">
-                                <Image
-                                  src="/images/dr-rakesh-vamsi.png"
-                                  alt="Dr. Rakesh Vamsi - Consultant Urologist & Andrologist"
-                                  fill
-                                  className="object-cover object-[center_12%] drop-shadow-2xl"
-                                  priority
-                                />
-                              </div>
-                            </div>
-
-                            {/* Unified Signature & Emblem Capsule Badge resting across bottom of arch */}
-                            <div className="absolute -bottom-5 sm:-bottom-6 left-1/2 -translate-x-1/2 z-30 bg-white/95 backdrop-blur-md px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-[0_8px_30px_rgba(23,54,75,0.14)] border border-[#E5DFD3] flex items-center gap-4 sm:gap-6 whitespace-nowrap">
-                              {/* Left part: Circular Emblem + Doctor Name + Urology & Andrology */}
-                              <div className="flex items-center gap-2.5">
-                                <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FAF8F5] border border-[#E5DFD3] p-0.5 flex-shrink-0 shadow-2xs">
-                                  <Image
-                                    src="/images/logo.png"
-                                    alt="Dr. Rakesh Vamsi"
-                                    fill
-                                    className="object-contain"
-                                  />
-                                </div>
-                                <div className="text-left leading-tight">
-                                  <div className="text-xs sm:text-sm font-heading font-extrabold text-[#17364B]">
-                                    Dr. Rakesh Vamsi
-                                  </div>
-                                  <div className="text-[8px] sm:text-[8.5px] font-bold uppercase tracking-wider text-[#1C6B7A] mt-0.5">
-                                    UROLOGY & ANDROLOGY
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* Divider */}
-                              <div className="h-7 w-[1px] bg-[#DCD5C9]" />
-
-                              {/* Right part: Cursive Handwriting Signature + Designation */}
-                              <div className="text-left leading-tight">
-                                <div className="font-signature text-xl sm:text-2xl text-[#17364B] font-semibold -mb-0.5 tracking-wide">
-                                  Dr. Rakesh Vamsi
-                                </div>
-                                <div className="text-[7.5px] sm:text-[8px] font-extrabold uppercase tracking-widest text-[#17364B] mt-1">
-                                  CONSULTANT UROLOGIST & ANDROLOGIST
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    {/* Video Modal */}
-                    <VideoModal
-                      isOpen={videoModalOpen}
-                      onClose={() => setVideoModalOpen(false)}
+            {/* 4 Value Proposition Mini-Cards (With Kidney System covering this stage on small screens) */}
+            <div className="relative pt-2">
+                {/* Mobile Kidney Graphic - Shifted slightly higher and slightly to the right */}
+                <div className="lg:hidden absolute -top-28 sm:-top-36 -right-8 sm:-right-4 w-[320px] sm:w-[420px] h-[390px] sm:h-[480px] pointer-events-none z-0 opacity-90 filter drop-shadow-[0_12px_32px_rgba(23,54,75,0.15)]">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/kidneys-transparent.png"
+                      alt="Kidney and Urinary System - Dr. Rakesh Vamsi"
+                      fill
+                      className="object-contain object-right scale-110"
+                      priority
                     />
-                  </section >
-                  );
+                  </div>
+                </div>
+
+                {/* 4 Value Proposition Mini-Cards Grid (Sitting cleanly in front) */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 relative z-10">
+                  {/* Card 1 */}
+                  <div className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white/95 backdrop-blur-2xs border border-[#E5DFD3] shadow-xs">
+                    <div className="w-7 h-7 text-[#B99A62] flex items-center justify-center mb-1">
+                      <Users className="w-5 h-5 text-[#B99A62]" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-[#17364B] leading-tight">
+                      Patient-Centered<br />Approach
+                    </span>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white/95 backdrop-blur-2xs border border-[#E5DFD3] shadow-xs">
+                    <div className="w-7 h-7 text-[#B99A62] flex items-center justify-center mb-1">
+                      <ShieldCheck className="w-5 h-5 text-[#B99A62]" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-[#17364B] leading-tight">
+                      Advanced<br />Treatment Options
+                    </span>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white/95 backdrop-blur-2xs border border-[#E5DFD3] shadow-xs">
+                    <div className="w-7 h-7 text-[#B99A62] flex items-center justify-center mb-1">
+                      <svg className="w-5 h-5 text-[#B99A62]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M6 18h8" />
+                        <path d="M3 22h18" />
+                        <path d="M14 22a7 7 0 1 0 0-14h-1" />
+                        <path d="M9 14h2" />
+                        <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" />
+                        <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
+                      </svg>
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-[#17364B] leading-tight">
+                      Minimally Invasive &<br />Robotic Surgery
+                    </span>
+                  </div>
+
+                  {/* Card 4 */}
+                  <div className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white/95 backdrop-blur-2xs border border-[#E5DFD3] shadow-xs">
+                    <div className="w-7 h-7 text-[#B99A62] flex items-center justify-center mb-1">
+                      <Heart className="w-5 h-5 text-[#B99A62]" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold text-[#17364B] leading-tight">
+                      Compassionate<br />Care
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ---------------------------------------------------- */}
+            {/* RIGHT COLUMN: Doctor Arch Frame & Signature Capsule  */}
+            {/* ---------------------------------------------------- */}
+            <div className="lg:col-span-6 relative flex justify-center items-center mt-8 lg:mt-0">
+              {/* Arch Framing Container - Generously Proportioned to match reference */}
+              <div className="relative w-[340px] h-[460px] sm:w-[440px] sm:h-[540px] lg:w-[480px] lg:h-[580px] flex items-center justify-center">
+
+                {/* The Arch Body with Rich Golden 3.5px Border */}
+                <div className="absolute inset-0 rounded-t-full rounded-b-[44px] bg-gradient-to-b from-[#E0EFF0] via-[#EAF4F5] to-[#F5F2EB] border-[3.5px] border-[#B99A62] shadow-[0_16px_40px_rgba(23,54,75,0.12)] overflow-hidden">
+                  {/* Subtle Radial Top Light Glow */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.8),transparent_65%)] pointer-events-none" />
+
+                  {/* Doctor Cutout Photo - Close-up Medium Shot filling the arch like in the reference image */}
+                  <div className="relative w-full h-[122%] transform translate-y-2 flex items-end justify-center">
+                    <Image
+                      src="/images/dr-rakesh-vamsi.png"
+                      alt="Dr. Rakesh Vamsi - Consultant Urologist & Andrologist"
+                      fill
+                      className="object-cover object-[center_12%] drop-shadow-2xl"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                {/* Unified Signature & Emblem Capsule Badge resting across bottom of arch */}
+                <div className="absolute -bottom-5 sm:-bottom-6 left-1/2 -translate-x-1/2 z-30 bg-white/95 backdrop-blur-md px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-[0_8px_30px_rgba(23,54,75,0.14)] border border-[#E5DFD3] flex items-center gap-4 sm:gap-6 whitespace-nowrap">
+                  {/* Left part: Circular Emblem + Doctor Name + Urology & Andrology */}
+                  <div className="flex items-center gap-2.5">
+                    <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FAF8F5] border border-[#E5DFD3] p-0.5 flex-shrink-0 shadow-2xs">
+                      <Image
+                        src="/images/logo.png"
+                        alt="Dr. Rakesh Vamsi"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="text-left leading-tight">
+                      <div className="text-xs sm:text-sm font-heading font-extrabold text-[#17364B]">
+                        Dr. Rakesh Vamsi
+                      </div>
+                      <div className="text-[8px] sm:text-[8.5px] font-bold uppercase tracking-wider text-[#1C6B7A] mt-0.5">
+                        UROLOGY & ANDROLOGY
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="h-7 w-[1px] bg-[#DCD5C9]" />
+
+                  {/* Right part: Cursive Handwriting Signature + Designation */}
+                  <div className="text-left leading-tight">
+                    <div className="font-signature text-xl sm:text-2xl text-[#17364B] font-semibold -mb-0.5 tracking-wide">
+                      Dr. Rakesh Vamsi
+                    </div>
+                    <div className="text-[7.5px] sm:text-[8px] font-extrabold uppercase tracking-widest text-[#17364B] mt-1">
+                      CONSULTANT UROLOGIST & ANDROLOGIST
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Video Modal */}
+        <VideoModal
+          isOpen={videoModalOpen}
+          onClose={() => setVideoModalOpen(false)}
+        />
+    </section >
+  );
 }
