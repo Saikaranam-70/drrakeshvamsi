@@ -42,11 +42,11 @@ export default function LanguageSwitcher({
   if (variant === "mobile") {
     return (
       <div className={cn("w-full space-y-1.5", className)}>
-        <div className="flex items-center gap-1.5 text-xs font-bold text-slate-300 px-1">
-          <Globe className="w-3.5 h-3.5 text-brand-cyan" />
+        <div className="flex items-center gap-1.5 text-xs font-bold text-[#17364B] px-1">
+          <Globe className="w-3.5 h-3.5 text-[#B99A62]" />
           <span>Select Language / భాష / भाषा</span>
         </div>
-        <div className="grid grid-cols-3 gap-1.5 p-1 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10">
+        <div className="grid grid-cols-3 gap-1.5 p-1 bg-[#E5EFF0] rounded-2xl border border-[#DCE5E8]">
           {LANGUAGES.map((lang) => {
             const isActive = locale === lang.code;
             return (
@@ -57,8 +57,8 @@ export default function LanguageSwitcher({
                 className={cn(
                   "py-2 px-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-center flex items-center justify-center gap-1",
                   isActive
-                    ? "bg-gradient-to-r from-brand-teal-500 to-brand-cyan text-brand-navy-950 shadow-[0_2px_10px_rgba(0,197,220,0.3)] font-extrabold"
-                    : "text-slate-300 hover:text-white hover:bg-white/10"
+                    ? "bg-[#B99A62] text-white shadow-xs font-extrabold"
+                    : "text-[#17364B] hover:text-[#17364B] hover:bg-white/80"
                 )}
                 aria-pressed={isActive}
               >
@@ -79,112 +79,113 @@ export default function LanguageSwitcher({
           type="button"
           onClick={() => setDropdownOpen(!dropdownOpen)}
           className={cn(
-            "inline-flex items-center gap-1 px-2 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 whitespace-nowrap flex-shrink-0",
-            "bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 hover:border-brand-cyan/40",
-            "focus:outline-none focus:ring-2 focus:ring-brand-teal-500/40 shadow-xs"
+            "inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 whitespace-nowrap flex-shrink-0",
+            "bg-white hover:bg-[#FAF8F5] text-[#17364B] border border-[#DCD5C9]",
+            "focus:outline-none focus:ring-2 focus:ring-[#B99A62]/30 shadow-xs"
           )}
           aria-expanded={dropdownOpen}
           aria-haspopup="true"
           aria-label="Select website language"
         >
-          <Globe className="w-3.5 h-3.5 text-brand-cyan flex-shrink-0" />
+          <Globe className="w-3.5 h-3.5 text-[#B99A62] flex-shrink-0" />
           <span className="font-bold text-[11px]">{currentLang.short}</span>
           <ChevronDown
             className={cn(
-              "w-2.5 h-2.5 text-slate-400 transition-transform duration-200",
-              dropdownOpen && "rotate-180 text-brand-cyan"
+              "w-2.5 h-2.5 text-[#4B6778] transition-transform duration-200",
+              dropdownOpen && "rotate-180 text-[#B99A62]"
             )}
           />
         </button>
 
         {dropdownOpen && (
-              <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-brand-navy-900 shadow-2xl border border-brand-navy-700 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
-                <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-brand-navy-800 mb-1">
-                  Language / భాష
-                </div>
-                {LANGUAGES.map((lang) => {
-                  const isSelected = locale === lang.code;
-                  return (
-                    <button
-                      key={lang.code}
-                      type="button"
-                      onClick={() => {
-                        setLocale(lang.code);
-                        setDropdownOpen(false);
-                      }}
-                      className={cn(
-                        "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
-                        isSelected
-                            ? "bg-brand-cyan/20 text-brand-cyan font-bold"
-                            : "text-slate-300 hover:bg-white/5 hover:text-white"
-                      )}
-                    >
-                      <span>{lang.native}</span>
-                      {isSelected && <Check className="w-3.5 h-3.5 text-brand-cyan" />}
-                    </button>
-                  );
-                })}
-              </div>
-        )}
+          <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-white shadow-card border border-[#E5DFD3] py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+            <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#4B6778] border-b border-[#E5DFD3] mb-1">
+              Language / భాష
             </div>
-            );
+            {LANGUAGES.map((lang) => {
+              const isSelected = locale === lang.code;
+              return (
+                <button
+                  key={lang.code}
+                  type="button"
+                  onClick={() => {
+                    setLocale(lang.code);
+                    setDropdownOpen(false);
+                  }}
+                  className={cn(
+                    "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
+                    isSelected
+                      ? "bg-[#E5EFF0] text-[#17364B] font-bold"
+                      : "text-[#17364B] hover:bg-[#FAF8F5]"
+                  )}
+                >
+                  <span>{lang.native}</span>
+                  {isSelected && <Check className="w-3.5 h-3.5 text-[#B99A62]" />}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
   }
 
-            // Desktop layout: Compact Pill with Globe and direct quick switches
-            return (
-            <div ref={dropdownRef} className={cn("relative inline-block text-left flex-shrink-0", className)}>
-              <button
-                type="button"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className={cn(
-                  "inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 whitespace-nowrap flex-shrink-0",
-                  "bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 hover:border-brand-cyan/40",
-                  "focus:outline-none focus:ring-2 focus:ring-brand-teal-500/40"
-                )}
-                aria-expanded={dropdownOpen}
-                aria-haspopup="true"
-                aria-label="Select website language"
-              >
-                <Globe className="w-3.5 h-3.5 text-brand-cyan flex-shrink-0" />
-                <span className="font-semibold">{currentLang.native}</span>
-                <ChevronDown
-                  className={cn(
-            "w-3 h-3 text-slate-400 transition-transform duration-200",
-                    dropdownOpen && "rotate-180 text-brand-cyan"
-                  )}
-                />
-              </button>
+  // Desktop layout: Compact Pill with Globe and direct quick switches
+  return (
+    <div ref={dropdownRef} className={cn("relative inline-block text-left flex-shrink-0", className)}>
+      <button
+        type="button"
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+        className={cn(
+          "inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold transition-all duration-200 whitespace-nowrap flex-shrink-0",
+          "bg-white hover:bg-[#FAF8F5] text-[#17364B] border border-[#DCD5C9] shadow-xs",
+          "focus:outline-none focus:ring-2 focus:ring-[#B99A62]/30"
+        )}
+        aria-expanded={dropdownOpen}
+        aria-haspopup="true"
+        aria-label="Select website language"
+      >
+        <Globe className="w-3.5 h-3.5 text-[#17364B] flex-shrink-0" />
+        <span>{currentLang.native}</span>
+        <ChevronDown
+          className={cn(
+            "w-3 h-3 text-[#17364B] transition-transform duration-200",
+            dropdownOpen && "rotate-180 text-[#B99A62]"
+          )}
+        />
+      </button>
 
-              {/* Dropdown Menu */}
-              {dropdownOpen && (
-                    <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-brand-navy-900 shadow-2xl border border-brand-navy-700 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
-                      <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-brand-navy-800 mb-1">
-                        Language / భాష
-                      </div>
-                      {LANGUAGES.map((lang) => {
-                        const isSelected = locale === lang.code;
-                        return (
-                          <button
-                            key={lang.code}
-                            type="button"
-                            onClick={() => {
-                              setLocale(lang.code);
-                              setDropdownOpen(false);
-                            }}
-                            className={cn(
-                              "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
-                              isSelected
-                                  ? "bg-brand-cyan/20 text-brand-cyan font-bold"
-                                  : "text-slate-300 hover:bg-white/5 hover:text-white"
-                            )}
-                          >
-                            <span>{lang.native}</span>
-                            {isSelected && <Check className="w-3.5 h-3.5 text-brand-cyan" />}
-                          </button>
-                        );
-                      })}
-                    </div>
-      )}
-                  </div>
-                  );
+      {/* Dropdown Menu */}
+      {dropdownOpen && (
+        <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-white shadow-card border border-[#E5DFD3] py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+          <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#4B6778] border-b border-[#E5DFD3] mb-1">
+            Language / భాష
+          </div>
+          {LANGUAGES.map((lang) => {
+            const isSelected = locale === lang.code;
+            return (
+              <button
+                key={lang.code}
+                type="button"
+                onClick={() => {
+                  setLocale(lang.code);
+                  setDropdownOpen(false);
+                }}
+                className={cn(
+                  "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
+                  isSelected
+                    ? "bg-[#E5EFF0] text-[#17364B] font-bold"
+                    : "text-[#17364B] hover:bg-[#FAF8F5]"
+                )}
+              >
+                <span>{lang.native}</span>
+                {isSelected && <Check className="w-3.5 h-3.5 text-[#B99A62]" />}
+              </button>
+            );
+          })}
+        </div>
+      )
+      }
+    </div>
+  );
 }

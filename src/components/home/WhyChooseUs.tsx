@@ -60,39 +60,39 @@ export default function WhyChooseUs() {
   ];
 
   return (
-      <section className="py-20 bg-brand-navy-950 border-y border-brand-navy-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge={t("home.whyChooseUs.badge", "WHY CHOOSE US")}
-            title={t("home.whyChooseUs.title", "Excellence in Urological & Andrological Care")}
-            subtitle={t("home.whyChooseUs.subtitle", "Combining advanced surgical precision with deep empathy and transparent patient communication.")}
-            align="center"
-            className="mb-14"
-          />
+        <section className="py-20 bg-[#F6F3EC] border-b border-[#E5DFD3]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              badge={t("home.whyChooseUs.badge", "WHY CHOOSE US")}
+              title={t("home.whyChooseUs.title", "Excellence in Urological & Andrological Care")}
+              subtitle={t("home.whyChooseUs.subtitle", "Combining advanced surgical precision with deep empathy and transparent patient communication.")}
+              align="center"
+              className="mb-14"
+            />
 
-          {/* 6 Pillars Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pillars.map((pillar, index) => {
-              const Icon = pillar.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-brand-navy-900/80 rounded-2xl p-7 border border-brand-navy-800 hover:border-brand-teal-400/40 shadow-xl hover-lift transition-all"
-                >
-                    <div className="w-12 h-12 rounded-xl bg-brand-teal-500/10 border border-brand-teal-500/20 text-brand-cyan flex items-center justify-center mb-5">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                      <h3 className="font-heading font-extrabold text-lg text-white mb-2">
-                        {pillar.title}
-                      </h3>
-                        <p className="text-sm text-slate-300 leading-relaxed">
+                {/* 6 Pillars Grid */ }
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {pillars.map((pillar, index) => {
+                    const Icon = pillar.icon;
+                    return (
+                      <div
+                        key={index}
+                        className="bg-white rounded-2xl p-7 border border-[#E5DFD3] hover:border-[#B99A62]/50 shadow-card hover-lift transition-all"
+                      >
+                        <div className="w-12 h-12 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center mb-5 shadow-xs">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <h3 className="font-heading font-extrabold text-lg text-[#17364B] mb-2">
+                          {pillar.title}
+                        </h3>
+                        <p className="text-sm text-[#4B6778] leading-relaxed">
                           {pillar.description}
                         </p>
                       </div>
-                      );
-          })}
-                  </div>
-                </div>
+                    );
+                  })}
+          </div>
+      </div>
     </section>
-          );
+  );
 }

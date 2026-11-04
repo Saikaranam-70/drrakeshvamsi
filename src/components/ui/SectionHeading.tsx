@@ -20,7 +20,6 @@ export default function SectionHeading({
   highlightedText,
   subtitle,
   align = "left",
-  theme = "dark",
   className,
   children,
 }: SectionHeadingProps) {
@@ -34,47 +33,32 @@ export default function SectionHeading({
     >
       {badge && (
         <div
-          className={cn(
-            "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
-            theme === "dark"
-              ? "bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30"
-              : "bg-brand-teal-50 text-brand-teal-700 border border-brand-teal-100"
-          )}
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#E5EFF0] text-[#17364B] border border-[#B99A62]/30 shadow-xs"
         >
           {badgeIcon}
           <span>{badge}</span>
         </div>
       )}
 
-      <h2
-        className={cn(
-          "font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl tracking-tight leading-tight",
-          theme === "dark" ? "text-white" : "text-brand-navy-900"
-        )}
-      >
-        {highlightedText ? (
-          <>
-            {title.split(highlightedText)[0]}
-            <span className="text-brand-teal-500">{highlightedText}</span>
-            {title.split(highlightedText)[1]}
-          </>
-        ) : (
-          title
-        )}
-      </h2>
-
-      {subtitle && (
-        <p
-          className={cn(
-            "text-sm sm:text-base leading-relaxed",
-            theme === "dark" ? "text-slate-300" : "text-slate-600"
+        <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl tracking-tight leading-tight text-[#17364B]">
+          {highlightedText ? (
+            <>
+              {title.split(highlightedText)[0]}
+              <span className="text-[#B99A62]">{highlightedText}</span>
+              {title.split(highlightedText)[1]}
+            </>
+          ) : (
+            title
           )}
-        >
-          {subtitle}
-        </p>
+        </h2>
+
+        {subtitle && (
+            <p className="text-sm sm:text-base leading-relaxed text-[#3A5668]">
+              {subtitle}
+            </p>
       )}
 
-      {children}
-    </div>
-  );
+            {children}
+          </div>
+        );
 }

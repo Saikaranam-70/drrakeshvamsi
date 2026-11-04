@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { X, Play, ShieldCheck, Stethoscope, Hospital, Film, Sparkles } from "lucide-react";
+import { X, Play, Hospital, Film, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalizedDoctorData } from "@/data/localizedDoctor";
 import { cn } from "@/lib/utils";
@@ -134,160 +134,161 @@ export default function VideoModal({ isOpen, onClose }: VideoModalProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200">
       <div
-        className="fixed inset-0 bg-brand-navy-950/85 backdrop-blur-md transition-opacity"
+        className="fixed inset-0 bg-[#17364B]/70 backdrop-blur-md transition-opacity"
         onClick={onClose}
         aria-hidden="true"
       />
 
-        <div className="relative w-full max-w-4xl bg-brand-navy-900 rounded-3xl shadow-2xl overflow-hidden border border-brand-navy-800 z-10 animate-in zoom-in-95 duration-200 max-h-[92vh] flex flex-col">
-          {/* Header */}
-          <div className="p-4 sm:p-5 bg-brand-navy-950 text-white flex items-center justify-between border-b border-brand-navy-800 flex-shrink-0">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-brand-teal-500/20 border border-brand-teal-400/30 flex items-center justify-center text-brand-cyan">
-                <Film className="w-5 h-5" />
+            <div className="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-[#E5DFD3] z-10 animate-in zoom-in-95 duration-200 max-h-[92vh] flex flex-col text-[#17364B]">
+              {/* Header */}
+              <div className="p-4 sm:p-5 bg-[#F6F3EC] text-[#17364B] flex items-center justify-between border-b border-[#E5DFD3] flex-shrink-0">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] flex items-center justify-center text-[#B99A62]">
+                    <Film className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-bold text-base sm:text-lg text-[#17364B] flex items-center gap-2">
+                      <span>{t("home.hero.videoModalTitle", "Clinical Videos & Surgical Expertise")}</span>
+                      <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-[#E5EFF0] text-[#17364B] border border-[#CCDDE0]">
+                        <Sparkles className="w-3 h-3 text-[#B99A62]" />
+                        HD Clinical
+                      </span>
+                    </h3>
+                    <p className="text-xs text-[#4B6778]">
+                      {doctor.fullName} | {doctor.designation} | {doctor.hospital.name}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="p-2 rounded-xl text-[#4B6778] hover:text-[#17364B] hover:bg-[#E5EFF0] transition-colors"
+                  aria-label="Close modal"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
-              <div>
-                <h3 className="font-heading font-bold text-base sm:text-lg text-white flex items-center gap-2">
-                  <span>{t("home.hero.videoModalTitle", "Clinical Videos & Surgical Expertise")}</span>
-                  <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-brand-teal-500/20 text-brand-cyan border border-brand-teal-500/30">
-                    <Sparkles className="w-3 h-3" />
-                    HD Clinical
-                  </span>
-                </h3>
-                <p className="text-xs text-brand-teal-300">
-                  {doctor.fullName} | {doctor.designation} | {doctor.hospital.name}
-                </p>
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={onClose}
-              className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
-              aria-label="Close modal"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
 
-          {/* Video Player Container */}
-          <div className="relative w-full bg-black flex items-center justify-center overflow-hidden flex-shrink-0 max-h-[50vh] sm:max-h-[54vh]">
-            <video
-              key={selectedVideo.src}
-              src={selectedVideo.src}
-              controls
-              playsInline
-              preload="metadata"
-              className="w-full max-h-[50vh] sm:max-h-[54vh] object-contain mx-auto"
-            >
-              Your browser does not support HTML5 video.
-            </video>
-          </div>
+                {/* Video Player Container */}
+                <div className="relative w-full bg-black flex items-center justify-center overflow-hidden flex-shrink-0 max-h-[50vh] sm:max-h-[54vh]">
+                  <video
+                    key={selectedVideo.src}
+                    src={selectedVideo.src}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full max-h-[50vh] sm:max-h-[54vh] object-contain mx-auto"
+                  >
+                    Your browser does not support HTML5 video.
+                  </video>
+                </div>
 
-          {/* Video Info and Playlist Selector */}
-            <div className="p-4 sm:p-5 bg-brand-navy-950 flex-1 overflow-y-auto space-y-3">
-              {/* Active video details card */}
-                <div className="bg-brand-navy-900/90 p-3.5 sm:p-4 rounded-2xl border border-brand-navy-800 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-white">
-                  <div className="space-y-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                        <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-brand-teal-500/20 text-brand-cyan border border-brand-teal-500/40 flex-shrink-0">
+                {/* Video Info and Playlist Selector */}
+                <div className="p-4 sm:p-5 bg-[#FAF8F5] flex-1 overflow-y-auto space-y-3">
+                  {/* Active video details card */}
+                  <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-[#E5DFD3] shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[#17364B]">
+                    <div className="space-y-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#E5EFF0] text-[#17364B] border border-[#CCDDE0] flex-shrink-0">
                           {locale === "te"
                             ? selectedVideo.tagTe
                             : locale === "hi"
                               ? selectedVideo.tagHi
                               : selectedVideo.tagEn}
                         </span>
-                          <span className="text-xs text-slate-600">•</span>
-                          <span className="text-xs font-semibold text-slate-400 truncate">
-                            {locale === "te"
-                              ? "డాక్టర్ రాకేష్ వంశీ వివరణ"
-                              : locale === "hi"
-                                ? "डॉ. राकेश वामसी द्वारा विवरण"
-                                : "Clinical Explanation"}
-                          </span>
-                        </div>
-                          <h4 className="font-heading font-bold text-base sm:text-lg text-white leading-snug">
-                            {currentTitle}
-                          </h4>
-                            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                              {currentDesc}
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Playlist selector bar */}
-                        <div className="space-y-1.5">
-                          <div className="flex items-center justify-between">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                                {locale === "te"
-                                  ? "అన్ని క్లినికల్ వీడియోలు (5 ఎంచుకోండి):"
-                                  : locale === "hi"
-                                    ? "सभी क्लिनिकल वीडियो (5 चुनें):"
-                                    : "Select Clinical Video (5 Available):"}
-                              </span>
-                                <span className="text-[11px] text-brand-cyan font-semibold">
-                                  {locale === "te" ? "ప్లే చేయడానికి క్లిక్ చేయండి" : locale === "hi" ? "चलाने के लिए क्लिक करें" : "Click to switch"}
-                                </span>
-                              </div>
-
-                              <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
-                                {CLINICAL_VIDEOS.map((vid, idx) => {
-                                  const isCurrent = vid.id === selectedVideo.id;
-                                  const vidTag =
-                                    locale === "te" ? vid.tagTe : locale === "hi" ? vid.tagHi : vid.tagEn;
-                                  const vidTitle =
-                                    locale === "te" ? vid.titleTe : locale === "hi" ? vid.titleHi : vid.titleEn;
-                                  return (
-                                    <button
-                                      key={vid.id}
-                                      type="button"
-                                      onClick={() => setSelectedVideo(vid)}
-                                      className={cn(
-                                        "p-2.5 rounded-xl border text-left transition-all duration-200 flex flex-col justify-between gap-1",
-                                        isCurrent
-                                          ? "bg-brand-navy-950 text-white border-brand-teal-500 shadow-md ring-1 ring-brand-teal-400"
-                        : "bg-brand-navy-900 text-slate-300 hover:bg-brand-navy-800 hover:text-white border-brand-navy-800"
-                    )}
-                  >
-                                <div className="flex items-center justify-between w-full">
-                                    <span className={cn("text-[10px] font-extrabold uppercase tracking-wider", isCurrent ? "text-brand-cyan" : "text-brand-teal-400")}>
-                                      {vidTag}
-                                    </span>
-                                    <div
-                                      className={cn(
-                                        "w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0",
-                          isCurrent ? "bg-gradient-to-r from-brand-teal-400 to-brand-cyan text-brand-navy-950 font-bold" : "bg-brand-navy-950 text-slate-400"
-                                      )}
-                                    >
-                                      <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
-                                    </div>
-                                </div>
-                                <span className="font-semibold text-[11px] line-clamp-1 leading-tight">
-                                  0{idx + 1}. {vidTitle}
-                                </span>
-                              </button>
-                              );
-              })}
-                          </div>
-                        </div>
+                        <span className="text-xs text-[#A0B0BA]">•</span>
+                        <span className="text-xs font-semibold text-[#4B6778] truncate">
+                          {locale === "te"
+                            ? "డాక్టర్ రాకేష్ వంశీ వివరణ"
+                            : locale === "hi"
+                              ? "डॉ. राकेश वामसी द्वारा विवरण"
+                              : "Clinical Explanation"}
+                        </span>
+                      </div>
+                      <h4 className="font-heading font-bold text-base sm:text-lg text-[#17364B] leading-snug">
+                        {currentTitle}
+                      </h4>
+                      <p className="text-xs sm:text-sm text-[#4B6778] leading-relaxed">
+                        {currentDesc}
+                      </p>
                     </div>
+                  </div>
 
-                    {/* Modal Footer */}
-                        <div className="p-3.5 sm:p-4 bg-brand-navy-950 border-t border-brand-navy-800 flex flex-col sm:flex-row items-center justify-between gap-3 flex-shrink-0">
-                          <div className="flex items-center gap-2 text-xs text-slate-300">
-                            <Hospital className="w-4 h-4 text-brand-cyan flex-shrink-0" />
-                            <span className="font-medium">
-                              {doctor.hospital.name}, {doctor.hospital.city} | {doctor.hospital.hours}
-                            </span>
-                          </div>
-                          <Link
-                            href="/book-appointment"
-                            onClick={onClose}
-                            className="w-full sm:w-auto px-5 py-2.5 rounded-full text-xs font-bold text-brand-navy-950 bg-gradient-to-r from-brand-teal-400 to-brand-cyan hover:shadow-glow shadow-sm transition-all text-center"
-                          >
-                            {t("home.hero.ctaAppointment", "Book Appointment")} →
-                          </Link>
-                        </div>
+                    {/* Playlist selector bar */}
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-[#4B6778]">
+                          {locale === "te"
+                            ? "అన్ని క్లినికల్ వీడియోలు (5 ఎంచుకోండి):"
+                            : locale === "hi"
+                              ? "सभी क्लिनिकल वीडियो (5 चुनें):"
+                              : "Select Clinical Video (5 Available):"}
+                        </span>
+                        <span className="text-[11px] text-[#B99A62] font-semibold">
+                          {locale === "te" ? "ప్లే చేయడానికి క్లిక్ చేయండి" : locale === "hi" ? "चलाने के लिए क्लिक करें" : "Click to switch"}
+                        </span>
+                      </div>
+
+                                    < div className = "grid grid-cols-1 sm:grid-cols-5 gap-2" >
+                                    {
+                                      CLINICAL_VIDEOS.map((vid, idx) => {
+                                        const isCurrent = vid.id === selectedVideo.id;
+                                        const vidTag =
+                                          locale === "te" ? vid.tagTe : locale === "hi" ? vid.tagHi : vid.tagEn;
+                                        const vidTitle =
+                                          locale === "te" ? vid.titleTe : locale === "hi" ? vid.titleHi : vid.titleEn;
+                                        return (
+                                          <button
+                                            key={vid.id}
+                                            type="button"
+                                            onClick={() => setSelectedVideo(vid)}
+                                            className={cn(
+                                              "p-2.5 rounded-xl border text-left transition-all duration-200 flex flex-col justify-between gap-1 shadow-xs",
+                                              isCurrent
+                                                ? "bg-white text-[#17364B] border-2 border-[#B99A62] ring-1 ring-[#B99A62]"
+                                                : "bg-white text-[#17364B] hover:bg-[#F6F3EC] border-[#E5DFD3]"
+                                            )}
+                                          >
+                    <div className="flex items-center justify-between w-full">
+                      <span className={cn("text-[10px] font-extrabold uppercase tracking-wider", isCurrent ? "text-[#B99A62]" : "text-[#4B6778]")}>
+                        {vidTag}
+                      </span>
+                      <div
+                        className={cn(
+                          "w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0",
+                          isCurrent ? "bg-[#B99A62] text-white font-bold" : "bg-[#E5EFF0] text-[#17364B]"
+                        )}
+                      >
+                        <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
                       </div>
                     </div>
-                    );
+                    <span className="font-semibold text-[11px] line-clamp-1 leading-tight text-[#17364B]">
+                      0{idx + 1}. {vidTitle}
+                    </span>
+                  </button>
+                        );
+              })}
+                </div>
+              </div>
+            </div>
+
+        {/* Modal Footer */}
+        <div className="p-3.5 sm:p-4 bg-[#F6F3EC] border-t border-[#E5DFD3] flex flex-col sm:flex-row items-center justify-between gap-3 flex-shrink-0">
+          <div className="flex items-center gap-2 text-xs text-[#4B6778]">
+            <Hospital className="w-4 h-4 text-[#B99A62] flex-shrink-0" />
+            <span className="font-medium">
+              {doctor.hospital.name}, {doctor.hospital.city} | {doctor.hospital.hours}
+            </span>
+          </div>
+          <Link
+            href="/book-appointment"
+            onClick={onClose}
+            className="w-full sm:w-auto px-5 py-2.5 rounded-full text-xs font-bold text-white bg-[#B99A62] hover:bg-[#A3844C] shadow-sm transition-all text-center"
+          >
+            {t("home.hero.ctaAppointment", "Book Appointment")} →
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingContactActions from "@/components/layout/FloatingContactActions";
+import SitePreloader from "@/components/ui/SitePreloader";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { generateClinicSchema, generatePhysicianSchema, generateWebSiteSchema } from "@/lib/structuredData";
 
@@ -159,12 +160,12 @@ export default function RootLayout({
         <link rel="icon" href="/icon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0d9488" />
+        <meta name="theme-color" content="#F6F3EC" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <script
@@ -180,14 +181,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJson) }}
         />
       </head>
-        <body className="font-sans min-h-screen flex flex-col bg-brand-navy-950 text-slate-100 antialiased selection:bg-brand-cyan selection:text-brand-navy-950">
-          <LanguageProvider>
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-            <FloatingContactActions />
-          </LanguageProvider>
-        </body>
+      <body className="font-sans min-h-screen flex flex-col bg-brand-ivory text-brand-navy antialiased selection:bg-brand-gold selection:text-white">
+        <SitePreloader />
+        <LanguageProvider>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <FloatingContactActions />
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

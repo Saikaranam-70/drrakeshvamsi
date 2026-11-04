@@ -4,28 +4,35 @@
 
 @layer base {
   :root {
-    --brand-navy-950: #000B1A;
-    --brand-navy-900: #001229;
-    --brand-navy-800: #001F47;
-    --brand-navy-700: #002D66;
-    --brand-teal-500: #009DBB;
-    --brand-cyan: #00C5DC;
-    --brand-border: #002A54;
-    --brand-surface: #001026;
+    --color-navy: #17364B;
+    --color-gold: #B99A62;
+    --color-ivory: #F6F3EC;
+    --color-soft-teal: #E5EFF0;
+
+    --brand-navy-950: #0D202D;
+    --brand-navy-900: #112736;
+    --brand-navy-850: #17364B;
+    --brand-navy-800: #1E425B;
+    --brand-navy-700: #275371;
+    --brand-gold: #B99A62;
+    --brand-ivory: #F6F3EC;
+    --brand-soft-teal: #E5EFF0;
+    --brand-border: #E2DBD0;
+    --brand-surface: #FAF8F5;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color-scheme: dark;
+    color-scheme: light;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
   }
 
   body {
-    background-color: #000B1A;
-    color: #F1F5F9;
+    background-color: #F6F3EC;
+    color: #17364B;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
   }
@@ -40,8 +47,8 @@
   }
 
   ::selection {
-    background-color: #00C5DC;
-    color: #000B1A;
+    background-color: #B99A62;
+    color: #FFFFFF;
   }
 }
 
@@ -52,16 +59,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #000B1A;
+  background: #F6F3EC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #002D66;
+  background: #D8C8AF;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00C5DC;
+  background: #B99A62;
 }
 
 /* Hide scrollbar utility for horizontal pills and carousels */
@@ -76,21 +83,21 @@
   scrollbar-width: none !important;
 }
 
-/* Medical Hero Glow Effects */
+/* Medical Hero Glow Effects - Soft Teal & Gold Tints */
 .hero-glow-teal {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0, 197, 220, 0.22) 0%, rgba(0, 157, 187, 0.08) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(229, 239, 240, 0.7) 0%, rgba(200, 225, 228, 0.3) 45%, transparent 70%);
   filter: blur(50px);
   pointer-events: none;
 }
 
-.hero-glow-navy {
+.hero-glow-gold {
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0, 51, 102, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(185, 154, 98, 0.12) 0%, transparent 70%);
   filter: blur(60px);
   pointer-events: none;
 }
@@ -100,14 +107,14 @@
     width: 260px;
     height: 260px;
     filter: blur(30px);
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
-  .hero-glow-navy {
+  .hero-glow-gold {
     width: 300px;
     height: 300px;
     filter: blur(35px);
-    opacity: 0.6;
+    opacity: 0.7;
   }
 }
 
@@ -117,34 +124,61 @@
   will-change: transform;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -8px rgba(23, 54, 75, 0.12);
+    border-color: #B99A62;
+  }
+}
 
-  @media (hover: hover) and (pointer: fine) {
-    .hover-lift:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 32px -8px rgba(0, 27, 61, 0.25);
-      border-color: #009DBB;
-    }
+/* Hardware acceleration for mobile animations */
+.transform-gpu {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Medical Preloader ECG pulse animation */
+@keyframes ecgPulse {
+  0% {
+    stroke-dashoffset: 400;
+    opacity: 0.3;
   }
 
-  /* Hardware acceleration for mobile animations */
-  .transform-gpu {
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+  30% {
+    opacity: 1;
   }
 
-  /* Script signature styling */
-  .font-signature {
-    font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  70% {
+    opacity: 1;
   }
 
-  /* Hide spin buttons on number inputs */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.3;
   }
+}
 
-  input[type=number] {
-    -moz-appearance: textfield;
-  }
+.animate-ecg {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: ecgPulse 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Script signature styling */
+.font-signature {
+  font-family: 'Great Vibes', 'Alex Brush', 'Dancing Script', 'Caveat', var(--font-signature), 'Brush Script MT', 'Segoe Script', cursive;
+  font-style: italic;
+}
+
+/* Hide spin buttons on number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
