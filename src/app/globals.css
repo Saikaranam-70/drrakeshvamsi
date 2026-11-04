@@ -133,6 +133,30 @@
     perspective: 1000px;
   }
 
+  /* Medical Preloader ECG pulse animation */
+  @keyframes ecgPulse {
+    0% {
+      stroke-dashoffset: 400;
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 0.3;
+    }
+  }
+
+  .animate-ecg {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: ecgPulse 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
   /* Script signature styling */
   .font-signature {
     font-family: 'Brush Script MT', 'Segoe Script', cursive;

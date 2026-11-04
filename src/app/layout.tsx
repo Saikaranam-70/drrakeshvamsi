@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingContactActions from "@/components/layout/FloatingContactActions";
+import SitePreloader from "@/components/ui/SitePreloader";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { generateClinicSchema, generatePhysicianSchema, generateWebSiteSchema } from "@/lib/structuredData";
 
@@ -181,6 +182,7 @@ export default function RootLayout({
         />
       </head>
         <body className="font-sans min-h-screen flex flex-col bg-brand-navy-950 text-slate-100 antialiased selection:bg-brand-cyan selection:text-brand-navy-950">
+          <SitePreloader />
           <LanguageProvider>
             <Header />
             <main className="flex-grow">{children}</main>
