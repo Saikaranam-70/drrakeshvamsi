@@ -17,10 +17,17 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -37,10 +44,10 @@ export default function Header() {
     <>
       <header
         className={cn(
-          "sticky top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b",
+          "sticky top-0 z-50 transition-all duration-300 bg-brand-navy-950/95 backdrop-blur-md border-b",
           isScrolled
-            ? "border-slate-200/80 shadow-sm py-2.5"
-            : "border-slate-100 py-3.5"
+            ? "border-brand-navy-800 shadow-lg shadow-brand-navy-950/50 py-2.5"
+            : "border-brand-navy-800/60 py-3.5"
         )}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +57,7 @@ export default function Header() {
               href="/"
               className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-500 rounded-xl p-1 flex-shrink-0"
             >
-              <div className="relative w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-full bg-white shadow-xs border border-slate-200/80 p-1 flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
+              <div className="relative w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-full bg-white shadow-xs border border-white/20 p-1 flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
                 <Image
                   src="/images/logo.png"
                   alt="Dr. Rakesh Vamsi - Consultant Urologist & Andrologist"
@@ -60,10 +67,10 @@ export default function Header() {
                 />
               </div>
               <div className="flex flex-col whitespace-nowrap">
-                <span className="font-heading font-extrabold text-base sm:text-lg lg:text-[19px] text-brand-navy-950 tracking-tight leading-tight group-hover:text-brand-teal-600 transition-colors">
+                <span className="font-heading font-extrabold text-base sm:text-lg lg:text-[19px] text-white tracking-tight leading-tight group-hover:text-brand-cyan transition-colors">
                   {t("common.header.doctorName", "Dr. Rakesh Vamsi")}
                 </span>
-                <span className="text-[11px] sm:text-xs font-semibold text-brand-teal-600 tracking-tight leading-tight mt-0.5">
+                <span className="text-[11px] sm:text-xs font-semibold text-brand-cyan tracking-tight leading-tight mt-0.5">
                   {t("common.header.subtitle", "Consultant Urologist & Andrologist")}
                 </span>
               </div>
@@ -81,15 +88,15 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "relative px-2.5 xl:px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-lg hover:text-brand-teal-600 whitespace-nowrap",
+                      "relative px-2.5 xl:px-3 py-2 text-sm font-semibold transition-colors duration-200 rounded-lg hover:text-brand-cyan whitespace-nowrap",
                       isActive
-                        ? "text-brand-navy-900 font-bold"
-                        : "text-slate-600 hover:text-slate-900"
+                        ? "text-white font-bold"
+                        : "text-slate-300 hover:text-white"
                     )}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-2.5 right-2.5 xl:left-3 xl:right-3 h-[2.5px] bg-brand-teal-500 rounded-full" />
+                      <span className="absolute bottom-0 left-2.5 right-2.5 xl:left-3 xl:right-3 h-[2.5px] bg-brand-cyan rounded-full shadow-glow" />
                     )}
                   </Link>
                 );
@@ -105,20 +112,20 @@ export default function Header() {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-brand-teal-600 transition-colors px-2 py-1.5 rounded-md hover:bg-slate-50 whitespace-nowrap flex-shrink-0"
+                className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-brand-cyan transition-colors px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 whitespace-nowrap flex-shrink-0"
                 aria-label={t("common.nav.followInstagram", "Follow Dr. Rakesh Vamsi on Instagram")}
               >
-                <Instagram className="w-4 h-4 text-brand-navy-900 flex-shrink-0" />
+                <Instagram className="w-4 h-4 text-brand-cyan flex-shrink-0" />
                 <span className="whitespace-nowrap">Instagram</span>
               </a>
 
               <Link
                 href="/book-appointment"
-                className="inline-flex items-center gap-1.5 xl:gap-2 px-4 xl:px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-brand-teal-600 to-brand-navy-800 hover:from-brand-teal-500 hover:to-brand-navy-700 shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap flex-shrink-0"
+                className="inline-flex items-center gap-1.5 xl:gap-2 px-4 xl:px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-brand-teal-500 to-brand-cyan hover:from-brand-teal-400 hover:to-brand-cyan shadow-md hover:shadow-glow transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap flex-shrink-0 text-brand-navy-950 font-bold"
               >
-                <Calendar className="w-4 h-4 flex-shrink-0" />
-                <span className="whitespace-nowrap">{t("common.nav.bookAppointment", "Book Appointment")}</span>
-                <span className="text-white/80 font-bold ml-0.5">→</span>
+                <Calendar className="w-4 h-4 flex-shrink-0 text-brand-navy-950" />
+                <span className="whitespace-nowrap text-brand-navy-950 font-bold">{t("common.nav.bookAppointment", "Book Appointment")}</span>
+                <span className="text-brand-navy-950/80 font-extrabold ml-0.5">→</span>
               </Link>
             </div>
 
@@ -127,14 +134,13 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="relative items-center justify-center w-11 h-11 rounded-2xl bg-gradient-to-b from-white/95 via-white/85 to-slate-100/80 backdrop-blur-2xl border border-white/90 shadow-[0_3px_12px_rgba(0,157,187,0.18)] hover:shadow-[0_4px_16px_rgba(0,157,187,0.25)] hover:border-brand-teal-300 active:scale-95 transition-all duration-200 group flex flex-shrink-0"
+                className="relative items-center justify-center w-11 h-11 rounded-2xl bg-brand-navy-900 border border-brand-navy-700 hover:border-brand-teal-400 active:scale-95 transition-all duration-200 group flex flex-shrink-0 shadow-md text-white"
                 aria-label="Open navigation menu"
               >
-                {/* Modern 3-bar hamburger with glossy accents */}
                 <div className="w-5 h-4 flex flex-col justify-between items-center relative z-10">
-                  <span className="w-5 h-[2.5px] bg-brand-navy-950 rounded-full group-hover:bg-brand-teal-600 transition-colors shadow-xs" />
-                  <span className="w-3.5 h-[2.5px] bg-gradient-to-r from-brand-teal-500 to-brand-cyan rounded-full self-start group-hover:w-5 transition-all shadow-xs" />
-                  <span className="w-5 h-[2.5px] bg-brand-navy-950 rounded-full group-hover:bg-brand-teal-600 transition-colors shadow-xs" />
+                  <span className="w-5 h-[2.5px] bg-white rounded-full group-hover:bg-brand-cyan transition-colors" />
+                  <span className="w-5 h-[2.5px] bg-white rounded-full group-hover:bg-brand-cyan transition-colors" />
+                  <span className="w-5 h-[2.5px] bg-white rounded-full group-hover:bg-brand-cyan transition-colors" />
                 </div>
               </button>
             </div>

@@ -3,6 +3,8 @@ import { appointmentBookingSchema } from "@/lib/schemas";
 import { generateAppointmentId } from "@/lib/utils";
 import { sendAppointmentEmails } from "@/lib/emailService";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();

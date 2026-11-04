@@ -43,10 +43,17 @@ export default function FloatingContactActions() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const checkScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setShowScrollTop(window.scrollY > 400);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", checkScroll);
+    window.addEventListener("scroll", checkScroll, { passive: true });
     return () => window.removeEventListener("scroll", checkScroll);
   }, []);
 
@@ -68,7 +75,7 @@ export default function FloatingContactActions() {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-6 left-4 sm:bottom-auto sm:left-auto sm:fixed sm:bottom-[210px] sm:right-6 z-40 p-2.5 sm:p-3 rounded-full bg-white text-brand-navy-900 shadow-xl border border-slate-200/90 hover:bg-slate-50 hover:text-brand-teal-600 transition-all transform hover:scale-110 active:scale-95"
+          className="fixed bottom-6 left-4 sm:bottom-auto sm:left-auto sm:fixed sm:bottom-[210px] sm:right-6 z-40 p-2.5 sm:p-3 rounded-full bg-brand-navy-900 text-white shadow-xl border border-brand-navy-700 hover:bg-brand-navy-800 hover:text-brand-cyan transition-all transform hover:scale-110 active:scale-95"
           aria-label="Scroll back to top"
         >
           <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />

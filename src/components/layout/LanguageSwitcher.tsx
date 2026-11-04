@@ -80,111 +80,111 @@ export default function LanguageSwitcher({
           onClick={() => setDropdownOpen(!dropdownOpen)}
           className={cn(
             "inline-flex items-center gap-1 px-2 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 whitespace-nowrap flex-shrink-0",
-            "bg-slate-50 hover:bg-slate-100 text-brand-navy-900 border border-slate-200/90 hover:border-brand-teal-300",
+            "bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 hover:border-brand-cyan/40",
             "focus:outline-none focus:ring-2 focus:ring-brand-teal-500/40 shadow-xs"
           )}
           aria-expanded={dropdownOpen}
           aria-haspopup="true"
           aria-label="Select website language"
         >
-          <Globe className="w-3.5 h-3.5 text-brand-teal-600 flex-shrink-0" />
+          <Globe className="w-3.5 h-3.5 text-brand-cyan flex-shrink-0" />
           <span className="font-bold text-[11px]">{currentLang.short}</span>
           <ChevronDown
             className={cn(
-              "w-2.5 h-2.5 text-slate-500 transition-transform duration-200",
-              dropdownOpen && "rotate-180 text-brand-teal-600"
+              "w-2.5 h-2.5 text-slate-400 transition-transform duration-200",
+              dropdownOpen && "rotate-180 text-brand-cyan"
             )}
           />
         </button>
 
         {dropdownOpen && (
-          <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-white shadow-xl border border-slate-100 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
-            <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-1">
-              Language / భాష
-            </div>
-            {LANGUAGES.map((lang) => {
-              const isSelected = locale === lang.code;
-              return (
-                <button
-                  key={lang.code}
-                  type="button"
-                  onClick={() => {
-                    setLocale(lang.code);
-                    setDropdownOpen(false);
-                  }}
-                  className={cn(
-                    "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
-                    isSelected
-                      ? "bg-brand-teal-50/80 text-brand-teal-700 font-bold"
-                      : "text-slate-700 hover:bg-slate-50 hover:text-brand-navy-900"
-                  )}
-                >
-                  <span>{lang.native}</span>
-                  {isSelected && <Check className="w-3.5 h-3.5 text-brand-teal-600" />}
-                </button>
-              );
-            })}
-          </div>
+              <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-brand-navy-900 shadow-2xl border border-brand-navy-700 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+                <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-brand-navy-800 mb-1">
+                  Language / భాష
+                </div>
+                {LANGUAGES.map((lang) => {
+                  const isSelected = locale === lang.code;
+                  return (
+                    <button
+                      key={lang.code}
+                      type="button"
+                      onClick={() => {
+                        setLocale(lang.code);
+                        setDropdownOpen(false);
+                      }}
+                      className={cn(
+                        "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
+                        isSelected
+                            ? "bg-brand-cyan/20 text-brand-cyan font-bold"
+                            : "text-slate-300 hover:bg-white/5 hover:text-white"
+                      )}
+                    >
+                      <span>{lang.native}</span>
+                      {isSelected && <Check className="w-3.5 h-3.5 text-brand-cyan" />}
+                    </button>
+                  );
+                })}
+              </div>
         )}
-      </div>
-    );
+            </div>
+            );
   }
 
-  // Desktop layout: Compact Pill with Globe and direct quick switches
-  return (
-    <div ref={dropdownRef} className={cn("relative inline-block text-left flex-shrink-0", className)}>
-      <button
-        type="button"
-        onClick={() => setDropdownOpen(!dropdownOpen)}
-        className={cn(
-          "inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 whitespace-nowrap flex-shrink-0",
-          "bg-slate-50 hover:bg-slate-100 text-brand-navy-900 border border-slate-200/90 hover:border-brand-teal-300",
-          "focus:outline-none focus:ring-2 focus:ring-brand-teal-500/40"
-        )}
-        aria-expanded={dropdownOpen}
-        aria-haspopup="true"
-        aria-label="Select website language"
-      >
-        <Globe className="w-3.5 h-3.5 text-brand-teal-600 flex-shrink-0" />
-        <span className="font-semibold">{currentLang.native}</span>
-        <ChevronDown
-          className={cn(
-            "w-3 h-3 text-slate-500 transition-transform duration-200",
-            dropdownOpen && "rotate-180 text-brand-teal-600"
-          )}
-        />
-      </button>
-
-      {/* Dropdown Menu */}
-      {dropdownOpen && (
-        <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-white shadow-xl border border-slate-100 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
-          <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-1">
-            Language / భాష
-          </div>
-          {LANGUAGES.map((lang) => {
-            const isSelected = locale === lang.code;
+            // Desktop layout: Compact Pill with Globe and direct quick switches
             return (
+            <div ref={dropdownRef} className={cn("relative inline-block text-left flex-shrink-0", className)}>
               <button
-                key={lang.code}
                 type="button"
-                onClick={() => {
-                  setLocale(lang.code);
-                  setDropdownOpen(false);
-                }}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
                 className={cn(
-                  "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
-                  isSelected
-                    ? "bg-brand-teal-50/80 text-brand-teal-700 font-bold"
-                    : "text-slate-700 hover:bg-slate-50 hover:text-brand-navy-900"
+                  "inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 whitespace-nowrap flex-shrink-0",
+                  "bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 hover:border-brand-cyan/40",
+                  "focus:outline-none focus:ring-2 focus:ring-brand-teal-500/40"
                 )}
+                aria-expanded={dropdownOpen}
+                aria-haspopup="true"
+                aria-label="Select website language"
               >
-                <span>{lang.native}</span>
-                {isSelected && <Check className="w-3.5 h-3.5 text-brand-teal-600" />}
+                <Globe className="w-3.5 h-3.5 text-brand-cyan flex-shrink-0" />
+                <span className="font-semibold">{currentLang.native}</span>
+                <ChevronDown
+                  className={cn(
+            "w-3 h-3 text-slate-400 transition-transform duration-200",
+                    dropdownOpen && "rotate-180 text-brand-cyan"
+                  )}
+                />
               </button>
-            );
-          })}
-        </div>
+
+              {/* Dropdown Menu */}
+              {dropdownOpen && (
+                    <div className="absolute right-0 mt-1.5 w-36 rounded-xl bg-brand-navy-900 shadow-2xl border border-brand-navy-700 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+                      <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-brand-navy-800 mb-1">
+                        Language / భాష
+                      </div>
+                      {LANGUAGES.map((lang) => {
+                        const isSelected = locale === lang.code;
+                        return (
+                          <button
+                            key={lang.code}
+                            type="button"
+                            onClick={() => {
+                              setLocale(lang.code);
+                              setDropdownOpen(false);
+                            }}
+                            className={cn(
+                              "w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between transition-colors",
+                              isSelected
+                                  ? "bg-brand-cyan/20 text-brand-cyan font-bold"
+                                  : "text-slate-300 hover:bg-white/5 hover:text-white"
+                            )}
+                          >
+                            <span>{lang.native}</span>
+                            {isSelected && <Check className="w-3.5 h-3.5 text-brand-cyan" />}
+                          </button>
+                        );
+                      })}
+                    </div>
       )}
-    </div>
-  );
+                  </div>
+                  );
 }

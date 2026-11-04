@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     template: "%s | Dr. G. Rakesh Vamsi - Best Urologist in Nellore",
   },
   description:
-  "Consult Dr. G. Rakesh Vamsi — Leading Consultant Urologist & Andrologist, Laparoscopic & Robotic Surgeon at KIMS Hospital, Nellore. 10+ yrs experience in Laser Kidney Stone Treatment, Prostate Care, Male Infertility & Advanced Urology. Book appointment online or call +91 76740 08057.",
+    "Consult Dr. G. Rakesh Vamsi — Leading Consultant Urologist & Andrologist, Laparoscopic & Robotic Surgeon at KIMS Hospital, Nellore. 10+ yrs experience in Laser Kidney Stone Treatment, Prostate Care, Male Infertility & Advanced Urology. Book appointment online or call +91 76740 08057.",
   keywords: [
     "Dr. G. Rakesh Vamsi",
     "Dr Rakesh Vamsi",
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     siteName: "Dr. G. Rakesh Vamsi | Best Urologist & Andrologist in Nellore",
     title: "Dr. G. Rakesh Vamsi | Best Urologist & Andrologist in Nellore | KIMS Hospital",
     description:
-    "Advanced, ethical and minimally invasive urological and andrological care by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore. Expert in Laser Stone Removal, Prostate Surgery, and Male Reproductive Health.",
+      "Advanced, ethical and minimally invasive urological and andrological care by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore. Expert in Laser Stone Removal, Prostate Surgery, and Male Reproductive Health.",
     images: [
       {
         url: "/images/dr-rakesh-vamsi.png",
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dr. G. Rakesh Vamsi | Best Urologist & Andrologist in Nellore",
     description:
-    "Expert Urology & Andrology Care in Nellore by Dr. G. Rakesh Vamsi at KIMS Hospital. Laser Stone Treatment, Prostate & Robotic Surgery.",
+      "Expert Urology & Andrology Care in Nellore by Dr. G. Rakesh Vamsi at KIMS Hospital. Laser Stone Treatment, Prostate & Robotic Surgery.",
     images: ["/images/dr-rakesh-vamsi.png"],
   },
   alternates: {
@@ -180,14 +180,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJson) }}
         />
       </head>
-      <body className="font-sans min-h-screen flex flex-col bg-white text-slate-800 antialiased">
-        <LanguageProvider>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-          <FloatingContactActions />
-        </LanguageProvider>
-      </body>
+        <body className="font-sans min-h-screen flex flex-col bg-brand-navy-950 text-slate-100 antialiased selection:bg-brand-cyan selection:text-brand-navy-950">
+          <LanguageProvider>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <FloatingContactActions />
+          </LanguageProvider>
+        </body>
     </html>
   );
 }
