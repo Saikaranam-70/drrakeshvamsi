@@ -3,7 +3,7 @@ import { treatmentsData } from "@/data/treatmentsData";
 import { blogArticles } from "@/data/blogData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://uroandroguy.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://drrakeshvamsi.com";
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "daily", priority: 1.0 },

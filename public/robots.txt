@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+Host: https://drrakeshvamsi.com
+Sitemap: https://drrakeshvamsi.com/sitemap.xml

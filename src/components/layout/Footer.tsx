@@ -286,7 +286,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 pt-4 border-t border-slate-800/60 text-center text-xs text-slate-500">
-          © {currentYear} UROANDROGUY. {t("common.footer.copyright", "All rights reserved. Dr. Rakesh Vamsi | Consultant Urologist & Andrologist | KIMS Hospital, Nellore.")}
+          © {currentYear} Dr. Rakesh Vamsi. {t("common.footer.copyright", "All rights reserved. Consultant Urologist & Andrologist | KIMS Hospital, Nellore.")}
         </div>
       </div>
     </footer>

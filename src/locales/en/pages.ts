@@ -291,9 +291,9 @@ export const enPages = {
   },
   legal: {
     privacyTitle: "Privacy Policy & Patient Data Protection",
-    privacySub: "Last updated: October 2024 • UROANDROGUY Clinical Practice",
+    privacySub: "Last updated: October 2024 • Urologist and Andrologist Clinical Practice",
     termsTitle: "Terms of Use & Medical Disclaimer",
-    termsSub: "Last updated: October 2024 • UROANDROGUY",
+    termsSub: "Last updated: October 2024 • Urologist and Andrologist",
     notFoundTitle: "Page Not Found",
     notFoundDesc: "The page you are looking for might have been moved, renamed, or is temporarily unavailable.",
     notFoundHome: "Return to Homepage",

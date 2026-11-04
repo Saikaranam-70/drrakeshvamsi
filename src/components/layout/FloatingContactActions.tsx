@@ -58,8 +58,8 @@ export default function FloatingContactActions() {
     locale === "te"
       ? `నమస్తే డాక్టర్ రాకేష్ వంశీ గారి క్లినిక్, నెల్లూరు కిమ్స్ హాస్పిటల్‌లో అపాయింట్‌మెంట్ కొరకు సంప్రదిస్తున్నాను.`
       : locale === "hi"
-      ? `नमस्ते डॉ. राकेश वामसी क्लीनिक, मैं किम्स हॉस्पिटल नेल्लोर में परामर्श अपॉइंटमेंट के संबंध में जानकारी चाहता हूँ।`
-      : `Hello Dr. G. Rakesh Vamsi's clinic, I would like to inquire about an appointment at KIMS Hospital, Nellore.`;
+        ? `नमस्ते डॉ. राकेश वामसी क्लीनिक, मैं किम्स हॉस्पिटल नेल्लोर में परामर्श अपॉइंटमेंट के संबंध में जानकारी चाहता हूँ।`
+        : `Hello Dr. G. Rakesh Vamsi's clinic, I would like to inquire about an appointment at KIMS Hospital, Nellore.`;
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function FloatingContactActions() {
           target="_blank"
           rel="noopener noreferrer"
           className="pointer-events-auto flex items-center justify-center gap-2 p-2.5 sm:px-4 sm:py-2.5 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-xl hover:shadow-[0_4px_20px_rgba(220,39,67,0.4)] transition-all transform hover:scale-105 active:scale-95 text-xs font-semibold group flex-shrink-0"
-          aria-label="Follow Dr. Rakesh Vamsi on Instagram (@uroandroguy)"
+          aria-label="Follow Dr. Rakesh Vamsi on Instagram"
         >
           <InstagramIcon className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
           <span className="hidden sm:inline">Instagram</span>
@@ -112,8 +112,8 @@ export default function FloatingContactActions() {
             {locale === "te"
               ? "WhatsApp"
               : locale === "hi"
-              ? "WhatsApp"
-              : "Chat on WhatsApp"}
+                ? "WhatsApp"
+                : "Chat on WhatsApp"}
           </span>
         </a>
       </aside>

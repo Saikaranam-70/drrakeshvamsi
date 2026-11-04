@@ -102,14 +102,14 @@ export default function Header() {
               <LanguageSwitcher variant="desktop" />
 
               <a
-                href="https://www.instagram.com/uroandroguy"
+                href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-brand-teal-600 transition-colors px-2 py-1.5 rounded-md hover:bg-slate-50 whitespace-nowrap flex-shrink-0"
                 aria-label={t("common.nav.followInstagram", "Follow Dr. Rakesh Vamsi on Instagram")}
               >
                 <Instagram className="w-4 h-4 text-brand-navy-900 flex-shrink-0" />
-                <span className="whitespace-nowrap">@uroandroguy</span>
+                <span className="whitespace-nowrap">Instagram</span>
               </a>
 
               <Link

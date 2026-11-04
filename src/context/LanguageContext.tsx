@@ -21,7 +21,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const STORAGE_KEY = "uroandroguy_user_locale";
+const STORAGE_KEY = "uro_andro_user_locale";
 const COOKIE_NAME = "NEXT_LOCALE";
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

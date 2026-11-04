@@ -58,13 +58,13 @@ export const doctorData: DoctorInfo = {
     state: "Andhra Pradesh",
     pincode: "524002",
     phone: "+91 76740 08057",
-    email: "info@uroandroguy.com",
+    email: "info@drrakeshvamsi.com",
     hours: "Mon - Sat: 9:00 AM - 5:00 PM (Slot basis - as per hospital schedule)",
     mapQuery: "KIMS+Hospitals+Nellore",
   },
   social: {
-    instagram: "@uroandroguy",
-    instagramUrl: "https://www.instagram.com/uroandroguy",
+    instagram: "@dr.rakeshvamsi",
+    instagramUrl: "https://www.instagram.com",
   },
   quote:
     "My focus is to provide advanced, ethical and personalized urological care with the latest technology for better outcomes and improved quality of life.",

@@ -9,10 +9,24 @@ import ClinicalVideoShowcase from "@/components/home/ClinicalVideoShowcase";
 import DoctorIntroSection from "@/components/home/DoctorIntroSection";
 import TestimonialsPreview from "@/components/home/TestimonialsPreview";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
+import { generateFaqSchema } from "@/lib/structuredData";
+import { faqsList } from "@/data/faqsData";
 
 export default function HomePage() {
+  const faqSchema = generateFaqSchema(
+    faqsList.slice(0, 6).map((f) => ({
+      question: f.question,
+      answer: f.answer,
+    }))
+  );
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* 1. Hero Section with Dr. Rakesh Vamsi Cutout & Glowing Holographic Visuals */}
       <HeroSection />
 

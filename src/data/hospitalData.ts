@@ -10,8 +10,8 @@ export const hospitalData = {
   branch: "Nellore",
   fullAddress: "KIMS Hospital, SP Nagar, Nellore, Andhra Pradesh, India - 524002",
   phone: "+91 76740 08057",
-  email: "info@uroandroguy.com",
-  instagram: "@uroandroguy",
+  email: "info@drrakeshvamsi.com",
+  instagram: "@dr.rakeshvamsi",
   hours: "Mon - Sat: 9:00 AM - 5:00 PM (Slot basis - as per hospital schedule)",
   googleMapsUrl: "https://maps.google.com/?q=KIMS+Hospitals+Nellore",
   embedMapUrl:

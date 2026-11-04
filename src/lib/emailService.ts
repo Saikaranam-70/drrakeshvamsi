@@ -239,7 +239,7 @@ Consultant: Dr. G. Rakesh Vamsi (MS, M.Ch Urology)
   <div class="card">
     <div class="header">
       <h1>New Appointment Booking Request</h1>
-      <p>UROANDROGUY — Dr. Rakesh Vamsi (KIMS Hospital Nellore)</p>
+      <p>Dr. Rakesh Vamsi — Urologist and Andrologist (KIMS Hospital Nellore)</p>
       <div class="badge">Reference ID: ${appointment.reference}</div>
     </div>
     <div class="content">
@@ -259,21 +259,20 @@ Consultant: Dr. G. Rakesh Vamsi (MS, M.Ch Urology)
         <tr><td class="label">Preferred Time Slot:</td><td class="val">${appointment.timeSlot}</td></tr>
       </table>
 
-      ${
-        appointment.description
-          ? `<div class="highlight-box">
+      ${appointment.description
+      ? `<div class="highlight-box">
               <strong>Patient Clinical Notes / Reason:</strong>
               <p style="margin: 6px 0 0; color: #334155; font-size: 14px; line-height: 1.5;">${appointment.description}</p>
             </div>`
-          : ""
-      }
+      : ""
+    }
 
       <div style="text-align: center; margin-top: 24px;">
         <a href="tel:${appointment.phone}" class="btn">Call Patient to Confirm</a>
       </div>
     </div>
     <div class="footer">
-      <p style="margin: 0;">UROANDROGUY Medical Portal • KIMS Hospital, Nellore, Andhra Pradesh</p>
+      <p style="margin: 0;">Dr. Rakesh Vamsi — Urologist and Andrologist • KIMS Hospital, Nellore, Andhra Pradesh</p>
     </div>
   </div>
 </body>
@@ -314,7 +313,7 @@ Call our clinic directly: +91 80193 74607 / +91 89783 72346
 
 Warm regards,
 Dr. G. Rakesh Vamsi (MS, M.Ch Urology)
-UROANDROGUY — KIMS Hospital Nellore
+Consultant Urologist and Andrologist — KIMS Hospital Nellore
     `.trim();
 
     const patientHtml = `
@@ -364,7 +363,7 @@ UROANDROGUY — KIMS Hospital Nellore
       <p style="color: #475569;">Our staff will contact you at <strong>${appointment.phone}</strong> to confirm your slot. For immediate assistance or rescheduling, please contact our hospital desk directly at <strong>+91 80193 74607</strong>.</p>
     </div>
     <div class="footer">
-      <p style="margin: 0;">UROANDROGUY Medical Portal • KIMS Hospital Nellore • www.uroandroguy.com</p>
+      <p style="margin: 0;">Dr. Rakesh Vamsi — Consultant Urologist and Andrologist • KIMS Hospital Nellore</p>
     </div>
   </div>
 </body>
@@ -407,7 +406,7 @@ Preferred Time: ${contact.preferredTimeSlot || "Not specified"}
 Message:
 ${contact.message || "No message provided."}
 ===================
-Sent from UROANDROGUY Website Contact Form.
+Sent from Dr. Rakesh Vamsi — Urologist and Andrologist Website Contact Form.
   `.trim();
 
   const adminHtml = `
@@ -435,7 +434,7 @@ Sent from UROANDROGUY Website Contact Form.
   <div class="card">
     <div class="header">
       <h1>New Website Inquiry</h1>
-      <p>UROANDROGUY — Dr. Rakesh Vamsi (KIMS Hospital Nellore)</p>
+      <p>Dr. Rakesh Vamsi — Urologist and Andrologist (KIMS Hospital Nellore)</p>
     </div>
     <div class="content">
       <table class="table">
@@ -446,14 +445,13 @@ Sent from UROANDROGUY Website Contact Form.
         ${contact.preferredTimeSlot ? `<tr><td class="label">Preferred Time:</td><td class="val">${contact.preferredTimeSlot}</td></tr>` : ""}
       </table>
 
-      ${
-        contact.message
-          ? `<div class="msg-box">
+      ${contact.message
+      ? `<div class="msg-box">
               <strong style="color: #0f766e; display: block; margin-bottom: 6px;">Message:</strong>
               <p style="margin: 0; color: #334155; line-height: 1.5;">${contact.message}</p>
             </div>`
-          : ""
-      }
+      : ""
+    }
 
       <div style="text-align: center; margin-top: 24px;">
         <a href="tel:${contact.phone}" class="btn">Call Contact</a>
@@ -461,7 +459,7 @@ Sent from UROANDROGUY Website Contact Form.
       </div>
     </div>
     <div class="footer">
-      <p style="margin: 0;">UROANDROGUY Medical Portal • Lead Notifications</p>
+      <p style="margin: 0;">Dr. Rakesh Vamsi — Urologist and Andrologist • Lead Notifications</p>
     </div>
   </div>
 </body>
@@ -517,7 +515,7 @@ KIMS Hospital, Nellore
       <p>For urgent inquiries or immediate appointments at KIMS Hospital Nellore, please call us directly at <strong>+91 80193 74607</strong>.</p>
     </div>
     <div class="footer">
-      <p style="margin: 0;">UROANDROGUY Medical Portal • KIMS Hospital Nellore</p>
+      <p style="margin: 0;">Dr. Rakesh Vamsi — Urologist and Andrologist • KIMS Hospital Nellore</p>
     </div>
   </div>
 </body>

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import AppointmentConfirmationClient from "./AppointmentConfirmationClient";
 
 export const metadata: Metadata = {
-  title: "Appointment Confirmed | UROANDROGUY",
+  title: "Appointment Confirmed | Urologist and Andrologist",
   description:
     "Your appointment with Dr. Rakesh Vamsi at KIMS Hospital Nellore has been received and confirmed.",
 };

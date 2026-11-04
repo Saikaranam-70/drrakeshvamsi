@@ -76,15 +76,15 @@ export default function AppointmentConfirmationClient() {
             {locale === "te"
               ? "అపాయింట్‌మెంట్ అభ్యర్థన నిర్ధారించబడింది!"
               : locale === "hi"
-              ? "अपॉइंटमेंट अनुरोध की पुष्टि हो गई!"
-              : "Appointment Request Confirmed!"}
+                ? "अपॉइंटमेंट अनुरोध की पुष्टि हो गई!"
+                : "Appointment Request Confirmed!"}
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto">
             {locale === "te"
               ? "మీ అపాయింట్‌మెంట్ అభ్యర్థన విజయవంతంగా నమోదైంది. KIMS హాస్పిటల్ నెల్లూరు క్లినికల్ కోఆర్డినేషన్ డెస్క్ SMS మరియు ఫోన్ ద్వారా మీ స్లాట్‌ను నిర్ధారిస్తుంది."
               : locale === "hi"
-              ? "आपका अपॉइंटमेंट अनुरोध सफलतापूर्वक दर्ज हो गया है। किम्स अस्पताल नेल्लोर का समन्वय डेस्क एसएमएस और फोन द्वारा आपके समय की पुष्टि करेगा।"
-              : "Your appointment request has been successfully generated. Our clinical coordination desk at KIMS Hospital Nellore will confirm your slot via SMS and phone."}
+                ? "आपका अपॉइंटमेंट अनुरोध सफलतापूर्वक दर्ज हो गया है। किम्स अस्पताल नेल्लोर का समन्वय डेस्क एसएमएस और फोन द्वारा आपके समय की पुष्टि करेगा।"
+                : "Your appointment request has been successfully generated. Our clinical coordination desk at KIMS Hospital Nellore will confirm your slot via SMS and phone."}
           </p>
         </div>
 
@@ -96,14 +96,14 @@ export default function AppointmentConfirmationClient() {
               <div className="relative w-10 h-10 bg-white rounded-lg p-1 flex-shrink-0">
                 <Image
                   src="/images/logo.png"
-                  alt="UROANDROGUY"
+                  alt="Urologist and Andrologist"
                   fill
                   className="object-contain"
                 />
               </div>
               <div>
                 <span className="font-heading font-extrabold text-base text-white tracking-tight">
-                  UROANDRO<span className="text-brand-cyan">GUY</span>
+                  Urologist & <span className="text-brand-cyan">Andrologist</span>
                 </span>
                 <span className="text-[10px] uppercase font-bold text-brand-teal-300 block">
                   {locDoctor.hospital.name}, {locDoctor.hospital.city}
@@ -216,22 +216,22 @@ export default function AppointmentConfirmationClient() {
                   {locale === "te"
                     ? "KIMS ఆసుపత్రి రిసెప్షన్ వద్ద రిజిస్ట్రేషన్ కోసం మీ నిర్ణీత సమయానికి 15 నిమిషాల ముందుగా చేరుకోండి."
                     : locale === "hi"
-                    ? "किम्स अस्पताल रिसेप्शन पर पंजीकरण के लिए अपने निर्धारित समय से 15 मिनट पहले पहुंचें।"
-                    : "Please arrive 15 minutes before your scheduled slot for registration at KIMS Hospital reception."}
+                      ? "किम्स अस्पताल रिसेप्शन पर पंजीकरण के लिए अपने निर्धारित समय से 15 मिनट पहले पहुंचें।"
+                      : "Please arrive 15 minutes before your scheduled slot for registration at KIMS Hospital reception."}
                 </li>
                 <li>
                   {locale === "te"
                     ? "గత మెడికల్ ప్రిస్క్రిప్షన్లు, అల్ట్రాసౌండ్ నివేదికలు మరియు రక్త పరీక్ష ఫలితాలు ఉంటే వెంట తీసుకురండి."
                     : locale === "hi"
-                    ? "उपलब्ध होने पर पिछले मेडिकल पर्चे, अल्ट्रासाउंड रिपोर्ट और रक्त परीक्षण परिणाम साथ लाएं।"
-                    : "Bring past medical prescriptions, ultrasound reports, and blood test results if available."}
+                      ? "उपलब्ध होने पर पिछले मेडिकल पर्चे, अल्ट्रासाउंड रिपोर्ट और रक्त परीक्षण परिणाम साथ लाएं।"
+                      : "Bring past medical prescriptions, ultrasound reports, and blood test results if available."}
                 </li>
                 <li>
                   {locale === "te"
                     ? "క్యాష్‌లెస్ డెస్క్ అనుమతుల కోసం మీ ప్రభుత్వ గుర్తింపు కార్డు మరియు ఆరోగ్య బీమా కార్డును వెంట ఉంచుకోండి."
                     : locale === "hi"
-                    ? "कैशलेस डेस्क क्लीयरेंस के लिए अपना सरकारी फोटो पहचान पत्र और स्वास्थ्य बीमा कार्ड साथ रखें।"
-                    : "Carry your government photo ID and health insurance card for cashless desk clearance."}
+                      ? "कैशलेस डेस्क क्लीयरेंस के लिए अपना सरकारी फोटो पहचान पत्र और स्वास्थ्य बीमा कार्ड साथ रखें।"
+                      : "Carry your government photo ID and health insurance card for cashless desk clearance."}
                 </li>
               </ul>
             </div>

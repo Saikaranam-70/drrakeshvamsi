@@ -37,7 +37,7 @@ export const enCommon = {
   footer: {
     preFooterHeading: "Need Expert Urology or Andrology Consultation?",
     preFooterSub: "Consult with Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
-    aboutHeading: "UROANDROGUY",
+    aboutHeading: "Urologist and Andrologist",
     aboutBio:
       "Dr. Rakesh Vamsi is a Consultant Urologist, Andrologist, and Laparoscopic & Robotic Surgeon at KIMS Hospital, Nellore. Providing compassionate, evidence-based care with advanced minimally invasive technology.",
     quickNavHeading: "Quick Navigation",
