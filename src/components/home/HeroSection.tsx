@@ -80,87 +80,19 @@ export default function HeroSection() {
               />
             </svg>
 
-            {/* Luminous Kidney & Urinary Tract Watermark (Matching Reference Image) */}
-            <div className="absolute top-10 right-8 lg:right-16 w-64 h-80 sm:w-80 sm:h-96 pointer-events-none hidden md:block">
-              <svg
-                viewBox="0 0 320 380"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-full filter drop-shadow-[0_0_16px_rgba(255,255,255,0.9)]"
-              >
-                <defs>
-                  {/* Luminous Inner Glow for Kidneys */}
-                  <radialGradient id="kidneyVolumetric" cx="45%" cy="40%" r="55%">
-                    <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.5" />
-                    <stop offset="60%" stopColor="#FFFFFF" stopOpacity="0.18" />
-                    <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.04" />
-                  </radialGradient>
-
-                  {/* Luminous Glow for Bladder */}
-                  <radialGradient id="bladderVolumetric" cx="50%" cy="35%" r="60%">
-                    <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.55" />
-                    <stop offset="70%" stopColor="#FFFFFF" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.05" />
-                  </radialGradient>
-                </defs>
-
-                {/* Left Kidney (Viewer's Left) */}
-                <path
-                  d="M100 80 C68 40, 16 68, 32 120 C 44 160, 84 165, 100 138 C 112 120, 112 98, 100 80 Z"
-                  stroke="#FFFFFF"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="url(#kidneyVolumetric)"
-                />
-                {/* Left Kidney Calyces / Inner Pyramids */}
-                <path d="M54 88 C62 96, 66 106, 58 118" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="3 3" opacity="0.9" />
-                <path d="M72 94 C78 106, 78 116, 70 128" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="3 3" opacity="0.9" />
-
-                {/* Right Kidney (Viewer's Right) */}
-                <path
-                  d="M220 80 C252 40, 304 68, 288 120 C 276 160, 236 165, 220 138 C 208 120, 208 98, 220 80 Z"
-                  stroke="#FFFFFF"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="url(#kidneyVolumetric)"
-                />
-                {/* Right Kidney Calyces / Inner Pyramids */}
-                <path d="M266 88 C258 96, 254 106, 262 118" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="3 3" opacity="0.9" />
-                <path d="M248 94 C242 106, 242 116, 250 128" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="3 3" opacity="0.9" />
-
-                {/* Left Ureter */}
-                <path
-                  d="M100 120 C 118 138, 134 175, 144 240"
-                  stroke="#FFFFFF"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-
-                  {/* Right Ureter */}
-                  <path
-                    d="M220 120 C 202 138, 186 175, 176 240"
-                    stroke="#FFFFFF"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-
-                  {/* Urinary Bladder */}
-                  <path
-                    d="M138 245 C 138 228, 182 228, 182 245 C 188 268, 182 284, 160 290 C 138 284, 132 268, 138 245 Z"
-                    stroke="#FFFFFF"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="url(#bladderVolumetric)"
-                  />
-
-                  {/* Urethra Output */}
-                  <path d="M160 290 L160 315" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" />
-                </svg>
-              </div>
-            </div>
+        {/* Realistic 3D Medical Kidney Graphic (High-Res Source Asset) */}
+        <div className="absolute top-1/2 -translate-y-1/2 right-2 lg:right-6 xl:right-10 w-[340px] sm:w-[420px] lg:w-[480px] xl:w-[540px] h-[340px] sm:h-[420px] lg:h-[480px] xl:h-[540px] pointer-events-none hidden md:block z-0">
+          <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_92%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_92%)] filter drop-shadow-[0_8px_24px_rgba(23,54,75,0.08)]">
+            <Image
+              src="/images/kidneys-graphic.jpg"
+              alt="Kidney and Urology Advanced Care - Dr. Rakesh Vamsi"
+              fill
+              className="object-contain object-center scale-110"
+              priority
+            />
+          </div>
+        </div>
+      </div>
 
             {/* Bottom Left Corner Wave & Golden Accent */}
             <div className="absolute bottom-0 left-0 w-80 sm:w-96 h-60 pointer-events-none overflow-hidden z-0">
