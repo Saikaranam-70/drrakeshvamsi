@@ -80,18 +80,18 @@ export default function HeroSection() {
           />
         </svg>
 
-              {/* Realistic 3D Medical Kidney Graphic (High-Res Source Asset) */}
-              <div className="absolute top-1/2 -translate-y-1/2 right-2 lg:right-6 xl:right-10 w-[340px] sm:w-[420px] lg:w-[480px] xl:w-[540px] h-[340px] sm:h-[420px] lg:h-[480px] xl:h-[540px] pointer-events-none hidden md:block z-0">
-                <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_92%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_92%)] filter drop-shadow-[0_8px_24px_rgba(23,54,75,0.08)]">
-                  <Image
-                    src="/images/kidneys-graphic.jpg"
-                    alt="Kidney and Urology Advanced Care - Dr. Rakesh Vamsi"
-                    fill
-                    className="object-contain object-center scale-110"
-                    priority
-                  />
-                </div>
-              </div>
+        {/* Realistic 3D Medical Kidney Graphic (Visible on small screens & desktop) */}
+        <div className="absolute top-16 sm:top-24 lg:top-1/2 lg:-translate-y-1/2 -right-4 sm:right-2 lg:right-6 xl:right-10 w-[190px] sm:w-[280px] lg:w-[480px] xl:w-[540px] h-[190px] sm:h-[280px] lg:h-[480px] xl:h-[540px] pointer-events-none z-0 block">
+          <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_92%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_92%)] filter drop-shadow-[0_8px_24px_rgba(23,54,75,0.08)] opacity-60 sm:opacity-75 lg:opacity-100 transition-opacity">
+            <Image
+              src="/images/kidneys-graphic.jpg"
+              alt="Kidney and Urology Advanced Care - Dr. Rakesh Vamsi"
+              fill
+              className="object-contain object-center scale-110"
+              priority
+            />
+          </div>
+        </div>
             </div>
 
             {/* Bottom Left Corner Wave & Golden Accent */ }
