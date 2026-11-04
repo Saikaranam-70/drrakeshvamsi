@@ -4,26 +4,30 @@
 
 @layer base {
   :root {
-    --brand-navy-950: #001026;
-    --brand-navy-900: #001B3D;
-    --brand-navy-800: #002852;
-    --brand-navy-700: #003366;
+    --brand-navy-950: #000B1A;
+    --brand-navy-900: #001229;
+    --brand-navy-800: #001F47;
+    --brand-navy-700: #002D66;
     --brand-teal-500: #009DBB;
     --brand-cyan: #00C5DC;
-    --brand-border: #D8EDF7;
-    --brand-surface: #F5FAFC;
+    --brand-border: #002A54;
+    --brand-surface: #001026;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   body {
-    background-color: #FFFFFF;
-    color: #1E293B;
+    background-color: #000B1A;
+    color: #F1F5F9;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Multilingual Script Typography */
@@ -36,8 +40,8 @@
   }
 
   ::selection {
-    background-color: #009DBB;
-    color: #FFFFFF;
+    background-color: #00C5DC;
+    color: #000B1A;
   }
 }
 
@@ -48,16 +52,28 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #000B1A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #002D66;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #009DBB;
+  background: #00C5DC;
+}
+
+/* Hide scrollbar utility for horizontal pills and carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
 /* Medical Hero Glow Effects */
@@ -79,28 +95,56 @@
   pointer-events: none;
 }
 
-/* Card hover transitions */
+@media (max-width: 768px) {
+  .hero-glow-teal {
+    width: 260px;
+    height: 260px;
+    filter: blur(30px);
+    opacity: 0.7;
+  }
+
+  .hero-glow-navy {
+    width: 300px;
+    height: 300px;
+    filter: blur(35px);
+    opacity: 0.6;
+  }
+}
+
+/* Card hover transitions - Only enabled on desktop mouse pointers to prevent mobile scrolling stutter */
 .hover-lift {
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  will-change: transform;
 }
 
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px -8px rgba(0, 27, 61, 0.12);
-  border-color: #009DBB;
-}
 
-/* Script signature styling */
-.font-signature {
-  font-family: 'Brush Script MT', 'Segoe Script', cursive;
-}
+  @media (hover: hover) and (pointer: fine) {
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -8px rgba(0, 27, 61, 0.25);
+      border-color: #009DBB;
+    }
+  }
 
-/* Hide spin buttons on number inputs */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
-}
+  /* Hardware acceleration for mobile animations */
+  .transform-gpu {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Script signature styling */
+  .font-signature {
+    font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  }
+
+  /* Hide spin buttons on number inputs */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }

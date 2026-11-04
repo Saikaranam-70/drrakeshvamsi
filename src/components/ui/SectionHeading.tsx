@@ -20,7 +20,7 @@ export default function SectionHeading({
   highlightedText,
   subtitle,
   align = "left",
-  theme = "light",
+  theme = "dark",
   className,
   children,
 }: SectionHeadingProps) {

@@ -80,7 +80,7 @@ export default function BlogExplorer() {
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-brand-navy-950 text-slate-100 min-h-screen">
       {/* 1. Hero Section matching screenshot */}
       <section className="relative overflow-hidden bg-hero-gradient text-white pt-12 pb-16 lg:pt-16 lg:pb-24">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none" />
@@ -136,18 +136,18 @@ export default function BlogExplorer() {
 
             {/* Right: Quote Card with Signature */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-2xl text-slate-800 space-y-4 border border-slate-100">
-                <span className="text-4xl font-serif text-brand-teal-500 leading-none block">
+              <div className="bg-brand-navy-900/90 rounded-2xl p-6 sm:p-7 shadow-2xl text-white space-y-4 border border-brand-navy-800">
+                <span className="text-4xl font-serif text-brand-cyan leading-none block">
                   “
                 </span>
-                <p className="text-sm font-medium text-slate-700 leading-relaxed">
+                <p className="text-sm font-medium text-slate-300 leading-relaxed">
                   {t("blog.doctorQuote", "Awareness leads to earlier diagnosis, better treatment and a healthier life.")}
                 </p>
-                <div className="pt-3 border-t border-slate-100 text-left">
-                  <div className="text-xl font-signature text-brand-navy-900">
+                <div className="pt-3 border-t border-brand-navy-800 text-left">
+                  <div className="text-xl font-signature text-white">
                     {locDoctor.name}
                   </div>
-                  <div className="text-[9px] font-extrabold uppercase tracking-wider text-brand-teal-600 mt-0.5">
+                  <div className="text-[9px] font-extrabold uppercase tracking-wider text-brand-cyan mt-0.5">
                     {locDoctor.designation}
                   </div>
                 </div>
@@ -158,32 +158,31 @@ export default function BlogExplorer() {
       </section>
 
       {/* 2. Category Filter Pills Strip */}
-      <section className="bg-white border-b border-slate-200 sticky top-[69px] z-30 shadow-xs">
+      <section className="bg-brand-navy-950/95 border-b border-brand-navy-800 sticky top-[69px] z-30 backdrop-blur-md shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-3">
-            {categoryPills.map((cat) => {
-              const isSelected = selectedCategory === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  type="button"
-                  onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
-                    isSelected
-                      ? "bg-brand-navy-900 text-white font-bold shadow-xs"
-                      : "text-slate-600 hover:text-brand-navy-900 hover:bg-slate-100 border border-slate-200"
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              );
-            })}
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-3 px-1 sm:px-0 scroll-smooth">
+              {categoryPills.map((cat) => {
+                const isSelected = selectedCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    onClick={() => setSelectedCategory(cat.id)}
+                                className={`px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all flex-shrink-0 ${isSelected
+                      ? "bg-gradient-to-r from-brand-teal-400 to-brand-cyan text-brand-navy-950 font-bold shadow-xs"
+                      : "text-slate-400 hover:text-white hover:bg-brand-navy-900 border border-brand-navy-800"
+                      }`}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
       </section>
 
       {/* 3. Main Articles List & Sidebar */}
-      <section className="py-14 bg-brand-surface min-h-screen">
+      <section className="py-14 bg-brand-navy-950 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Left 8 Cols: Articles Grid */}
@@ -193,7 +192,7 @@ export default function BlogExplorer() {
                   {filteredArticles.map((article) => (
                     <article
                       key={article.slug}
-                      className="group bg-white rounded-2xl overflow-hidden border border-brand-border shadow-xs hover-lift transition-all flex flex-col justify-between"
+                      className="group bg-brand-navy-900/90 rounded-2xl overflow-hidden border border-brand-navy-800 hover:border-brand-teal-500/40 shadow-xs hover-lift transition-all flex flex-col justify-between"
                     >
                       {/* Card Thumbnail Area with Category Badge */}
                       <div className="relative aspect-[16/9] bg-gradient-to-tr from-brand-navy-950 via-brand-navy-900 to-brand-teal-900 flex items-center justify-center p-6 text-center overflow-hidden">
@@ -209,33 +208,33 @@ export default function BlogExplorer() {
                       {/* Card Content */}
                       <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div className="space-y-2">
-                          <h2 className="font-heading font-extrabold text-lg text-brand-navy-900 group-hover:text-brand-teal-600 transition-colors line-clamp-2">
+                          <h2 className="font-heading font-extrabold text-lg text-white group-hover:text-brand-cyan transition-colors line-clamp-2">
                             <Link href={`/blog/${article.slug}`}>
                               {article.title}
                             </Link>
                           </h2>
-                          <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 leading-relaxed">
+                          <p className="text-xs sm:text-sm text-slate-400 line-clamp-2 leading-relaxed">
                             {article.shortDescription}
                           </p>
                         </div>
 
                         {/* Metadata & Read More link */}
-                        <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                        <div className="pt-4 border-t border-brand-navy-800 flex items-center justify-between text-xs text-slate-400">
                           <div className="flex items-center gap-3">
                             <span className="flex items-center gap-1">
-                              <Calendar className="w-3.5 h-3.5" />
+                              <Calendar className="w-3.5 h-3.5 text-brand-cyan" />
                               {article.date}
                             </span>
                             <span>•</span>
                             <span className="flex items-center gap-1">
-                              <Clock className="w-3.5 h-3.5" />
+                              <Clock className="w-3.5 h-3.5 text-brand-cyan" />
                               {article.readTime}
                             </span>
                           </div>
 
                           <Link
                             href={`/blog/${article.slug}`}
-                            className="font-bold text-brand-teal-700 hover:text-brand-teal-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                            className="font-bold text-brand-cyan hover:text-white flex items-center gap-1 group-hover:translate-x-1 transition-transform"
                           >
                             <span>{t("common.readMore", "Read More")}</span>
                             <span>→</span>
@@ -246,19 +245,19 @@ export default function BlogExplorer() {
                   ))}
                 </div>
               ) : (
-                <div className="bg-white rounded-2xl p-12 text-center border border-brand-border shadow-xs space-y-3">
-                  <div className="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
+                <div className="bg-brand-navy-900/90 rounded-2xl p-12 text-center border border-brand-navy-800 shadow-xs space-y-3">
+                  <div className="w-16 h-16 rounded-full bg-brand-navy-950 border border-brand-navy-800 text-brand-cyan flex items-center justify-center mx-auto">
                     <Search className="w-8 h-8" />
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-brand-navy-900">
+                  <h3 className="font-heading font-bold text-lg text-white">
                     {locale === "te" ? "వ్యాసాలు ఏవీ కనుగొనబడలేదు" : locale === "hi" ? "कोई लेख नहीं मिला" : "No articles found"}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-500 max-w-sm mx-auto">
+                  <p className="text-xs sm:text-sm text-slate-400 max-w-sm mx-auto">
                     {locale === "te"
                       ? `"${searchQuery}" శోధనకు తగిన వ్యాసాలు లేవు. అన్ని వ్యాసాలను చూడటానికి శోధనను తొలగించండి.`
                       : locale === "hi"
-                      ? `"${searchQuery}" के लिए कोई लेख नहीं मिला। सभी स्वास्थ्य गाइड देखने के लिए खोज साफ़ करें।`
-                      : `No medical articles matched your query "${searchQuery}". Clear search to view all health guides.`}
+                        ? `"${searchQuery}" के लिए कोई लेख नहीं मिला। सभी स्वास्थ्य गाइड देखने के लिए खोज साफ़ करें।`
+                        : `No medical articles matched your query "${searchQuery}". Clear search to view all health guides.`}
                   </p>
                   <button
                     type="button"
@@ -266,7 +265,7 @@ export default function BlogExplorer() {
                       setSearchQuery("");
                       setSelectedCategory("all");
                     }}
-                    className="px-4 py-2 rounded-full text-xs font-semibold text-white bg-brand-teal-600 hover:bg-brand-teal-500"
+                    className="px-4 py-2 rounded-full text-xs font-semibold text-brand-navy-950 bg-gradient-to-r from-brand-teal-400 to-brand-cyan hover:shadow-glow transition-all"
                   >
                     {locale === "te" ? "అన్ని వ్యాసాలు చూడండి" : locale === "hi" ? "सभी लेख देखें" : "View All Articles"}
                   </button>
@@ -277,7 +276,7 @@ export default function BlogExplorer() {
             {/* Right 4 Cols: Sidebar (Search + Categories widget + Stay Updated) */}
             <aside aria-label="Article search and categories" className="lg:col-span-4 space-y-6 lg:sticky lg:top-36">
               {/* Search Widget */}
-              <div className="bg-white p-5 rounded-2xl border border-brand-border shadow-xs">
+              <div className="bg-brand-navy-900/90 p-5 rounded-2xl border border-brand-navy-800 shadow-xs">
                 <div className="relative">
                   <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                   <input
@@ -285,13 +284,13 @@ export default function BlogExplorer() {
                     placeholder={t("blog.searchPlaceholder", "Search articles...")}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-9 py-2.5 rounded-full text-xs sm:text-sm bg-slate-50 border border-slate-200 focus:bg-white focus:outline-none focus:border-brand-teal-500 transition-all"
+                    className="w-full pl-10 pr-9 py-2.5 rounded-full text-xs sm:text-sm bg-brand-navy-950 border border-brand-navy-700 text-white placeholder-slate-400 focus:outline-none focus:border-brand-cyan transition-all"
                   />
                   {searchQuery && (
                     <button
                       type="button"
                       onClick={() => setSearchQuery("")}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors"
                     >
                       <X className="w-4 h-4" />
                     </button>
@@ -300,8 +299,8 @@ export default function BlogExplorer() {
               </div>
 
               {/* Categories Widget matching screenshot */}
-              <div className="bg-white p-6 rounded-2xl border border-brand-border shadow-xs space-y-4">
-                <h3 className="font-heading font-extrabold text-base text-brand-navy-900">
+              <div className="bg-brand-navy-900/90 p-6 rounded-2xl border border-brand-navy-800 shadow-xs space-y-4">
+                <h3 className="font-heading font-extrabold text-base text-white">
                   {t("blog.categories", "Categories")}
                 </h3>
                 <div className="space-y-1">
@@ -310,7 +309,7 @@ export default function BlogExplorer() {
                       key={cat.id}
                       type="button"
                       onClick={() => setSelectedCategory(cat.id)}
-                      className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-brand-surface text-xs font-semibold text-slate-700 hover:text-brand-navy-900 transition-colors text-left"
+                      className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-brand-navy-800/60 text-xs font-semibold text-slate-300 hover:text-brand-cyan transition-colors text-left"
                     >
                       <span>{cat.name}</span>
                       <div className="flex items-center gap-1 text-slate-400 text-[11px]">
@@ -349,11 +348,11 @@ export default function BlogExplorer() {
                       placeholder={t("blog.emailPlaceholder", "Enter your email address")}
                       value={newsletterEmail}
                       onChange={(e) => setNewsletterEmail(e.target.value)}
-                      className="w-full pl-4 pr-11 py-2.5 rounded-full text-xs bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
+                      className="w-full pl-4 pr-11 py-2.5 rounded-full text-xs bg-brand-navy-950 border border-brand-navy-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
                     />
                     <button
                       type="submit"
-                      className="absolute right-1.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-brand-teal-500 hover:bg-brand-teal-400 text-white flex items-center justify-center transition-colors"
+                      className="absolute right-1.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-brand-teal-400 to-brand-cyan text-brand-navy-950 flex items-center justify-center transition-colors font-bold"
                       aria-label="Subscribe"
                     >
                       <ArrowRight className="w-4 h-4" />
@@ -367,7 +366,7 @@ export default function BlogExplorer() {
       </section>
 
       {/* 4. Bottom Have a Question Banner matching screenshot */}
-      <section className="py-10 bg-white">
+      <section className="py-10 bg-brand-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl bg-gradient-to-r from-brand-navy-950 via-brand-navy-900 to-brand-navy-800 border border-brand-teal-500/20 p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
             <div>
@@ -378,8 +377,8 @@ export default function BlogExplorer() {
                 {locale === "te"
                   ? "డాక్టర్ రాకేష్ వంశీ వద్ద నిపుణుల సలహా పొందండి. KIMS హాస్పిటల్ నెల్లూరులో సంప్రదింపు బుక్ చేయండి."
                   : locale === "hi"
-                  ? "डॉ. राकेश वामसी से विशेषज्ञ सलाह प्राप्त करें। किम्स अस्पताल, नेल्लोर में परामर्श बुक करें।"
-                  : "Get expert advice from Dr. Rakesh Vamsi. Book a consultation at KIMS Hospital, Nellore."}
+                    ? "डॉ. राकेश वामसी से विशेषज्ञ सलाह प्राप्त करें। किम्स अस्पताल, नेल्लोर में परामर्श बुक करें।"
+                    : "Get expert advice from Dr. Rakesh Vamsi. Book a consultation at KIMS Hospital, Nellore."}
               </p>
             </div>
             <Link

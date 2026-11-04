@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { contactFormSchema } from "@/lib/schemas";
 import { sendContactEmails } from "@/lib/emailService";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();

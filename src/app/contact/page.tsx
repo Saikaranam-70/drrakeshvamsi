@@ -78,7 +78,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-brand-navy-950 text-slate-100 min-h-screen">
       {/* 1. Hero Section matching screenshot */}
       <section className="relative overflow-hidden bg-hero-gradient text-white pt-12 pb-16 lg:pt-16 lg:pb-24">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none" />
@@ -155,21 +155,21 @@ export default function ContactPage() {
 
             {/* Right: Quote Card with Signature */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-2xl text-slate-800 space-y-4 border border-slate-100">
-                <span className="text-4xl font-serif text-brand-teal-500 leading-none block">
+              <div className="bg-brand-navy-900/90 rounded-2xl p-6 sm:p-7 shadow-2xl text-white space-y-4 border border-brand-navy-800">
+                <span className="text-4xl font-serif text-brand-cyan leading-none block">
                   “
                 </span>
-                <p className="text-sm font-medium text-slate-700 leading-relaxed">
+                <p className="text-sm font-medium text-slate-300 leading-relaxed">
                   {t("contact.doctorQuote", "Your health matters. We are here to listen, understand and provide the best care for you.")}
                 </p>
-                <div className="pt-3 border-t border-slate-100 text-left">
-                  <div className="text-xl font-signature text-brand-navy-900">
+                <div className="pt-3 border-t border-brand-navy-800 text-left">
+                  <div className="text-xl font-signature text-white">
                     {locDoctor.name}
                   </div>
-                  <div className="text-[9px] font-extrabold uppercase tracking-wider text-brand-teal-600 mt-0.5">
+                  <div className="text-[9px] font-extrabold uppercase tracking-wider text-brand-cyan mt-0.5">
                     {locDoctor.designation}
                   </div>
-                  <div className="text-[8px] text-slate-500 uppercase mt-0.5">
+                  <div className="text-[8px] text-slate-400 uppercase mt-0.5">
                     {locDoctor.hospital.name}, {locDoctor.hospital.city}
                   </div>
                 </div>
@@ -180,28 +180,28 @@ export default function ContactPage() {
       </section>
 
       {/* 2. Main 3-Column Layout matching screenshot */}
-      <section className="py-14 bg-brand-surface">
+      <section className="py-14 bg-brand-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Col 1 (3.5 cols): Contact Information matching screenshot */}
             <div className="lg:col-span-4 space-y-4">
-              <div className="bg-white p-6 rounded-2xl border border-brand-border shadow-xs space-y-4">
-                <h3 className="font-heading font-extrabold text-lg text-brand-navy-900 mb-2">
+              <div className="bg-brand-navy-900/90 p-6 rounded-2xl border border-brand-navy-800 shadow-md space-y-4 text-white">
+                <h3 className="font-heading font-extrabold text-lg text-white mb-2">
                   {t("contact.infoHeading", "Contact Information")}
                 </h3>
 
                 {/* Phone */}
-                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-brand-teal-50 text-brand-teal-600 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-brand-navy-800/80 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-brand-navy-950 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-slate-500">
+                    <div className="text-xs font-semibold text-slate-400">
                       {locale === "te" ? "ఫోన్ నంబర్" : locale === "hi" ? "फ़ोन" : "Phone"}
                     </div>
                     <a
                       href={`tel:${locDoctor.hospital.phone.replace(/\s+/g, "")}`}
-                      className="text-sm font-bold text-brand-navy-900 hover:text-brand-teal-600 transition-colors block mt-0.5"
+                      className="text-sm font-bold text-white hover:text-brand-cyan transition-colors block mt-0.5"
                     >
                       {locDoctor.hospital.phone}
                     </a>
@@ -209,17 +209,17 @@ export default function ContactPage() {
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-brand-teal-50 text-brand-teal-600 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-brand-navy-800/80 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-brand-navy-950 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-slate-500">
+                    <div className="text-xs font-semibold text-slate-400">
                       {locale === "te" ? "ఈమెయిల్" : locale === "hi" ? "ईमेल" : "Email"}
                     </div>
                     <a
                       href={`mailto:${locDoctor.hospital.email}`}
-                      className="text-sm font-bold text-brand-navy-900 hover:text-brand-teal-600 transition-colors block mt-0.5"
+                      className="text-sm font-bold text-white hover:text-brand-cyan transition-colors block mt-0.5"
                     >
                       {locDoctor.hospital.email}
                     </a>
@@ -227,32 +227,32 @@ export default function ContactPage() {
                 </div>
 
                 {/* Hospital Address */}
-                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-brand-teal-50 text-brand-teal-600 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-brand-navy-800/80 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-brand-navy-950 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-slate-500">
+                    <div className="text-xs font-semibold text-slate-400">
                       {locale === "te" ? "ఆసుపత్రి" : locale === "hi" ? "अस्पताल" : "Hospital"}
                     </div>
-                    <div className="text-xs font-bold text-brand-navy-900 mt-0.5">
+                    <div className="text-xs font-bold text-white mt-0.5">
                       {locDoctor.hospital.address}
                     </div>
                   </div>
                 </div>
 
                 {/* Instagram */}
-                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-brand-navy-800/80 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-pink-950/40 border border-pink-500/30 text-pink-400 flex items-center justify-center flex-shrink-0">
                     <Instagram className="w-5 h-5" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-slate-500">Instagram</div>
+                    <div className="text-xs font-semibold text-slate-400">Instagram</div>
                     <a
                       href={locDoctor.social.instagramUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-bold text-brand-navy-900 hover:text-pink-600 transition-colors block mt-0.5"
+                      className="text-sm font-bold text-white hover:text-pink-400 transition-colors block mt-0.5"
                     >
                       {locDoctor.social.instagram}
                     </a>
@@ -260,18 +260,18 @@ export default function ContactPage() {
                 </div>
 
                 {/* Timings */}
-                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-brand-teal-50 text-brand-teal-600 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-brand-navy-800/80 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-brand-navy-950 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-slate-500">
+                    <div className="text-xs font-semibold text-slate-400">
                       {locale === "te" ? "సంప్రదింపు సమయాలు" : locale === "hi" ? "परामर्श का समय" : "Consultation Hours"}
                     </div>
-                    <div className="text-xs font-bold text-brand-navy-900 mt-0.5">
+                    <div className="text-xs font-bold text-white mt-0.5">
                       {locale === "te" ? "సోమ - శని: ఉదయం 9:00 - సాయంత్రం 5:00" : locale === "hi" ? "सोम - शनि: सुबह 9:00 - शाम 5:00" : "Mon - Sat: 9:00 AM - 5:00 PM"}
                     </div>
-                    <div className="text-[10px] text-slate-500">
+                    <div className="text-[10px] text-slate-400">
                       {locale === "te" ? "(స్లాట్ ప్రాతిపదికన - ఆసుపత్రి షెడ్యూల్ ప్రకారం)" : locale === "hi" ? "(स्लॉट के अनुसार - अस्पताल समय सारिणी)" : "(Slot basis - as per hospital schedule)"}
                     </div>
                   </div>
@@ -279,18 +279,18 @@ export default function ContactPage() {
               </div>
 
               {/* Visit Our Clinic Card matching screenshot */}
-              <div className="p-5 bg-white rounded-2xl border border-brand-border shadow-xs flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-brand-teal-100 text-brand-teal-700 flex items-center justify-center flex-shrink-0">
+              <div className="p-5 bg-brand-navy-900/90 rounded-2xl border border-brand-navy-800 shadow-md flex items-center gap-3.5 text-white">
+                <div className="w-10 h-10 rounded-xl bg-brand-navy-950 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center flex-shrink-0">
                   <Building2 className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
                     {locale === "te" ? "మా క్లినిక్ సందర్శించండి" : locale === "hi" ? "हमारे क्लिनिक पर आएं" : "Visit Our Clinic"}
                   </span>
-                  <div className="text-sm font-extrabold text-brand-navy-900">
+                  <div className="text-sm font-extrabold text-white">
                     {locDoctor.hospital.name}, {locDoctor.hospital.city}
                   </div>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
+                  <p className="text-[11px] text-slate-400 mt-0.5">
                     {locale === "te"
                       ? "ఆధునిక యూరాలజీ సౌకర్యాలతో సమగ్ర సంప్రదింపు."
                       : locale === "hi"
@@ -304,17 +304,17 @@ export default function ContactPage() {
             {/* Col 2 (5 cols): Map & Facilities Gallery matching screenshot */}
             <div className="lg:col-span-5 space-y-6">
               {/* Map Container */}
-              <div className="bg-white p-5 rounded-2xl border border-brand-border shadow-xs space-y-4">
+              <div className="bg-brand-navy-900/90 p-5 rounded-2xl border border-brand-navy-800 shadow-md space-y-4 text-white">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-heading font-extrabold text-base text-brand-navy-900">
+                    <h3 className="font-heading font-extrabold text-base text-white">
                       {locale === "te"
                         ? "KIMS హాస్పిటల్, నెల్లూరులో మమ్మల్ని కనుగొనండి"
                         : locale === "hi"
                         ? "किम्स अस्पताल, नेल्लोर में हमें खोजें"
                         : "Find Us at KIMS Hospital, Nellore"}
                     </h3>
-                    <p className="text-xs text-slate-500">
+                    <p className="text-xs text-slate-400">
                       {locale === "te"
                         ? "సులభంగా చేరుకోగల ప్రదేశం మరియు అత్యున్నత సౌకర్యాలు."
                         : locale === "hi"
@@ -327,15 +327,15 @@ export default function ContactPage() {
                     href="https://maps.google.com/?q=KIMS+Hospital+Nellore+Andhra+Pradesh"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white bg-brand-teal-600 hover:bg-brand-teal-500 transition-colors shadow-xs"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-brand-navy-950 bg-gradient-to-r from-brand-teal-400 to-brand-cyan hover:from-brand-teal-300 hover:to-brand-cyan/90 transition-colors shadow-xs"
                   >
                     <span>{locale === "te" ? "దారి తెలుసుకోండి" : locale === "hi" ? "दिशा-निर्देश" : "Get Directions"}</span>
-                    <Navigation className="w-3.5 h-3.5" />
+                    <Navigation className="w-3.5 h-3.5 text-brand-navy-950" />
                   </a>
                 </div>
 
                 {/* Embedded Interactive Google Map provided by hospital */}
-                <div className="relative aspect-[16/10] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 shadow-inner">
+                <div className="relative aspect-[16/10] bg-brand-navy-950 rounded-xl overflow-hidden border border-brand-navy-800 shadow-inner">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.871882171663!2d79.96576907587249!3d14.434546081119064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf328e835091f%3A0x2039ca804465dba5!2sKIMS%20Hospitals%2C%20Nellore!5e0!3m2!1sen!2sin!4v1793368188028!5m2!1sen!2sin"
                     width="100%"
@@ -355,27 +355,27 @@ export default function ContactPage() {
                     {locale === "te" ? "ఆసుపత్రి మౌలిక సదుపాయాలు & సౌకర్యాలు" : locale === "hi" ? "अस्पताल की बुनियादी ढांचा और सुविधाएं" : "Hospital Infrastructure & Facilities"}
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div className="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
-                      <Building2 className="w-4 h-4 text-brand-teal-600 flex-shrink-0" />
-                      <span className="font-semibold text-slate-700">
+                    <div className="p-3 rounded-xl bg-brand-navy-950 border border-brand-navy-800 flex items-center gap-2">
+                      <Building2 className="w-4 h-4 text-brand-cyan flex-shrink-0" />
+                      <span className="font-semibold text-slate-200">
                         {locale === "te" ? "ప్రధాన ఆసుపత్రి భవనం" : locale === "hi" ? "मुख्य अस्पताल भवन" : "Main Hospital Building"}
                       </span>
                     </div>
-                    <div className="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
-                      <Armchair className="w-4 h-4 text-brand-teal-600 flex-shrink-0" />
-                      <span className="font-semibold text-slate-700">
+                    <div className="p-3 rounded-xl bg-brand-navy-950 border border-brand-navy-800 flex items-center gap-2">
+                      <Armchair className="w-4 h-4 text-brand-cyan flex-shrink-0" />
+                      <span className="font-semibold text-slate-200">
                         {locale === "te" ? "రిసెప్షన్ & వెయిటింగ్" : locale === "hi" ? "रिसेप्शन और प्रतीक्षालय" : "Reception & Waiting"}
                       </span>
                     </div>
-                    <div className="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
-                      <Stethoscope className="w-4 h-4 text-brand-teal-600 flex-shrink-0" />
-                      <span className="font-semibold text-slate-700">
+                    <div className="p-3 rounded-xl bg-brand-navy-950 border border-brand-navy-800 flex items-center gap-2">
+                      <Stethoscope className="w-4 h-4 text-brand-cyan flex-shrink-0" />
+                      <span className="font-semibold text-slate-200">
                         {locale === "te" ? "సంప్రదింపుల గది" : locale === "hi" ? "परामर्श कक्ष" : "Consultation Room"}
                       </span>
                     </div>
-                    <div className="p-3 rounded-xl bg-white border border-slate-200 flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-brand-teal-600 flex-shrink-0" />
-                      <span className="font-semibold text-slate-700">
+                    <div className="p-3 rounded-xl bg-brand-navy-950 border border-brand-navy-800 flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-brand-cyan flex-shrink-0" />
+                      <span className="font-semibold text-slate-200">
                         {locale === "te" ? "లేజర్ & రోబోటిక్ OT" : locale === "hi" ? "लेजर और रोबोटिक ओटी" : "Laser & Robotic OT"}
                       </span>
                     </div>
@@ -445,7 +445,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, fullName: e.target.value })
                         }
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-cyan placeholder:text-slate-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-brand-navy-900 border border-brand-navy-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
                       />
                     </div>
 
@@ -459,7 +459,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
                         }
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-cyan placeholder:text-slate-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-brand-navy-900 border border-brand-navy-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
                       />
                     </div>
 
@@ -473,7 +473,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-cyan placeholder:text-slate-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-brand-navy-900 border border-brand-navy-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
                       />
                     </div>
 
@@ -485,7 +485,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, preferredDate: e.target.value })
                         }
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-brand-navy-900 border border-brand-navy-700 text-white focus:outline-none focus:ring-2 focus:ring-brand-cyan"
                       />
                     </div>
 
@@ -499,15 +499,15 @@ export default function ContactPage() {
                             preferredTimeSlot: e.target.value,
                           })
                         }
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-brand-navy-900 border border-brand-navy-700 text-white focus:outline-none focus:ring-2 focus:ring-brand-cyan"
                       >
-                        <option value="Morning (09:00 AM - 12:00 PM)">
+                        <option value="Morning (09:00 AM - 12:00 PM)" className="bg-brand-navy-900 text-white">
                           {locale === "te" ? "ఉదయం (09:00 AM - 12:00 PM)" : locale === "hi" ? "सुबह (09:00 AM - 12:00 PM)" : "Morning (09:00 AM - 12:00 PM)"}
                         </option>
-                        <option value="Afternoon (01:00 PM - 03:00 PM)">
+                        <option value="Afternoon (01:00 PM - 03:00 PM)" className="bg-brand-navy-900 text-white">
                           {locale === "te" ? "మధ్యాహ్నం (01:00 PM - 03:00 PM)" : locale === "hi" ? "दोपहर (01:00 PM - 03:00 PM)" : "Afternoon (01:00 PM - 03:00 PM)"}
                         </option>
-                        <option value="Evening (03:00 PM - 05:00 PM)">
+                        <option value="Evening (03:00 PM - 05:00 PM)" className="bg-brand-navy-900 text-white">
                           {locale === "te" ? "సాయంత్రం (03:00 PM - 05:00 PM)" : locale === "hi" ? "शाम (03:00 PM - 05:00 PM)" : "Evening (03:00 PM - 05:00 PM)"}
                         </option>
                       </select>
@@ -528,7 +528,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, message: e.target.value })
                         }
-                        className="w-full px-3.5 py-2 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-cyan placeholder:text-slate-400 resize-none"
+                        className="w-full px-3.5 py-2 rounded-xl bg-brand-navy-900 border border-brand-navy-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-cyan resize-none"
                       />
                     </div>
 

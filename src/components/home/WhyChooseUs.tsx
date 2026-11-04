@@ -60,39 +60,39 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 bg-brand-surface border-y border-brand-border/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge={t("home.whyChooseUs.badge", "WHY CHOOSE US")}
-          title={t("home.whyChooseUs.title", "Excellence in Urological & Andrological Care")}
-          subtitle={t("home.whyChooseUs.subtitle", "Combining advanced surgical precision with deep empathy and transparent patient communication.")}
-          align="center"
-          className="mb-14"
-        />
+      <section className="py-20 bg-brand-navy-950 border-y border-brand-navy-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            badge={t("home.whyChooseUs.badge", "WHY CHOOSE US")}
+            title={t("home.whyChooseUs.title", "Excellence in Urological & Andrological Care")}
+            subtitle={t("home.whyChooseUs.subtitle", "Combining advanced surgical precision with deep empathy and transparent patient communication.")}
+            align="center"
+            className="mb-14"
+          />
 
-        {/* 6 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pillars.map((pillar, index) => {
-            const Icon = pillar.icon;
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-7 border border-brand-border/80 shadow-xs hover-lift transition-all"
-              >
-                <div className="w-12 h-12 rounded-xl bg-brand-teal-50 border border-brand-teal-100 text-brand-teal-600 flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6" />
-                </div>
-                <h3 className="font-heading font-extrabold text-lg text-brand-navy-900 mb-2">
-                  {pillar.title}
-                </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  {pillar.description}
-                </p>
-              </div>
-            );
+          {/* 6 Pillars Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {pillars.map((pillar, index) => {
+              const Icon = pillar.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-brand-navy-900/80 rounded-2xl p-7 border border-brand-navy-800 hover:border-brand-teal-400/40 shadow-xl hover-lift transition-all"
+                >
+                    <div className="w-12 h-12 rounded-xl bg-brand-teal-500/10 border border-brand-teal-500/20 text-brand-cyan flex items-center justify-center mb-5">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                      <h3 className="font-heading font-extrabold text-lg text-white mb-2">
+                        {pillar.title}
+                      </h3>
+                        <p className="text-sm text-slate-300 leading-relaxed">
+                          {pillar.description}
+                        </p>
+                      </div>
+                      );
           })}
-        </div>
-      </div>
+                  </div>
+                </div>
     </section>
-  );
+          );
 }
