@@ -93,546 +93,546 @@ export default function TreatmentDetailClient({
   };
 
   return (
-      <div className="bg-brand-navy-950 text-slate-100 min-h-screen">
-        {/* 1. Treatment-Specific Hero Section matching screenshot */}
-        <section className="relative overflow-hidden bg-hero-gradient text-white pt-8 pb-14 lg:pt-12 lg:pb-16 border-b border-brand-teal-500/20">
-          <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="bg-[#F6F3EC] text-[#17364B] min-h-screen">
+          {/* 1. Treatment-Specific Hero Section */}
+          <section className="relative overflow-hidden bg-[#F6F3EC] text-[#17364B] pt-8 pb-14 lg:pt-12 lg:pb-16 border-b border-[#E5DFD3]">
+            <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#E5EFF0]/50 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            {/* Back link */}
-            <Link
-              href="/treatments"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-cyan hover:text-white transition-colors mb-6"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>{t("treatments.backToTreatments", "Back to Treatments")}</span>
-            </Link>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                {/* Back link */}
+                <Link
+                  href="/treatments"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B99A62] hover:text-[#17364B] transition-colors mb-6"
+                >
+                  <ArrowLeft className="w-3.5 h-3.5" />
+                  <span>{t("treatments.backToTreatments", "Back to Treatments")}</span>
+                </Link>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Left Column: Headlines & 4 Badges */}
-              <div className="lg:col-span-7 space-y-5 text-left">
-                <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
-                  {locTreatment.title.split(" ")[0]}{" "}
-                  <span className="text-brand-cyan">
-                    {locTreatment.title.split(" ").slice(1).join(" ") || "Care"}
-                  </span>
-                </h1>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                      {/* Left Column: Headlines & 4 Badges */}
+                      <div className="lg:col-span-7 space-y-5 text-left">
+                        <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#17364B] tracking-tight leading-tight">
+                          {locTreatment.title.split(" ")[0]}{" "}
+                          <span className="text-[#B99A62]">
+                            {locTreatment.title.split(" ").slice(1).join(" ") || "Care"}
+                          </span>
+                        </h1>
 
-                <p className="text-sm sm:text-base text-slate-300 max-w-xl leading-relaxed">
-                  {locTreatment.heroDescription}
-                </p>
+                          <p className="text-sm sm:text-base text-[#3A5668] max-w-xl leading-relaxed">
+                            {locTreatment.heroDescription}
+                          </p>
 
-                {/* 4 Feature Badges */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
-                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
-                    <div className="text-brand-cyan font-bold text-xs">{badgeLabels.diagnosis.top}</div>
-                    <div className="text-white text-xs font-medium">{badgeLabels.diagnosis.bottom}</div>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
-                    <div className="text-brand-cyan font-bold text-xs">{badgeLabels.treatment.top}</div>
-                    <div className="text-white text-xs font-medium">{badgeLabels.treatment.bottom}</div>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
-                    <div className="text-brand-cyan font-bold text-xs">{badgeLabels.recovery.top}</div>
-                    <div className="text-white text-xs font-medium">{badgeLabels.recovery.bottom}</div>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-left">
-                    <div className="text-brand-cyan font-bold text-xs">{badgeLabels.care.top}</div>
-                    <div className="text-white text-xs font-medium">{badgeLabels.care.bottom}</div>
-                  </div>
-                </div>
-              </div>
+                          {/* 4 Feature Badges */}
+                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+                            <div className="p-2.5 rounded-xl bg-white border border-[#E5DFD3] shadow-xs text-left">
+                              <div className="text-[#B99A62] font-bold text-xs">{badgeLabels.diagnosis.top}</div>
+                              <div className="text-[#17364B] text-xs font-medium">{badgeLabels.diagnosis.bottom}</div>
+                            </div>
+                            <div className="p-2.5 rounded-xl bg-white border border-[#E5DFD3] shadow-xs text-left">
+                              <div className="text-[#B99A62] font-bold text-xs">{badgeLabels.treatment.top}</div>
+                              <div className="text-[#17364B] text-xs font-medium">{badgeLabels.treatment.bottom}</div>
+                            </div>
+                            <div className="p-2.5 rounded-xl bg-white border border-[#E5DFD3] shadow-xs text-left">
+                              <div className="text-[#B99A62] font-bold text-xs">{badgeLabels.recovery.top}</div>
+                              <div className="text-[#17364B] text-xs font-medium">{badgeLabels.recovery.bottom}</div>
+                            </div>
+                            <div className="p-2.5 rounded-xl bg-white border border-[#E5DFD3] shadow-xs text-left">
+                              <div className="text-[#B99A62] font-bold text-xs">{badgeLabels.care.top}</div>
+                              <div className="text-[#17364B] text-xs font-medium">{badgeLabels.care.bottom}</div>
+                            </div>
+                          </div>
+                      </div>
 
-              {/* Right Column: Doctor Quote Card with Signature */}
-              <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                    <div className="bg-brand-navy-900/90 rounded-2xl p-6 sm:p-7 shadow-2xl text-slate-100 space-y-4 border border-brand-navy-800 max-w-sm w-full">
-                      <span className="text-4xl font-serif text-brand-cyan leading-none block">
-                        “
-                      </span>
-                        <p className="text-sm font-medium text-slate-300 leading-relaxed">
-                          {locTreatment.quote}
-                        </p>
-                            <div className="pt-3 border-t border-brand-navy-800 text-left">
-                              <div className="text-xl font-signature text-white">
-                                {locDoctor.name}
-                              </div>
-                                <div className="text-[9px] font-extrabold uppercase tracking-wider text-brand-cyan mt-0.5">
-                                  {locDoctor.designation}
+                      {/* Right Column: Doctor Quote Card with Signature */}
+                      <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card text-[#17364B] space-y-4 border border-[#E5DFD3] max-w-sm w-full">
+                          <span className="text-4xl font-serif text-[#B99A62] leading-none block">
+                            “
+                          </span>
+                          <p className="text-sm font-medium text-[#3A5668] leading-relaxed">
+                            {locTreatment.quote}
+                          </p>
+                              <div className="pt-3 border-t border-[#E5DFD3] text-left">
+                                <div className="text-xl font-signature text-[#17364B]">
+                                  {locDoctor.name}
+                                </div>
+                                  <div className="text-[10px] font-extrabold uppercase tracking-wider text-[#B99A62] mt-0.5">
+                                    {locDoctor.designation}
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                    </div>
-                  </section>
+                      </section>
 
-                  {/* 2. In-Page Sticky Tab Navigation Bar matching reference */}
-                    <div className="sticky top-[69px] z-30 bg-brand-navy-950/95 backdrop-blur-md border-b border-brand-navy-800 shadow-md">
-                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar py-2.5">
-                          <div className="flex items-center gap-1.5 flex-nowrap">
-                            {TAB_CONFIG.map((tab) => (
-                              <button
-                                key={tab.id}
-                                type="button"
-                                onClick={() => scrollToSection(tab.id)}
-                                className={cn(
-                                  "px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors",
-                                  activeTab === tab.id
-                                    ? "bg-brand-teal-500 text-white font-bold shadow-xs"
-                      : "text-slate-400 hover:text-brand-cyan hover:bg-brand-navy-900"
+      {/* 2. In-Page Sticky Tab Navigation Bar */ }
+                              < div className = "sticky top-[69px] z-30 bg-[#F6F3EC]/95 backdrop-blur-md border-b border-[#E5DFD3] shadow-xs" >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar py-2.5">
+            <div className="flex items-center gap-1.5 flex-nowrap">
+              {TAB_CONFIG.map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => scrollToSection(tab.id)}
+                  className={cn(
+                    "px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors",
+                    activeTab === tab.id
+                      ? "bg-[#B99A62] text-white font-bold shadow-xs"
+                      : "text-[#3A5668] hover:text-[#B99A62] hover:bg-[#E5EFF0]"
                   )}
                 >
-                            {getTabLabel(tab.labelKey, tab.defaultLabel)}
-                          </button>
+                  {getTabLabel(tab.labelKey, tab.defaultLabel)}
+                </button>
               ))}
-                        </div>
+            </div>
 
-                        <Link
-                          href="/book-appointment"
-                          className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold text-brand-navy-950 bg-gradient-to-r from-brand-teal-400 to-brand-cyan shadow-sm hover:shadow-glow transition-all whitespace-nowrap flex-shrink-0"
-                        >
-                          <Calendar className="w-3.5 h-3.5 text-brand-navy-950" />
-                          <span>{t("common.bookAppointment", "Book Appointment")} →</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                  <Link
+                    href="/book-appointment"
+                    className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold text-white bg-[#B99A62] hover:bg-[#A3844C] shadow-sm transition-all whitespace-nowrap flex-shrink-0"
+                  >
+                    <Calendar className="w-3.5 h-3.5 text-white" />
+                    <span>{t("common.bookAppointment", "Book Appointment")} →</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-                  {/* 3. Main Two-Column Layout */}
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                      {/* Left Main Content Column */}
-                      <div className="lg:col-span-8 space-y-12">
-                        {/* SECTION 1: Overview */}
-                        <section id="overview" className="scroll-mt-36 space-y-4">
-                          <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-xl bg-brand-navy-900 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center font-bold">
+                    {/* 3. Main Two-Column Layout */}
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                        {/* Left Main Content Column */}
+                        <div className="lg:col-span-8 space-y-12">
+                          {/* SECTION 1: Overview */}
+                          <section id="overview" className="scroll-mt-36 space-y-4">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center font-bold">
                                 01
                               </div>
-                                <h2 className="font-heading font-extrabold text-2xl text-white">
-                                  {getTabLabel("overview", "Overview")}
-                                </h2>
+                              <h2 className="font-heading font-extrabold text-2xl text-[#17364B]">
+                                {getTabLabel("overview", "Overview")}
+                              </h2>
                             </div>
 
-                              <p className="text-base text-slate-300 leading-relaxed">
-                                {locTreatment.overview.description}
-                              </p>
+                            <p className="text-base text-[#3A5668] leading-relaxed">
+                              {locTreatment.overview.description}
+                            </p>
 
-                              {/* Key Points Checklist Card matching screenshot */}
-                                  <div className="p-6 rounded-2xl bg-brand-navy-900/90 border border-brand-navy-800 space-y-3">
-                                    <h3 className="font-heading font-bold text-sm uppercase tracking-wider text-white">
-                                      {locale === "te" ? "ముఖ్య అంశాలు" : locale === "hi" ? "मुख्य बिंदु" : "Key Points"}
-                                    </h3>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                                      {locTreatment.overview.keyPoints.map((point, idx) => (
-                                          <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                                            <CheckCircle2 className="w-4 h-4 text-brand-cyan mt-0.5 flex-shrink-0" />
-                                            <span>{point}</span>
-                                          </div>
+              {/* Key Points Checklist Card */ }
+                                  < div className = "p-6 rounded-2xl bg-white border border-[#E5DFD3] shadow-card space-y-3" >
+                <h3 className="font-heading font-bold text-sm uppercase tracking-wider text-[#17364B]">
+                  {locale === "te" ? "ముఖ్య అంశాలు" : locale === "hi" ? "मुख्य बिंदु" : "Key Points"}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {locTreatment.overview.keyPoints.map((point, idx) => (
+                    <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#3A5668]">
+                      <CheckCircle2 className="w-4 h-4 text-[#B99A62] mt-0.5 flex-shrink-0" />
+                      <span>{point}</span>
+                    </div>
                   ))}
+                </div>
+                            </div>
+                        </section>
+
+                          {/* SECTION 2: Symptoms */}
+                          <section id="symptoms" className="scroll-mt-36 space-y-5">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center font-bold">
+                                02
+                              </div>
+                              <h2 className="font-heading font-extrabold text-2xl text-[#17364B]">
+                                {getTabLabel("symptoms", "Symptoms")}
+                              </h2>
+                            </div>
+                            <p className="text-sm text-[#3A5668]">
+                              {locale === "te"
+                                ? "లక్షణాలు తేలికపాటి అసౌకర్యం నుండి తీవ్రమైన బాధ వరకు ఉండవచ్చు. ప్రారంభంలో గుర్తించడం త్వరిత చికిత్సకు తోడ్పడుతుంది."
+                                : locale === "hi"
+                                  ? "लक्षण हल्के असहजता से लेकर गंभीर परेशानी तक हो सकते हैं। प्रारंभिक पहचान से त्वरित व दर्दरहित उपचार संभव होता है।"
+                                  : "Symptoms can vary from mild discomfort to acute distress. Early identification allows prompt, painless intervention."}
+                            </p>
+
+              {/* Symptoms Cards Grid */}
+                                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
+                                    {locTreatment.symptoms.map((s, idx) => (
+                                      <div
+                                        key={idx}
+                                        className="p-4 rounded-xl bg-white border border-[#E5DFD3] shadow-card flex flex-col items-center text-center space-y-2 hover-lift transition-all"
+                                      >
+                                        <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center">
+                                          <AlertTriangle className="w-5 h-5" />
                                         </div>
+                                        <span className="font-heading font-bold text-xs text-[#17364B]">
+                                          {s.title}
+                                        </span>
+                                        {s.description && (
+                                          <span className="text-[11px] text-[#4B6778]">
+                                            {s.description}
+                                          </span>
+                                        )}
+                  </div>
+                ))}
+                          </div>
+                        </section>
+
+                          {/* SECTION 3: Causes */}
+                          <section id="causes" className="scroll-mt-36 space-y-5">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center font-bold">
+                                03
+                              </div>
+                              <h2 className="font-heading font-extrabold text-2xl text-[#17364B]">
+                                {locale === "te" ? "కారణాలు & రిస్క్ అంశాలు" : locale === "hi" ? "कारण और जोखिम कारक" : "Causes & Risk Factors"}
+                              </h2>
+                            </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
+                {locTreatment.causes.map((c, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 rounded-xl bg-white border border-[#E5DFD3] shadow-card flex items-start gap-3"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-[#E5EFF0] text-[#B99A62] border border-[#CCDDE0] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Droplet className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-xs text-[#17364B]">
+                        {c.title}
+                      </h4>
+                      {c.description && (
+                        <p className="text-[11px] text-[#4B6778] mt-0.5">
+                          {c.description}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                                    ))}
               </div>
-                                  </section>
+                          </section>
 
-                                  {/* SECTION 2: Symptoms */}
-                                  <section id="symptoms" className="scroll-mt-36 space-y-5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-xl bg-brand-navy-900 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center font-bold">
-                                          02
-                                        </div>
-                                          <h2 className="font-heading font-extrabold text-2xl text-white">
-                                            {getTabLabel("symptoms", "Symptoms")}
-                                          </h2>
-                                      </div>
-                                        <p className="text-sm text-slate-300">
-                                          {locale === "te"
-                                            ? "లక్షణాలు తేలికపాటి అసౌకర్యం నుండి తీవ్రమైన బాధ వరకు ఉండవచ్చు. ప్రారంభంలో గుర్తించడం త్వరిత చికిత్సకు తోడ్పడుతుంది."
-                                            : locale === "hi"
-                                              ? "लक्षण हल्के असहजता से लेकर गंभीर परेशानी तक हो सकते हैं। प्रारंभिक पहचान से त्वरित व दर्दरहित उपचार संभव होता है।"
-                                              : "Symptoms can vary from mild discomfort to acute distress. Early identification allows prompt, painless intervention."}
-                                        </p>
+                            {/* SECTION 4: Diagnosis */}
+                            <section id="diagnosis" className="scroll-mt-36 space-y-5">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center font-bold">
+                                  04
+                                </div>
+                                <h2 className="font-heading font-extrabold text-2xl text-[#17364B]">
+                                  {getTabLabel("diagnosis", "Diagnosis")}
+                                </h2>
+                              </div>
 
-                                        {/* Symptoms Cards Grid matching screenshot */}
-                                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
-                                          {locTreatment.symptoms.map((s, idx) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {locTreatment.diagnosis.map((d, idx) => (
+                  <div
+                    key={idx}
+                    className="p-5 rounded-2xl bg-white border border-[#E5DFD3] shadow-card space-y-2 hover-lift transition-all"
+                  >
+                    <div className="w-9 h-9 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center">
+                      <Stethoscope className="w-4 h-4" />
+                    </div>
+                    <h4 className="font-heading font-bold text-sm text-[#17364B]">
+                      {d.title}
+                    </h4>
+                    <p className="text-xs text-[#3A5668] leading-relaxed">
+                      {d.description}
+                    </p>
+                  </div>
+                ))}
+                          </div>
+                        </section>
+
+                          {/* SECTION 5: Treatment Options */}
+                          <section id="treatment-options" className="scroll-mt-36 space-y-5">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center font-bold">
+                                05
+                              </div>
+                              <h2 className="font-heading font-extrabold text-2xl text-[#17364B]">
+                                {getTabLabel("treatmentOptions", "Treatment Options")}
+                              </h2>
+                            </div>
+
+                                        <div className="space-y-4">
+                                          {locTreatment.treatmentOptions.map((opt, idx) => (
                                             <div
                                               key={idx}
-                                              className="p-4 rounded-xl bg-brand-navy-900/90 border border-brand-navy-800 shadow-md flex flex-col items-center text-center space-y-2 hover-lift transition-all"
+                                              className="p-6 rounded-2xl bg-white border border-[#E5DFD3] shadow-card hover-lift transition-all space-y-3"
                                             >
-                                                <div className="w-10 h-10 rounded-xl bg-brand-navy-950 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center">
-                                                  <AlertTriangle className="w-5 h-5" />
-                                                </div>
-                                                  <span className="font-heading font-bold text-xs text-white">
-                                                    {s.title}
+                                              <div className="flex flex-wrap items-center justify-between gap-2">
+                                                <h4 className="font-heading font-extrabold text-lg text-[#17364B]">
+                                                  {opt.title}
+                                                </h4>
+                                                {opt.isMinimallyInvasive && (
+                                                  <span className="text-[11px] font-bold text-[#17364B] bg-[#E5EFF0] px-2.5 py-0.5 rounded-full border border-[#CCDDE0]">
+                                                    {locale === "te" ? "కనిష్ట ఇన్వాసివ్" : locale === "hi" ? "मिनिमली इनवेसिव" : "Minimally Invasive"}
                                                   </span>
-                                                  {s.description && (
-                                                      <span className="text-[11px] text-slate-400">
-                                                        {s.description}
+                                                )}
+                                              </div>
+                                                <p className="text-xs font-semibold text-[#B99A62]">
+                                                  {opt.subtitle}
+                                                </p>
+                                                  <p className="text-sm text-[#3A5668] leading-relaxed">
+                                                    {opt.description}
+                                                  </p>
+                                                    <div className="pt-2 flex items-center gap-2 text-xs font-medium text-[#4B6778]">
+                                                      <Clock className="w-3.5 h-3.5 text-[#B99A62]" />
+                                                      <span>
+                                                        {locale === "te" ? "కోలుకునే సమయం / ఆసుపత్రి బస: " : locale === "hi" ? "रिकवरी / अस्पताल में रहने का समय: " : "Recovery / Hospital stay: "}
+                                                        {opt.recoveryTime}
                                                       </span>
-                    )}
                                                     </div>
-                                                  ))}
-                                              </div>
-                                            </section>
-
-            {/* SECTION 3: Causes */ }
-                                            < section id = "causes" className = "scroll-mt-36 space-y-5" >
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-xl bg-brand-navy-900 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center font-bold">
-                                                  03
+                                                  </div>
+                ))}
                                                 </div>
-                                                  <h2 className="font-heading font-extrabold text-2xl text-white">
-                                                    {locale === "te" ? "కారణాలు & రిస్క్ అంశాలు" : locale === "hi" ? "कारण और जोखिम कारक" : "Causes & Risk Factors"}
-                                                  </h2>
-                                              </div>
+                                              </section>
 
-                                              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
-                                                {locTreatment.causes.map((c, idx) => (
-                                                  <div
-                                                    key={idx}
-                                                    className="p-4 rounded-xl bg-brand-navy-900/90 border border-brand-navy-800 flex items-start gap-3"
-                                                  >
-                                                      <div className="w-8 h-8 rounded-lg bg-brand-navy-950 text-brand-cyan border border-brand-teal-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                                        <Droplet className="w-4 h-4" />
-                                                      </div>
-                                                      <div>
-                                                          <h4 className="font-heading font-bold text-xs text-white">
-                                                            {c.title}
-                                                          </h4>
-                                                          {c.description && (
-                                                              <p className="text-[11px] text-slate-400 mt-0.5">
-                                                                {c.description}
-                                                              </p>
-                      )}
-                                                            </div>
-                  </div>
-                ))}
-                                                    </div>
-                                                  </section>
-
-            {/* SECTION 4: Diagnosis */ }
-                                                  < section id = "diagnosis" className = "scroll-mt-36 space-y-5" >
+                                              {/* SECTION 6: Recovery */}
+                                                <section id="recovery" className="scroll-mt-36 space-y-5">
                                                   <div className="flex items-center gap-3">
-                                                      <div className="w-10 h-10 rounded-xl bg-brand-navy-900 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center font-bold">
-                                                        04
-                                                      </div>
-                                                        <h2 className="font-heading font-extrabold text-2xl text-white">
-                                                          {getTabLabel("diagnosis", "Diagnosis")}
-                                                        </h2>
+                                                    <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center font-bold">
+                                                      06
                                                     </div>
+                                                    <h2 className="font-heading font-extrabold text-2xl text-[#17364B]">
+                                                      {locale === "te" ? "కోలుకోవడం & ఫాలో-అప్" : locale === "hi" ? "रिकवरी और फॉलो-अप" : "Recovery & Follow-Up"}
+                                                    </h2>
+                                                  </div>
 
-                                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                                      {locTreatment.diagnosis.map((d, idx) => (
-                                                        <div
-                                                          key={idx}
-                                                          className="p-5 rounded-2xl bg-brand-navy-900/90 border border-brand-navy-800 shadow-md space-y-2 hover-lift transition-all"
-                                                        >
-                                                            <div className="w-9 h-9 rounded-xl bg-brand-navy-950 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center">
-                                                              <Stethoscope className="w-4 h-4" />
-                                                            </div>
-                                                              <h4 className="font-heading font-bold text-sm text-white">
-                                                                {d.title}
-                                                              </h4>
-                                                                <p className="text-xs text-slate-300 leading-relaxed">
-                                                                  {d.description}
-                                                                </p>
-                                                              </div>
-                ))}
-                                                          </div>
-                                                        </section>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                  <div className="p-4 rounded-xl bg-white border border-[#E5DFD3] shadow-card space-y-1">
+                                                    <span className="text-xs font-bold uppercase tracking-wider text-[#B99A62]">
+                                                      {locale === "te" ? "ఆసుపత్రి బస" : locale === "hi" ? "अस्पताल में रुकना" : "Hospital Stay"}
+                                                    </span>
+                                                    <p className="text-xs sm:text-sm text-[#3A5668]">
+                                                      {locTreatment.recoveryInfo.hospitalStay}
+                                                    </p>
+                                                  </div>
+                                                  <div className="p-4 rounded-xl bg-white border border-[#E5DFD3] shadow-card space-y-1">
+                                                    <span className="text-xs font-bold uppercase tracking-wider text-[#B99A62]">
+                                                      {locale === "te" ? "సాధారణ జీవితానికి తిరిగి రావడం" : locale === "hi" ? "दैनिक जीवन में वापसी" : "Resuming Normal Life"}
+                                                    </span>
+                                                    <p className="text-xs sm:text-sm text-[#3A5668]">
+                                                      {locTreatment.recoveryInfo.resumingDailyLife}
+                                                    </p>
+                                                  </div>
+                                                  <div className="p-4 rounded-xl bg-white border border-[#E5DFD3] shadow-card space-y-1">
+                                                    <span className="text-xs font-bold uppercase tracking-wider text-[#B99A62]">
+                                                      {locale === "te" ? "ఆహారం & నీటి వినియోగం" : locale === "hi" ? "आहार और जलयोजन" : "Diet & Hydration"}
+                                                    </span>
+                                                    <p className="text-xs sm:text-sm text-[#3A5668]">
+                                                      {locTreatment.recoveryInfo.dietLifestyle}
+                                                    </p>
+                                                  </div>
+                                                  <div className="p-4 rounded-xl bg-white border border-[#E5DFD3] shadow-card space-y-1">
+                                                    <span className="text-xs font-bold uppercase tracking-wider text-[#B99A62]">
+                                                      {locale === "te" ? "ఫాలో-అప్ సంరక్షణ" : locale === "hi" ? "फॉलो-अप देखभाल" : "Follow-Up Care"}
+                                                    </span>
+                                                    <p className="text-xs sm:text-sm text-[#3A5668]">
+                                                      {locTreatment.recoveryInfo.followUp}
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                              </section>
 
-            {/* SECTION 5: Treatment Options */ }
-                                                        < section id = "treatment-options" className = "scroll-mt-36 space-y-5" >
-                                                        <div className="flex items-center gap-3">
-                                                            <div className="w-10 h-10 rounded-xl bg-brand-navy-900 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center font-bold">
-                                                              05
-                                                            </div>
-                                                              <h2 className="font-heading font-extrabold text-2xl text-white">
-                                                                {getTabLabel("treatmentOptions", "Treatment Options")}
-                                                              </h2>
-                                                          </div>
+                                                {/* SECTION 7: When to Consult */}
+                                                <section id="when-to-consult" className="scroll-mt-36 space-y-4">
+                                                  <div className="flex items-center gap-3">
+                                                    <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center font-bold">
+                                                      07
+                                                    </div>
+                                                    <h2 className="font-heading font-extrabold text-2xl text-[#17364B]">
+                                                      {getTabLabel("whenToConsult", "When to Consult a Specialist")}
+                                                    </h2>
+                                                  </div>
 
-                                                          <div className="space-y-4">
-                                                            {locTreatment.treatmentOptions.map((opt, idx) => (
-                                                              <div
-                                                                key={idx}
-                                                                className="p-6 rounded-2xl bg-brand-navy-900/90 border border-brand-navy-800 shadow-md hover-lift transition-all space-y-3"
-                                                              >
-                                                                <div className="flex flex-wrap items-center justify-between gap-2">
-                                                                    <h4 className="font-heading font-extrabold text-lg text-white">
-                                                                      {opt.title}
-                                                                    </h4>
-                                                                    {opt.isMinimallyInvasive && (
-                        <span className="text-[11px] font-bold text-emerald-300 bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
-                          {locale === "te" ? "కనిష్ట ఇన్వాసివ్" : locale === "hi" ? "मिनिमली इनवेसिव" : "Minimally Invasive"}
-                        </span>
+                                                <div className="p-6 rounded-2xl bg-[#FFF9EE] border border-[#B99A62]/30 space-y-3">
+                                                  <p className="text-xs font-bold uppercase tracking-wider text-[#B99A62]">
+                                                    {locale === "te"
+                                                      ? "ఈ క్రింది లక్షణాలు కనిపిస్తే సంప్రదింపులను ఆలస్యం చేయవద్దు:"
+                                                      : locale === "hi"
+                                                        ? "यदि आप निम्नलिखित लक्षणों का अनुभव करते हैं तो परामर्श में देरी न करें:"
+                                                        : "Do not delay consultation if you experience:"}
+                                                  </p>
+                                                  <ul className="space-y-2 text-xs sm:text-sm text-[#17364B]">
+                                                    {locTreatment.whenToConsult.map((item, idx) => (
+                                                      <li key={idx} className="flex items-start gap-2">
+                                                        <span className="text-[#B99A62] font-bold">•</span>
+                                                        <span>{item}</span>
+                                                      </li>
+                                                    ))}
+                                                  </ul>
+                                                </div>
+                                              </section>
+
+                                                {/* SECTION 8: FAQs */}
+                                                <section id="faqs" className="scroll-mt-36 space-y-4">
+                                                  <div className="flex items-center gap-3">
+                                                    <div className="w-10 h-10 rounded-xl bg-[#E5EFF0] border border-[#CCDDE0] text-[#B99A62] flex items-center justify-center font-bold">
+                                                      08
+                                                    </div>
+                                                    <h2 className="font-heading font-extrabold text-2xl text-[#17364B]">
+                                                      {getTabLabel("faqs", "Frequently Asked Questions")}
+                                                    </h2>
+                                                  </div>
+
+              <div className="space-y-3">
+                {locTreatment.faqs.map((faq, idx) => {
+                  const isOpen = openFaqIndex === idx;
+                  return (
+                    <div
+                      key={idx}
+                      className="rounded-xl border border-[#E5DFD3] bg-white overflow-hidden shadow-card"
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
+                        className="w-full p-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm text-[#17364B]"
+                        aria-expanded={isOpen}
+                      >
+                        <span>{faq.question}</span>
+                        <ChevronDown
+                          className={cn(
+                            "w-4 h-4 text-[#B99A62] transition-transform",
+                            isOpen && "rotate-180"
+                          )}
+                        />
+                      </button>
+                      {isOpen && (
+                        <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-[#3A5668] border-t border-[#E5DFD3] bg-[#FAF8F5]">
+                          {faq.answer}
+                        </div>
                       )}
                     </div>
-                    <p className="text-xs font-semibold text-brand-cyan">
-                      {opt.subtitle}
-                    </p>
-                    <p className="text-sm text-slate-300 leading-relaxed">
-                      {opt.description}
-                    </p>
-                    <div className="pt-2 flex items-center gap-2 text-xs font-medium text-slate-400">
-                      <Clock className="w-3.5 h-3.5 text-brand-cyan" />
-                      <span>
-                        {locale === "te" ? "కోలుకునే సమయం / ఆసుపత్రి బస: " : locale === "hi" ? "रिकवरी / अस्पताल में रहने का समय: " : "Recovery / Hospital stay: "}
-                        {opt.recoveryTime}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* SECTION 6: Recovery */}
-                                                                    <section id="recovery" className="scroll-mt-36 space-y-5">
-                                                                      <div className="flex items-center gap-3">
-                                                                          <div className="w-10 h-10 rounded-xl bg-brand-navy-900 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center font-bold">
-                                                                            06
-                                                                          </div>
-                                                                            <h2 className="font-heading font-extrabold text-2xl text-white">
-                                                                              {locale === "te" ? "కోలుకోవడం & ఫాలో-అప్" : locale === "hi" ? "रिकवरी और फॉलो-अप" : "Recovery & Follow-Up"}
-                                                                            </h2>
-                                                                        </div>
-
-                                                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                                                              <div className="p-4 rounded-xl bg-brand-navy-900/90 border border-brand-navy-800 space-y-1">
-                                                                                <span className="text-xs font-bold uppercase tracking-wider text-brand-cyan">
-                                                                                  {locale === "te" ? "ఆసుపత్రి బస" : locale === "hi" ? "अस्पताल में रुकना" : "Hospital Stay"}
-                                                                                </span>
-                                                                                  <p className="text-xs sm:text-sm text-slate-300">
-                                                                                    {locTreatment.recoveryInfo.hospitalStay}
-                                                                                  </p>
-                                                                              </div>
-                                                                                  <div className="p-4 rounded-xl bg-brand-navy-900/90 border border-brand-navy-800 space-y-1">
-                                                                                    <span className="text-xs font-bold uppercase tracking-wider text-brand-cyan">
-                                                                                      {locale === "te" ? "సాధారణ జీవితానికి తిరిగి రావడం" : locale === "hi" ? "दैनिक जीवन में वापसी" : "Resuming Normal Life"}
-                                                                                    </span>
-                                                                                      <p className="text-xs sm:text-sm text-slate-300">
-                                                                                        {locTreatment.recoveryInfo.resumingDailyLife}
-                                                                                      </p>
-                                                                                  </div>
-                                                                                      <div className="p-4 rounded-xl bg-brand-navy-900/90 border border-brand-navy-800 space-y-1">
-                                                                                        <span className="text-xs font-bold uppercase tracking-wider text-brand-cyan">
-                                                                                          {locale === "te" ? "ఆహారం & నీటి వినియోగం" : locale === "hi" ? "आहार और जलयोजन" : "Diet & Hydration"}
-                                                                                        </span>
-                                                                                          <p className="text-xs sm:text-sm text-slate-300">
-                                                                                            {locTreatment.recoveryInfo.dietLifestyle}
-                                                                                          </p>
-                                                                                      </div>
-                                                                                          <div className="p-4 rounded-xl bg-brand-navy-900/90 border border-brand-navy-800 space-y-1">
-                                                                                            <span className="text-xs font-bold uppercase tracking-wider text-brand-cyan">
-                                                                                              {locale === "te" ? "ఫాలో-అప్ సంరక్షణ" : locale === "hi" ? "फॉलो-अप देखभाल" : "Follow-Up Care"}
-                                                                                            </span>
-                                                                                              <p className="text-xs sm:text-sm text-slate-300">
-                                                                                                {locTreatment.recoveryInfo.followUp}
-                                                                                              </p>
-                                                                                          </div>
-                                                                                      </div>
-                                                                                    </section>
-
-                                                                                    {/* SECTION 7: When to Consult */}
-                                                                                    <section id="when-to-consult" className="scroll-mt-36 space-y-4">
-                                                                                      <div className="flex items-center gap-3">
-                                                                                          <div className="w-10 h-10 rounded-xl bg-brand-navy-900 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center font-bold">
-                                                                                            07
-                                                                                          </div>
-                                                                                            <h2 className="font-heading font-extrabold text-2xl text-white">
-                                                                                              {getTabLabel("whenToConsult", "When to Consult a Specialist")}
-                                                                                            </h2>
-                                                                                        </div>
-
-                                                                                            <div className="p-6 rounded-2xl bg-amber-950/30 border border-amber-500/30 space-y-3">
-                                                                                              <p className="text-xs font-bold uppercase tracking-wider text-amber-300">
-                                                                                                {locale === "te"
-                                                                                                  ? "ఈ క్రింది లక్షణాలు కనిపిస్తే సంప్రదింపులను ఆలస్యం చేయవద్దు:"
-                                                                                                  : locale === "hi"
-                                                                                                    ? "यदि आप निम्नलिखित लक्षणों का अनुभव करते हैं तो परामर्श में देरी न करें:"
-                                                                                                    : "Do not delay consultation if you experience:"}
-                                                                                              </p>
-                                                                                                <ul className="space-y-2 text-xs sm:text-sm text-amber-100">
-                                                                                                  {locTreatment.whenToConsult.map((item, idx) => (
-                                                                                                    <li key={idx} className="flex items-start gap-2">
-                                                                                                      <span className="text-amber-400 font-bold">•</span>
-                                                                                                      <span>{item}</span>
-                                                                                                    </li>
-                                                                                                  ))}
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                          </section>
-
-                                                                                          {/* SECTION 8: FAQs */}
-                                                                                          <section id="faqs" className="scroll-mt-36 space-y-4">
-                                                                                            <div className="flex items-center gap-3">
-                                                                                                <div className="w-10 h-10 rounded-xl bg-brand-navy-900 border border-brand-teal-500/30 text-brand-cyan flex items-center justify-center font-bold">
-                                                                                                  08
-                                                                                                </div>
-                                                                                                  <h2 className="font-heading font-extrabold text-2xl text-white">
-                                                                                                    {getTabLabel("faqs", "Frequently Asked Questions")}
-                                                                                                  </h2>
-                                                                                              </div>
-
-                                                                                              <div className="space-y-3">
-                                                                                                {locTreatment.faqs.map((faq, idx) => {
-                                                                                                  const isOpen = openFaqIndex === idx;
-                                                                                                  return (
-                                                                                                    <div
-                                                                                                      key={idx}
-                                                                                                      className="rounded-xl border border-brand-navy-800 bg-brand-navy-900/90 overflow-hidden shadow-md"
-                                                                                                    >
-                                                                                                      <button
-                                                                                                        type="button"
-                                                                                                        onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                                                                                                        className="w-full p-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm text-white"
-                                                                                                        aria-expanded={isOpen}
-                                                                                                      >
-                                                                                                        <span>{faq.question}</span>
-                                                                                                        <ChevronDown
-                                                                                                          className={cn(
-                                                                                                            "w-4 h-4 text-slate-400 transition-transform",
-                            isOpen && "rotate-180 text-brand-cyan"
-                                                                                                          )}
-                                                                                                        />
-                                                                                                      </button>
-                                                                                                      {isOpen && (
-                                                                                                          <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-300 border-t border-brand-navy-800">
-                                                                                                            {faq.answer}
-                                                                                                          </div>
-                      )}
-                                                                                                        </div>
-                                                                                                      );
+                                                          );
                 })}
-                                                                                                    </div>
-            </section>
-                                                                                            </div>
+              </div>
+                                                </section>
+          </div>
 
-                                                                                            {/* Right Sidebar Column matching screenshot */}
-                                                                                            <aside aria-label="Appointment booking and assistance" className="lg:col-span-4 space-y-6 lg:sticky lg:top-36">
-                                                                                              {/* 1. Book a Consultation Card */}
-                                                                                              <div className="bg-brand-navy-900 text-white rounded-2xl p-6 sm:p-7 shadow-xl border border-brand-navy-800 space-y-4">
-                                                                                                <div className="w-12 h-12 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center">
-                                                                                                  <Calendar className="w-6 h-6" />
-                                                                                                </div>
+                                            {/* Right Sidebar Column */}
+                                            <aside aria-label="Appointment booking and assistance" className="lg:col-span-4 space-y-6 lg:sticky lg:top-36">
+                                              {/* 1. Book a Consultation Card */}
+                                              <div className="bg-white text-[#17364B] rounded-2xl p-6 sm:p-7 shadow-card border border-[#E5DFD3] space-y-4">
+                                                <div className="w-12 h-12 rounded-xl bg-[#E5EFF0] text-[#B99A62] flex items-center justify-center">
+                                                  <Calendar className="w-6 h-6" />
+                                                </div>
 
-                                                                                                <div>
-                                                                                                  <h3 className="font-heading font-bold text-lg text-white">
-                                                                                                    {locale === "te" ? "సంప్రదింపును బుక్ చేయండి" : locale === "hi" ? "परामर्श बुक करें" : "Book a Consultation"}
-                                                                                                  </h3>
-                                                                                                  <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                                                                                                    {locale === "te"
-                                                                                                      ? `డాక్టర్ రాకేష్ వంశీ (KIMS హాస్పిటల్ నెల్లూరు) వద్ద ${locTreatment.title} కోసం నిపుణుల సలహా మరియు వ్యక్తిగత సంరక్షణ పొందండి.`
-                                                                                                      : locale === "hi"
-                                                                                                        ? `किम्स अस्पताल नेल्लोर में डॉ. राकेश वामसी से ${locTreatment.title} के लिए विशेषज्ञ मूल्यांकन और व्यक्तिगत उपचार प्राप्त करें।`
-                                                                                                        : `Get expert evaluation and personalized treatment for ${locTreatment.title.toLowerCase()} from Dr. Rakesh Vamsi at KIMS Hospital Nellore.`}
-                                                                                                  </p>
-                                                                                                </div>
+                                                <div>
+                                                  <h3 className="font-heading font-bold text-lg text-[#17364B]">
+                                                    {locale === "te" ? "సంప్రదింపును బుక్ చేయండి" : locale === "hi" ? "परामर्श बुक करें" : "Book a Consultation"}
+                                                  </h3>
+                                                  <p className="text-xs text-[#3A5668] mt-1 leading-relaxed">
+                                                    {locale === "te"
+                                                      ? `డాక్టర్ రాకేష్ వంశీ (KIMS హాస్పిటల్ నెల్లూరు) వద్ద ${locTreatment.title} కోసం నిపుణుల సలహా మరియు వ్యక్తిగత సంరక్షణ పొందండి.`
+                                                      : locale === "hi"
+                                                        ? `किम्स अस्पताल नेल्लोर में डॉ. राकेश वामसी से ${locTreatment.title} के लिए विशेषज्ञ मूल्यांकन और व्यक्तिगत उपचार प्राप्त करें।`
+                                                        : `Get expert evaluation and personalized treatment for ${locTreatment.title.toLowerCase()} from Dr. Rakesh Vamsi at KIMS Hospital Nellore.`}
+                                                  </p>
+                                                </div>
 
-                                                                                                <Link
-                                                                                                  href="/book-appointment"
-                                                                                                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-bold text-brand-navy-950 bg-gradient-to-r from-brand-teal-400 to-brand-cyan shadow-lg hover:shadow-glow transition-all"
-                                                                                                >
-                                                                                                  <span>{t("common.bookAppointment", "Book Appointment")}</span>
-                                                                                                  <span>→</span>
-                                                                                                </Link>
-                                                                                              </div>
+                                              <Link
+                                                href="/book-appointment"
+                                                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-bold text-white bg-[#B99A62] hover:bg-[#A3844C] shadow-sm transition-all"
+                                              >
+                                                <span>{t("common.bookAppointment", "Book Appointment")}</span>
+                                                <span>→</span>
+                                              </Link>
+                                          </div>
 
-                                                                                              {/* 2. Related Treatments Card */}
-                                                                                              {locRelated.length > 0 && (
-                                                                                                    <div className="bg-brand-navy-900/90 rounded-2xl p-5 border border-brand-navy-800 shadow-md space-y-3">
-                                                                                                      <h4 className="font-heading font-bold text-sm text-white">
-                                                                                                        {locale === "te" ? "సంబంధిత చికిత్సలు" : locale === "hi" ? "संबंधित उपचार" : "Related Treatments"}
-                                                                                                      </h4>
-                                                                                                      <div className="space-y-2">
-                                                                                                        {locRelated.map((rel) => (
-                                                                                                          <Link
-                                                                                                            key={rel.slug}
-                                                                                                            href={`/treatments/${rel.slug}`}
-                                                                                                            className="flex items-center justify-between p-2.5 rounded-xl hover:bg-brand-navy-800 text-xs font-semibold text-slate-300 hover:text-brand-cyan transition-colors"
-                                                                                                          >
-                                                                                                            <span>{rel.title}</span>
-                                                                                                            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-                                                                                                          </Link>
-                                                                                                        ))}
-                                                                                                      </div>
-                                                                                                    </div>
-            )}
+            {/* 2. Related Treatments Card */}
+                                          {locRelated.length > 0 && (
+                                            <div className="bg-white rounded-2xl p-5 border border-[#E5DFD3] shadow-card space-y-3">
+                                              <h4 className="font-heading font-bold text-sm text-[#17364B]">
+                                                {locale === "te" ? "సంబంధిత చికిత్సలు" : locale === "hi" ? "संबंधित उपचार" : "Related Treatments"}
+                                              </h4>
+                                              <div className="space-y-2">
+                                                {locRelated.map((rel) => (
+                                                  <Link
+                                                    key={rel.slug}
+                                                    href={`/treatments/${rel.slug}`}
+                                                    className="flex items-center justify-between p-2.5 rounded-xl hover:bg-[#E5EFF0] text-xs font-semibold text-[#3A5668] hover:text-[#B99A62] transition-colors"
+                                                  >
+                                                    <span>{rel.title}</span>
+                                                    <ChevronRight className="w-3.5 h-3.5 text-[#B99A62]" />
+                                                  </Link>
+                                                ))}
+                                              </div>
+                                            </div>
+                                          )}
 
-                                                                                                    {/* 3. Need Help Card matching screenshot */}
-                                                                                                        <div className="bg-brand-navy-900/90 rounded-2xl p-5 border border-brand-navy-800 shadow-md space-y-4">
-                                                                                                          <h4 className="font-heading font-bold text-sm text-white">
-                                                                                                            {locale === "te" ? "తక్షణ సహాయం కావాలా?" : locale === "hi" ? "तुरंत सहायता चाहिए?" : "Need Immediate Help?"}
-                                                                                                          </h4>
+                                            {/* 3. Need Help Card */}
+                                            <div className="bg-white rounded-2xl p-5 border border-[#E5DFD3] shadow-card space-y-4">
+                                              <h4 className="font-heading font-bold text-sm text-[#17364B]">
+                                                {locale === "te" ? "తక్షణ సహాయం కావాలా?" : locale === "hi" ? "तुरंत सहायता चाहिए?" : "Need Immediate Help?"}
+                                              </h4>
 
-                                                                                                          <div className="space-y-3">
-                                                                                                            {/* Phone */}
-                                                                                                            <a
-                                                                                                              href={`tel:${locDoctor.hospital.phone.replace(/\s+/g, "")}`}
-                                                                                                              className="flex items-center gap-3 p-2.5 rounded-xl bg-brand-navy-950 hover:bg-brand-navy-800 border border-brand-navy-800 transition-colors group"
-                                                                                                            >
-                                                                                                                <div className="w-8 h-8 rounded-lg bg-brand-navy-900 text-brand-cyan flex items-center justify-center">
-                                                                                                                  <Phone className="w-4 h-4" />
-                                                                                                                </div>
-                                                                                                                <div className="text-left leading-tight">
-                                                                                                                    <div className="text-xs font-bold text-white group-hover:text-brand-cyan">
-                                                                                                                      {locDoctor.hospital.phone}
-                                                                                                                    </div>
-                                                                                                                      <div className="text-[10px] text-slate-400">
-                                                                                                                        {locale === "te" ? "ఆసుపత్రి డెస్క్ & అత్యవసర సేవ" : locale === "hi" ? "अस्पताल डेस्क और आपातकालीन" : "Hospital desk & emergency"}
-                                                                                                                      </div>
-                                                                                                                    </div>
-                                                                                                                  </a>
+                                                <div className="space-y-3">
+                                                  {/* Phone */}
+                                                  <a
+                                                    href={`tel:${locDoctor.hospital.phone.replace(/\s+/g, "")}`}
+                                                    className="flex items-center gap-3 p-2.5 rounded-xl bg-[#FAF8F5] hover:bg-[#E5EFF0] border border-[#E5DFD3] transition-colors group"
+                                                  >
+                                                    <div className="w-8 h-8 rounded-lg bg-[#E5EFF0] text-[#B99A62] flex items-center justify-center">
+                                                      <Phone className="w-4 h-4" />
+                                                    </div>
+                                                    <div className="text-left leading-tight">
+                                                      <div className="text-xs font-bold text-[#17364B] group-hover:text-[#B99A62]">
+                                                        {locDoctor.hospital.phone}
+                                                      </div>
+                                                      <div className="text-[10px] text-[#4B6778]">
+                                                        {locale === "te" ? "ఆసుపత్రి డెస్క్ & అత్యవసర సేవ" : locale === "hi" ? "अस्पताल डेस्क और आपातकालीन" : "Hospital desk & emergency"}
+                                                      </div>
+                                                    </div>
+                                                  </a>
 
-                                                                                                                  {/* WhatsApp */}
-                                                                                                                  <a
-                                                                                                                    href={`https://wa.me/917674008057?text=${encodeURIComponent(
-                                                                                                                      locale === "te"
-                                                                                                                        ? `నమస్తే డాక్టర్ జి. రాకేష్ వంశీ గారు, నాకు ${locTreatment.title} గురించి వివరాలు కావాలి.`
-                                                                                                                        : locale === "hi"
-                                                                                                                          ? `नमस्ते डॉ. जी. राकेश वामसी, मुझे ${locTreatment.title} के बारे में जानकारी चाहिए।`
-                                                                                                                          : `Hi Dr. G. Rakesh Vamsi, I have an inquiry about ${locTreatment.title}`
-                                                                                                                    )}`}
-                                                                                                                    target="_blank"
-                                                                                                                    rel="noopener noreferrer"
-                                                                                                                    className="flex items-center gap-3 p-2.5 rounded-xl bg-emerald-950/40 hover:bg-emerald-950/70 border border-emerald-500/30 transition-colors group"
-                                                                                                                  >
-                                                                                                                      <div className="w-8 h-8 rounded-lg bg-emerald-900/60 text-emerald-400 flex items-center justify-center">
-                                                                                                                        <MessageCircle className="w-4 h-4 fill-current" />
-                                                                                                                      </div>
-                                                                                                                      <div className="text-left leading-tight">
-                                                                                                                          <div className="text-xs font-bold text-emerald-200">
-                                                                                                                            {locale === "te" ? "వాట్సాప్‌లో చాట్ చేయండి" : locale === "hi" ? "व्हाट्सएप पर चैट करें" : "Chat on WhatsApp"}
-                                                                                                                          </div>
-                                                                                                                            <div className="text-[10px] text-emerald-400">
-                                                                                                                              {locale === "te" ? "త్వరిత ప్రశ్న స్పందన" : locale === "hi" ? "त्वरित प्रश्न उत्तर" : "Quick query response"}
-                                                                                                                            </div>
-                                                                                                                          </div>
-                                                                                                                        </a>
+                                                  {/* WhatsApp */}
+                                                  <a
+                                                    href={`https://wa.me/917674008057?text=${encodeURIComponent(
+                                                      locale === "te"
+                                                        ? `నమస్తే డాక్టర్ జి. రాకేష్ వంశీ గారు, నాకు ${locTreatment.title} గురించి వివరాలు కావాలి.`
+                                                        : locale === "hi"
+                                                          ? `नमस्ते डॉ. जी. राकेश वामसी, मुझे ${locTreatment.title} के बारे में जानकारी चाहिए।`
+                                                          : `Hi Dr. G. Rakesh Vamsi, I have an inquiry about ${locTreatment.title}`
+                                                    )}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-3 p-2.5 rounded-xl bg-[#EAF7EE] hover:bg-[#DDF2E3] border border-emerald-300 transition-colors group"
+                                                  >
+                                                    <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                                                      <MessageCircle className="w-4 h-4 fill-current" />
+                                                    </div>
+                                                    <div className="text-left leading-tight">
+                                                      <div className="text-xs font-bold text-emerald-900">
+                                                        {locale === "te" ? "వాట్సాప్‌లో చాట్ చేయండి" : locale === "hi" ? "व्हाट्सएप पर चैट करें" : "Chat on WhatsApp"}
+                                                      </div>
+                                                      <div className="text-[10px] text-emerald-700">
+                                                        {locale === "te" ? "త్వరిత ప్రశ్న స్పందన" : locale === "hi" ? "त्वरित प्रश्न उत्तर" : "Quick query response"}
+                                                      </div>
+                                                    </div>
+                                                  </a>
 
-                                                                                                                        {/* Email */}
-                                                                                                                        <a
-                                                                                                                          href={`mailto:${locDoctor.hospital.email}`}
-                                                                                                                          className="flex items-center gap-3 p-2.5 rounded-xl bg-brand-navy-950 hover:bg-brand-navy-800 border border-brand-navy-800 transition-colors group"
-                                                                                                                        >
-                                                                                                                            <div className="w-8 h-8 rounded-lg bg-brand-navy-900 text-brand-cyan flex items-center justify-center">
-                                                                                                                              <Mail className="w-4 h-4" />
-                                                                                                                            </div>
-                                                                                                                            <div className="text-left leading-tight">
-                                                                                                                                <div className="text-xs font-bold text-white group-hover:text-brand-cyan truncate max-w-[170px]">
-                                                                                                                                  {locDoctor.hospital.email}
-                                                                                                                                </div>
-                                                                                                                                  <div className="text-[10px] text-slate-400">
-                                                                                                                                    {locale === "te" ? "మీ రిపోర్టులను పంపండి" : locale === "hi" ? "अपनी रिपोर्ट हमें भेजें" : "Send us your reports"}
-                                                                                                                                  </div>
-                                                                                                                                </div>
-                                                                                                                              </a>
-                                                                                                                            </div>
-                                                                                                                          </div>
-                                                                                                                        </aside>
-                                                                                                                      </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                );
+                                    {/* Email */}
+                                    <a
+                                      href={`mailto:${locDoctor.hospital.email}`}
+                                      className="flex items-center gap-3 p-2.5 rounded-xl bg-[#FAF8F5] hover:bg-[#E5EFF0] border border-[#E5DFD3] transition-colors group"
+                                    >
+                                      <div className="w-8 h-8 rounded-lg bg-[#E5EFF0] text-[#B99A62] flex items-center justify-center">
+                                        <Mail className="w-4 h-4" />
+                                      </div>
+                                      <div className="text-left leading-tight">
+                                        <div className="text-xs font-bold text-[#17364B] group-hover:text-[#B99A62] truncate max-w-[170px]">
+                                          {locDoctor.hospital.email}
+                                        </div>
+                                        <div className="text-[10px] text-[#4B6778]">
+                                          {locale === "te" ? "మీ రిపోర్టులను పంపండి" : locale === "hi" ? "अपनी रिपोर्ट हमें भेजें" : "Send us your reports"}
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </div>
+          </aside>
+                          </div>
+                      </div>
+                    </div>
+                    );
 }

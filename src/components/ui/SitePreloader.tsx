@@ -9,22 +9,12 @@ export default function SitePreloader() {
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    // Check if user prefers reduced motion
-    const prefersReducedMotion =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (prefersReducedMotion) {
-      setIsComplete(true);
-      return;
-    }
-
     // Lock body scroll while preloader is active
     document.body.style.overflow = "hidden";
 
-    // Progress increments for realistic smooth loading simulation
+    // Smooth loading progress simulation (1.5s total feel)
     const startTime = Date.now();
-    const duration = 1400; // 1.4 seconds total loading feel
+    const duration = 1500;
 
     const timer = setInterval(() => {
       const elapsed = Date.now() - startTime;
@@ -42,26 +32,25 @@ export default function SitePreloader() {
         clearInterval(timer);
         setProgress(100);
 
-        // Hold briefly at 100% then trigger smooth landing exit
+        // Hold briefly at 100% then smoothly fade into Home
         setTimeout(() => {
           setIsExiting(true);
-          // Allow page content to be interactive during transition
           document.body.style.overflow = "unset";
 
           // Unmount preloader after exit animation completes
           setTimeout(() => {
             setIsComplete(true);
-          }, 650);
-        }, 200);
+          }, 700);
+        }, 250);
       }
     }, 25);
 
-    // Safety fallback: ensure screen is never locked for more than 2.5s
+    // Safety fallback: ensure screen is never locked indefinitely
     const fallbackTimer = setTimeout(() => {
       document.body.style.overflow = "unset";
       setIsExiting(true);
-      setTimeout(() => setIsComplete(true), 650);
-    }, 2500);
+      setTimeout(() => setIsComplete(true), 700);
+    }, 2800);
 
     return () => {
       clearInterval(timer);
@@ -75,34 +64,33 @@ export default function SitePreloader() {
   return (
     <aside
       aria-label="Site preloader"
-      className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-brand-navy-950 transition-all duration-700 ease-out select-none ${
-        isExiting
-          ? "opacity-0 scale-105 pointer-events-none filter blur-xs"
+      className={`fixed inset-0 z-[99999] flex items-center justify-center bg-[#F6F3EC] transition-all duration-700 ease-out ${isExiting
+          ? "opacity-0 pointer-events-none filter blur-xs"
           : "opacity-100 scale-100"
-      }`}
+        }`}
     >
       {/* Background Soft Ambient Glowing Spheres */}
-      <div className="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-brand-cyan/15 blur-[90px] pointer-events-none transform -translate-x-12 -translate-y-8 animate-pulse" />
-      <div className="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-brand-teal-500/15 blur-[90px] pointer-events-none transform translate-x-12 translate-y-8 animate-pulse [animation-delay:700ms]" />
+      <div className="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#E5EFF0]/80 blur-[90px] pointer-events-none transform -translate-x-12 -translate-y-8 animate-pulse" />
+      <div className="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#B99A62]/10 blur-[90px] pointer-events-none transform translate-x-12 translate-y-8 animate-pulse [animation-delay:700ms]" />
 
       {/* Subtle radial center highlight */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,18,41,0.85)_0%,rgba(0,11,26,0.98)_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(246,243,236,0.6)_0%,rgba(246,243,236,0.98)_70%)] pointer-events-none" />
 
       {/* Main Content Container */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-sm">
         {/* Animated Brand Halo & Logo */}
         <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center mb-5">
           {/* Outer Rotating Glowing Ring */}
-          <div className="absolute inset-0 rounded-full border border-brand-cyan/25 border-t-brand-cyan border-r-brand-teal-400 animate-spin [animation-duration:3s]" />
+          <div className="absolute inset-0 rounded-full border border-[#B99A62]/30 border-t-[#B99A62] border-r-[#D4BE92] animate-spin [animation-duration:3s]" />
 
           {/* Middle Dashed Counter-Rotating Ring */}
-          <div className="absolute inset-2 rounded-full border border-dashed border-brand-teal-500/30 animate-spin [animation-duration:7s] [animation-direction:reverse]" />
+          <div className="absolute inset-2 rounded-full border border-dashed border-[#17364B]/20 animate-spin [animation-duration:7s] [animation-direction:reverse]" />
 
           {/* Subtle Outer Ping Wave */}
-          <div className="absolute inset-1 rounded-full bg-brand-cyan/10 animate-ping [animation-duration:2.5s]" />
+          <div className="absolute inset-1 rounded-full bg-[#B99A62]/10 animate-ping [animation-duration:2.5s]" />
 
           {/* Center Circular Logo Badge */}
-          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white p-2 shadow-[0_0_35px_rgba(0,197,220,0.35)] border-2 border-brand-cyan/50 flex items-center justify-center overflow-hidden">
+          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white p-2 shadow-card border-2 border-[#B99A62]/40 flex items-center justify-center overflow-hidden">
             <Image
               src="/images/logo.png"
               alt="Dr. G. Rakesh Vamsi Logo"
@@ -116,16 +104,16 @@ export default function SitePreloader() {
 
         {/* Doctor & Clinic Identity */}
         <div className="space-y-1.5 mb-2">
-          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-[#17364B] tracking-tight">
             Dr. G. Rakesh Vamsi
           </h2>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-navy-900 border border-brand-teal-500/30 text-[11px] sm:text-xs font-bold text-brand-cyan uppercase tracking-wider">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-ping" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E5EFF0] border border-[#B99A62]/30 text-[11px] sm:text-xs font-bold text-[#17364B] uppercase tracking-wider shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B99A62] animate-ping" />
             <span>Consultant Urologist & Andrologist</span>
           </div>
 
-          <p className="text-xs text-slate-400 font-medium pt-0.5">
+          <p className="text-xs text-[#4B6778] font-medium pt-0.5">
             KIMS Hospital, Nellore
           </p>
         </div>
@@ -142,7 +130,7 @@ export default function SitePreloader() {
             {/* Background static pulse trace */}
             <path
               d="M0 20 H45 L54 10 L62 30 L70 5 L78 28 L86 20 H200"
-              stroke="rgba(0, 197, 220, 0.15)"
+              stroke="rgba(185, 154, 98, 0.2)"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -158,9 +146,9 @@ export default function SitePreloader() {
             />
             <defs>
               <linearGradient id="ecgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#009DBB" stopOpacity="0.2" />
-                <stop offset="50%" stopColor="#00C5DC" stopOpacity="1" />
-                <stop offset="100%" stopColor="#60E0F0" stopOpacity="0.8" />
+                <stop offset="0%" stopColor="#B99A62" stopOpacity="0.2" />
+                <stop offset="50%" stopColor="#B99A62" stopOpacity="1" />
+                <stop offset="100%" stopColor="#8A6E38" stopOpacity="0.8" />
               </linearGradient>
             </defs>
           </svg>
@@ -169,19 +157,19 @@ export default function SitePreloader() {
         {/* Progress Bar Container */}
         <div className="w-56 sm:w-64 mt-2">
           {/* Progress Bar Track */}
-          <div className="w-full h-1.5 rounded-full bg-brand-navy-900 border border-brand-navy-800 overflow-hidden relative shadow-inner">
+          <div className="w-full h-1.5 rounded-full bg-[#E5EFF0] border border-[#DCE5E8] overflow-hidden relative shadow-inner">
             <div
-              className="h-full bg-gradient-to-r from-brand-teal-500 via-brand-cyan to-brand-teal-300 rounded-full transition-all duration-100 ease-out shadow-[0_0_15px_rgba(0,197,220,0.8)]"
-              style={{ width: `${progress}%` }}
+              className="h-full bg-gradient-to-r from-[#B99A62] via-[#C9AD7D] to-[#9E8047] rounded-full transition-all duration-100 ease-out shadow-[0_0_12px_rgba(185,154,98,0.5)]"
+              style={{ width: `${progress}% ` }}
             />
           </div>
 
           {/* Status Label & Percentage Counter */}
-          <div className="flex items-center justify-between w-full mt-2 text-[10px] sm:text-[11px] font-mono text-slate-400">
-            <span className="tracking-widest uppercase text-slate-400">
+          <div className="flex items-center justify-between w-full mt-2 text-[10px] sm:text-[11px] font-mono text-[#4B6778]">
+            <span className="tracking-widest uppercase text-[#4B6778]">
               {progress < 100 ? "Clinical Portal" : "Welcome"}
             </span>
-            <span className="text-brand-cyan font-bold font-mono">
+            <span className="text-[#B99A62] font-bold font-mono">
               {progress}%
             </span>
           </div>
