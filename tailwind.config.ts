@@ -65,9 +65,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-        heading: ["var(--font-jakarta)", "sans-serif"],
-        signature: ["'Brush Script MT'", "cursive"],
+        sans: ["'Outfit'", "var(--font-inter)", "-apple-system", "sans-serif"],
+        heading: ["'Outfit'", "var(--font-jakarta)", "sans-serif"],
+        serif: ["'Playfair Display'", "Georgia", "serif"],
+        signature: ["'Great Vibes'", "'Dancing Script'", "cursive"],
       },
       boxShadow: {
         soft: "0 4px 20px -2px rgba(23, 54, 75, 0.06)",
