@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -7,20 +6,6 @@ import FloatingContactActions from "@/components/layout/FloatingContactActions";
 import SitePreloader from "@/components/ui/SitePreloader";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { generateClinicSchema, generatePhysicianSchema, generateWebSiteSchema } from "@/lib/structuredData";
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-jakarta",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 const siteUrl = "https://drrakeshvamsi.com";
 
@@ -31,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Dr. Rakesh Vamsi",
   },
   description:
-  "Consult Dr. G. Rakesh Vamsi — Leading Andrologist in Nellore & Consultant Urologist at KIMS Hospital. 10+ yrs experience in Male Infertility, Erectile Dysfunction, Laser Kidney Stone Treatment & Robotic Surgery. Book appointment or call +91 76740 08057.",
+    "Consult Dr. G. Rakesh Vamsi — Leading Andrologist in Nellore & Consultant Urologist at KIMS Hospital. 10+ yrs experience in Male Infertility, Erectile Dysfunction, Laser Kidney Stone Treatment & Robotic Surgery. Book appointment or call +91 76740 08057.",
   keywords: [
     "Andrologist in Nellore",
     "Best Andrologist in Nellore",
@@ -98,7 +83,7 @@ export const metadata: Metadata = {
     siteName: "Dr. G. Rakesh Vamsi | Andrologist & Urologist in Nellore",
     title: "Andrologist in Nellore | Dr. G. Rakesh Vamsi | Best Urologist & Male Fertility Specialist",
     description:
-    "Expert Andrology, Male Infertility, Laser Kidney Stone Treatment & Robotic Urology by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore. Advanced, ethical and patient-focused healthcare.",
+      "Expert Andrology, Male Infertility, Laser Kidney Stone Treatment & Robotic Urology by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore. Advanced, ethical and patient-focused healthcare.",
     images: [
       {
         url: "/images/dr-rakesh-vamsi.png",
@@ -118,7 +103,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Andrologist in Nellore | Dr. G. Rakesh Vamsi",
     description:
-    "Leading Andrologist & Consultant Urologist at KIMS Hospital, Nellore. Expert Male Fertility, ED, Laser Stone & Robotic Surgery.",
+      "Leading Andrologist & Consultant Urologist at KIMS Hospital, Nellore. Expert Male Fertility, ED, Laser Stone & Robotic Surgery.",
     images: ["/images/dr-rakesh-vamsi.png"],
   },
   alternates: {
@@ -149,45 +134,42 @@ export default function RootLayout({
   const websiteJson = generateWebSiteSchema();
 
   return (
-    <html
-      lang="en"
-      className={`${jakarta.variable} ${inter.variable}`}
-    >
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#F6F3EC" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJson) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicJson) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJson) }}
-        />
-      </head>
-      <body className="font-sans min-h-screen flex flex-col bg-brand-ivory text-brand-navy antialiased selection:bg-brand-gold selection:text-white">
-        <SitePreloader />
-        <LanguageProvider>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-          <FloatingContactActions />
-        </LanguageProvider>
-      </body>
-    </html>
-  );
+      <html lang="en">
+        <head>
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="icon" href="/icon.png" type="image/png" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#F6F3EC" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJson) }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicJson) }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJson) }}
+          />
+        </head>
+        <body className="font-sans min-h-screen flex flex-col bg-brand-ivory text-brand-navy antialiased selection:bg-brand-gold selection:text-white">
+          <SitePreloader />
+          <LanguageProvider>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <FloatingContactActions />
+          </LanguageProvider>
+        </body>
+      </html>
+      );
 }
