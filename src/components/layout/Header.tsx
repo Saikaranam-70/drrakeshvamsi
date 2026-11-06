@@ -62,7 +62,7 @@ export default function Header() {
               <div className="relative w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-full bg-white shadow-xs border border-[#E5DFD3] p-1 flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
                 <Image
                   src="/images/logo.png"
-                  alt="Dr. Rakesh Vamsi - Consultant Urologist & Andrologist"
+                  alt="Dr. G. Rakesh Vamsi - Consultant Andrologist & Urologist Logo"
                   fill
                   className="object-contain p-0.5"
                   priority

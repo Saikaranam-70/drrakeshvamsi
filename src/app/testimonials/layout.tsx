@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/structuredData";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://drrakeshvamsi.com";
+const siteUrl = "https://drrakeshvamsi.com";
 
 export const metadata: Metadata = {
-  title: "Patient Reviews & Testimonials | Dr. G. Rakesh Vamsi | Nellore",
+  title: {
+    absolute: "Patient Reviews & Testimonials | Dr. Rakesh Vamsi Nellore",
+  },
   description:
-    "Read verified patient reviews and recovery stories for kidney stone laser treatments, prostate surgeries, and urological care by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
+  "Read patient feedback and verified recovery stories for kidney stone laser treatments, prostate surgeries, and andrological care by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
   keywords: [
     "Dr Rakesh Vamsi reviews",
+    "Andrologist in Nellore reviews",
     "Urologist reviews Nellore",
-    "Best andrologist in Nellore reviews",
+    "Best andrologist in Nellore feedback",
     "KIMS Hospital urology patient feedback",
     "Kidney stone laser surgery reviews Nellore",
   ],
@@ -17,11 +21,26 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/testimonials`,
   },
   openGraph: {
-    title: "Patient Stories & Reviews | Dr. G. Rakesh Vamsi",
+    title: "Patient Reviews & Testimonials | Dr. Rakesh Vamsi Nellore",
     description:
-      "Real stories of recovery and clinical excellence from patients treated by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
+    "Real stories of recovery and clinical care from patients treated by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
     url: `${siteUrl}/testimonials`,
     type: "website",
+    images: [
+      {
+        url: "/images/dr-rakesh-vamsi.png",
+        width: 1200,
+        height: 630,
+        alt: "Patient Reviews - Dr. G. Rakesh Vamsi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Patient Reviews | Dr. Rakesh Vamsi Nellore",
+    description:
+      "Patient experiences and recovery stories under Dr. G. Rakesh Vamsi at KIMS Hospital Nellore.",
+    images: ["/images/dr-rakesh-vamsi.png"],
   },
 };
 
@@ -30,6 +49,19 @@ export default function TestimonialsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Testimonials", url: "/testimonials" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  );
 }
 

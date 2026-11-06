@@ -1,27 +1,32 @@
 import React from "react";
 import { Metadata } from "next";
 import BlogExplorer from "@/components/blog/BlogExplorer";
+import { generateBreadcrumbSchema } from "@/lib/structuredData";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://drrakeshvamsi.com";
+const siteUrl = "https://drrakeshvamsi.com";
 
 export const metadata: Metadata = {
-  title: "Urology & Men's Health Articles | Dr. G. Rakesh Vamsi",
+  title: {
+    absolute: "Men's Health & Urology Blog | Dr. Rakesh Vamsi | Nellore",
+  },
   description:
-  "Educational medical articles, kidney stone prevention guides, prostate wellness, and men's health insights written by Dr. G. Rakesh Vamsi, Consultant Urologist & Andrologist at KIMS Hospital, Nellore.",
+  "Evidence-based medical articles on Male Infertility, Erectile Dysfunction, Kidney Stone Prevention & Robotic Surgery by Dr. G. Rakesh Vamsi, Consultant Andrologist & Urologist at KIMS Hospital, Nellore.",
   keywords: [
-    "Urology articles Nellore",
+    "Men's health blog Nellore",
+    "Andrology articles Andhra Pradesh",
+    "Male infertility causes and treatment",
     "Kidney stone prevention tips",
-    "Prostate health guide",
-    "Men's health advice Andhra Pradesh",
-    "Dr Rakesh Vamsi blog",
+    "Erectile dysfunction treatment options",
+    "Urology medical blog India",
+    "Dr Rakesh Vamsi articles",
   ],
   alternates: {
     canonical: `${siteUrl}/blog`,
   },
   openGraph: {
-    title: "Urology & Men's Health Articles | Dr. G. Rakesh Vamsi",
+    title: "Men's Health & Urology Blog | Dr. Rakesh Vamsi | Nellore",
     description:
-      "Expert medical guides on kidney stones, prostate conditions, and andrological wellness by Dr. G. Rakesh Vamsi.",
+    "Expert medical guides on andrology, male fertility, kidney stones, and prostate health by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
     url: `${siteUrl}/blog`,
     type: "website",
     images: [
@@ -29,12 +34,32 @@ export const metadata: Metadata = {
         url: "/images/dr-rakesh-vamsi.png",
         width: 1200,
         height: 630,
-        alt: "Medical Articles - Dr. G. Rakesh Vamsi",
+        alt: "Men's Health & Urology Articles - Dr. G. Rakesh Vamsi",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Men's Health & Urology Blog | Dr. Rakesh Vamsi",
+    description:
+      "Evidence-based clinical guides on andrology, male fertility, and urological health by Dr. G. Rakesh Vamsi.",
+    images: ["/images/dr-rakesh-vamsi.png"],
   },
 };
 
 export default function BlogPage() {
-  return <BlogExplorer />;
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Medical Blog", url: "/blog" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <BlogExplorer />
+    </>
+  );
 }

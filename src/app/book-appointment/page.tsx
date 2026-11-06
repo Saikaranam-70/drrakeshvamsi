@@ -1,32 +1,65 @@
 import React from "react";
 import { Metadata } from "next";
 import BookingWizard from "@/components/booking/BookingWizard";
+import { generateBreadcrumbSchema } from "@/lib/structuredData";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://drrakeshvamsi.com";
+const siteUrl = "https://drrakeshvamsi.com";
 
 export const metadata: Metadata = {
-  title: "Book Doctor Appointment Online | Dr. G. Rakesh Vamsi | KIMS Hospital",
+  title: {
+    absolute: "Book Andrologist & Urologist Appointment | Dr. Rakesh Vamsi Nellore",
+  },
   description:
-  "Schedule an in-person hospital or video consultation with Dr. G. Rakesh Vamsi, Consultant Urologist & Andrologist at KIMS Hospital, Nellore. Quick, direct slot booking with instant confirmation.",
+  "Book an in-person hospital visit or confidential consultation with Dr. G. Rakesh Vamsi, Consultant Andrologist & Urologist at KIMS Hospital, Nellore. Quick, instant slot confirmation.",
   keywords: [
+    "Book andrologist appointment Nellore",
     "Book urologist appointment Nellore",
     "Dr Rakesh Vamsi appointment booking",
     "KIMS Hospital Nellore urology appointment",
-    "Online doctor consultation Nellore",
-    "Kidney stone doctor consultation",
+    "Male fertility doctor appointment Nellore",
+    "Kidney stone doctor consultation Nellore",
+    "Erectile dysfunction doctor consultation",
   ],
   alternates: {
     canonical: `${siteUrl}/book-appointment`,
   },
   openGraph: {
-    title: "Book Appointment Online | Dr. G. Rakesh Vamsi",
+    title: "Book Andrologist & Urologist Appointment | Dr. Rakesh Vamsi Nellore",
     description:
-      "Schedule a consultation with Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore. Instant confirmation for in-person or video visits.",
+    "Schedule a consultation with Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore. Instant appointment confirmation for hospital visits.",
     url: `${siteUrl}/book-appointment`,
     type: "website",
+    images: [
+      {
+        url: "/images/dr-rakesh-vamsi.png",
+        width: 1200,
+        height: 630,
+        alt: "Book Appointment - Dr. G. Rakesh Vamsi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book Appointment | Dr. Rakesh Vamsi Nellore",
+    description:
+      "Schedule a consultation with Dr. G. Rakesh Vamsi at KIMS Hospital Nellore.",
+    images: ["/images/dr-rakesh-vamsi.png"],
   },
 };
 
 export default function BookAppointmentPage() {
-  return <BookingWizard />;
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Book Appointment", url: "/book-appointment" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <BookingWizard />
+    </>
+  );
 }

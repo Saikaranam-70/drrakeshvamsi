@@ -1,6 +1,7 @@
 User-Agent: *
 Allow: /
 Disallow: /api/
+Disallow: /appointment-confirmation
 
 Host: https://drrakeshvamsi.com
 Sitemap: https://drrakeshvamsi.com/sitemap.xml
