@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbSchema } from "@/lib/structuredData";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://drrakeshvamsi.com";
+const siteUrl = "https://drrakeshvamsi.com";
 
 export const metadata: Metadata = {
-  title: "Patient Guide & Hospital Visit Preparation | Dr. G. Rakesh Vamsi",
+  title: {
+    absolute: "Patient Guide & Hospital Visit Preparation | Dr. Rakesh Vamsi Nellore",
+  },
   description:
     "Patient guidelines, pre-operative instructions, hospital admission guide, and cashless insurance claims information for visits to Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
   keywords: [
@@ -17,11 +20,26 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/patient-info`,
   },
   openGraph: {
-    title: "Patient Guide & Visit Prep | Dr. G. Rakesh Vamsi",
+    title: "Patient Guide & Hospital Visit Preparation | Dr. Rakesh Vamsi Nellore",
     description:
       "Comprehensive patient instructions, health checklist, and hospital guide for visits to KIMS Hospital, Nellore.",
     url: `${siteUrl}/patient-info`,
     type: "website",
+    images: [
+      {
+        url: "/images/dr-rakesh-vamsi.png",
+        width: 1200,
+        height: 630,
+        alt: "Patient Guide - Dr. G. Rakesh Vamsi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Patient Guide | Dr. Rakesh Vamsi Nellore",
+    description:
+      "Pre-operative instructions, hospital admission steps, and insurance info for Dr. G. Rakesh Vamsi.",
+    images: ["/images/dr-rakesh-vamsi.png"],
   },
 };
 
@@ -30,6 +48,19 @@ export default function PatientInfoLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Patient Info", url: "/patient-info" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  );
 }
 

@@ -1,12 +1,12 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://drrakeshvamsi.com";
+  const siteUrl = "https://drrakeshvamsi.com";
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/"],
+      disallow: ["/api/", "/appointment-confirmation"],
     },
     sitemap: `${siteUrl}/sitemap.xml`,
     host: siteUrl,
