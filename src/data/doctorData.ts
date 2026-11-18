@@ -69,9 +69,9 @@ export const doctorData: DoctorInfo = {
   quote:
     "My focus is to provide advanced, ethical and personalized urological care with the latest technology for better outcomes and improved quality of life.",
   shortBio:
-    "Fellowship-trained andrologist in Nellore specializing in male infertility, erectile dysfunction, penile implants (IPP), and advanced laser and robotic urology at KIMS Hospital.",
+  "Fellowship-trained andrologist in Nellore specializing in male infertility, erectile dysfunction, penile implants (IPP), and advanced laser and robotic urology at KIMS Hospital.",
   fullBio:
-    "Dr. Rakesh Vamsi is a distinguished Consultant Urologist and formally trained Andrologist in Nellore based at KIMS Hospital. With dedicated super-specialty training in andrology, microsurgical varicocelectomy, and penile prosthesis surgery, Dr. Vamsi provides evidence-based, compassionate care for complex male reproductive, sexual wellness, and urological conditions. His surgical philosophy prioritizes minimally invasive laser, microscopic, and robotic techniques that ensure faster healing, minimal post-operative discomfort, and optimal clinical outcomes.",
+  "Dr. Rakesh Vamsi is a distinguished Consultant Urologist and formally trained Andrologist in Nellore based at KIMS Hospital. With dedicated super-specialty training in andrology, microsurgical varicocelectomy, and penile prosthesis surgery, Dr. Vamsi provides evidence-based, compassionate care for complex male reproductive, sexual wellness, and urological conditions. His surgical philosophy prioritizes minimally invasive laser, microscopic, and robotic techniques that ensure faster healing, minimal post-operative discomfort, and optimal clinical outcomes.",
   qualifications: [
     {
       degree: "MBBS",

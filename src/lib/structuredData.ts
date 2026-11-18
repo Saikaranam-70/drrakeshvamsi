@@ -27,7 +27,7 @@ export function generatePhysicianSchema() {
     honorificSuffix: "MBBS, MS (General Surgery), M.Ch (Urology), FMAS",
     jobTitle: "Trained Andrologist, Consultant Urologist, Laparoscopic & Robotic Surgeon",
     description:
-      "Dr. G. Rakesh Vamsi is a premier fellowship and clinically trained Andrologist in Nellore and Consultant Urologist at KIMS Hospital. Specializing in Male Infertility, Erectile Dysfunction, Penile Implants, Laser Kidney Stone Treatment, and Advanced Robotic Surgery.",
+    "Dr. G. Rakesh Vamsi is a premier fellowship and clinically trained Andrologist in Nellore and Consultant Urologist at KIMS Hospital. Specializing in Male Infertility, Erectile Dysfunction, Penile Implants, Laser Kidney Stone Treatment, and Advanced Robotic Surgery.",
     url: siteUrl,
     image: `${siteUrl}/images/dr-rakesh-vamsi.png`,
     logo: `${siteUrl}/images/logo.png`,
@@ -209,7 +209,7 @@ export function generateWebSiteSchema() {
       "www.drrakeshvamsi.com",
     ],
     description:
-      "Official medical portal of Dr. G. Rakesh Vamsi — Trained Andrologist in Nellore, Consultant Urologist, and Robotic Surgeon at KIMS Hospital, Nellore, Andhra Pradesh.",
+    "Official medical portal of Dr. G. Rakesh Vamsi — Trained Andrologist in Nellore, Consultant Urologist, and Robotic Surgeon at KIMS Hospital, Nellore, Andhra Pradesh.",
     publisher: {
       "@id": `${siteUrl}/#physician`,
     },

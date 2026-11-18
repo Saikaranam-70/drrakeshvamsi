@@ -28,7 +28,7 @@ export const enHome = {
     headingHighlight: "Male Sexual & Reproductive",
     headingSuffix: "Wellness",
     subtitle:
-      "Dr. Rakesh Vamsi is a premier trained andrologist in Nellore providing specialized, confidential, and evidence-based clinical solutions for ED management, penile implants, and male infertility at KIMS Hospital, Nellore.",
+    "Dr. Rakesh Vamsi is a premier trained andrologist in Nellore providing specialized, confidential, and evidence-based clinical solutions for ED management, penile implants, and male infertility at KIMS Hospital, Nellore.",
     definitiveBadge: "Permanent Gold Standard",
     pillar1Title: "ED Management",
     pillar1Subtitle: "Erectile Dysfunction Solutions",

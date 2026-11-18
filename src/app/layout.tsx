@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Dr. Rakesh Vamsi",
   },
   description:
-    "Consult Dr. G. Rakesh Vamsi — Leading Trained Andrologist in Nellore & Consultant Urologist at KIMS Hospital. 10+ yrs experience in Male Infertility, Erectile Dysfunction, Penile Implants, Laser Kidney Stone Treatment & Robotic Surgery. Book appointment or call +91 76740 08057.",
+  "Consult Dr. G. Rakesh Vamsi — Leading Trained Andrologist in Nellore & Consultant Urologist at KIMS Hospital. 10+ yrs experience in Male Infertility, Erectile Dysfunction, Penile Implants, Laser Kidney Stone Treatment & Robotic Surgery. Book appointment or call +91 76740 08057.",
   keywords: [
     "Trained Andrologist in Nellore",
     "Trained Andrologist",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     siteName: "Dr. G. Rakesh Vamsi | Andrologist & Urologist in Nellore",
     title: "Trained Andrologist in Nellore | Dr. G. Rakesh Vamsi | Best Urologist & Male Fertility Specialist",
     description:
-      "Expert Andrology, Male Infertility, Penile Implants, Laser Kidney Stone Treatment & Robotic Urology by Dr. G. Rakesh Vamsi — premier trained andrologist in Nellore at KIMS Hospital.",
+    "Expert Andrology, Male Infertility, Penile Implants, Laser Kidney Stone Treatment & Robotic Urology by Dr. G. Rakesh Vamsi — premier trained andrologist in Nellore at KIMS Hospital.",
     images: [
       {
         url: "/images/dr-rakesh-vamsi.png",
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Trained Andrologist in Nellore | Dr. G. Rakesh Vamsi",
     description:
-      "Leading Trained Andrologist & Consultant Urologist at KIMS Hospital, Nellore. Expert Male Fertility, ED, Penile Implants, Laser Stone & Robotic Surgery.",
+    "Leading Trained Andrologist & Consultant Urologist at KIMS Hospital, Nellore. Expert Male Fertility, ED, Penile Implants, Laser Stone & Robotic Surgery.",
     images: ["/images/dr-rakesh-vamsi.png"],
   },
   alternates: {

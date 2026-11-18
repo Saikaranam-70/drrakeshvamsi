@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     absolute: "Trained Andrologist in Nellore | Dr. Rakesh Vamsi | Best Urologist & Male Fertility Specialist",
   },
   description:
-    "Looking for a trained andrologist in Nellore? Consult Dr. G. Rakesh Vamsi (MS, M.Ch Urology) at KIMS Hospital. Expert care for Male Infertility, Erectile Dysfunction, Penile Implants, Laser Kidney Stone Treatment & Robotic Surgery. Book appointment online.",
+  "Looking for a trained andrologist in Nellore? Consult Dr. G. Rakesh Vamsi (MS, M.Ch Urology) at KIMS Hospital. Expert care for Male Infertility, Erectile Dysfunction, Penile Implants, Laser Kidney Stone Treatment & Robotic Surgery. Book appointment online.",
   keywords: [
     "Trained Andrologist in Nellore",
     "Trained Andrologist",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "Dr. G. Rakesh Vamsi | Trained Andrologist & Urologist in Nellore",
     title: "Trained Andrologist in Nellore | Dr. Rakesh Vamsi | Best Urologist & Male Fertility Specialist",
     description:
-      "Consult Dr. G. Rakesh Vamsi — Premier Trained Andrologist in Nellore & Consultant Urologist at KIMS Hospital. Expert in Male Infertility, ED, Laser Stone Removal & Robotic Surgery.",
+    "Consult Dr. G. Rakesh Vamsi — Premier Trained Andrologist in Nellore & Consultant Urologist at KIMS Hospital. Expert in Male Infertility, ED, Laser Stone Removal & Robotic Surgery.",
     images: [
       {
         url: "/images/dr-rakesh-vamsi.png",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Trained Andrologist in Nellore | Dr. Rakesh Vamsi",
     description:
-      "Premier Trained Andrologist & Urologist in Nellore at KIMS Hospital. Expert in Male Infertility, ED, Penile Implants, Laser Kidney Stone Surgery.",
+    "Premier Trained Andrologist & Urologist in Nellore at KIMS Hospital. Expert in Male Infertility, ED, Penile Implants, Laser Kidney Stone Surgery.",
     images: ["/images/dr-rakesh-vamsi.png"],
   },
 };
