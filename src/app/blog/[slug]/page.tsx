@@ -145,11 +145,11 @@ export default function BlogDetailPage({ params }: Props) {
     article.relatedSlugs?.includes(a.slug)
   );
 
-    const articleSchema = generateArticleSchema({
-      title: article.title,
-      slug: article.slug,
-      description: article.shortDescription,
-      datePublished: article.date,
+  const articleSchema = generateArticleSchema({
+    title: article.title,
+    slug: article.slug,
+    description: article.shortDescription,
+    datePublished: article.date,
     category: article.category,
   });
 

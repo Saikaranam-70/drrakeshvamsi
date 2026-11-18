@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     absolute: "Andrology & Urology Treatments in Nellore | Dr. Rakesh Vamsi",
   },
   description:
-  "Comprehensive andrology & urology treatments in Nellore: Male Infertility, ED, Penile Implants, Laser Kidney Stone Removal (RIRS, PCNL) & Robotic Surgery by Dr. G. Rakesh Vamsi at KIMS Hospital.",
+    "Comprehensive andrology & urology treatments in Nellore: Male Infertility, ED, Penile Implants, Laser Kidney Stone Removal (RIRS, PCNL) & Robotic Surgery by Dr. G. Rakesh Vamsi at KIMS Hospital.",
   keywords: [
     "Andrology treatments Nellore",
     "Urology treatments Nellore",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Andrology & Urology Treatments in Nellore | Dr. Rakesh Vamsi",
     description:
-    "Advanced minimally invasive laser, laparoscopic, and robotic surgical treatments for andrology and urology at KIMS Hospital, Nellore.",
+      "Advanced minimally invasive laser, laparoscopic, and robotic surgical treatments for andrology and urology at KIMS Hospital, Nellore.",
     url: `${siteUrl}/treatments`,
     type: "website",
     images: [

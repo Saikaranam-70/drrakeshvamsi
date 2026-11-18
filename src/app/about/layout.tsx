@@ -5,11 +5,14 @@ const siteUrl = "https://www.drrakeshvamsi.com";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "About Dr. Rakesh Vamsi | Andrologist & Urologist in Nellore",
+    absolute: "About Dr. Rakesh Vamsi | Trained Andrologist & Urologist in Nellore",
   },
   description:
-    "Learn about Dr. G. Rakesh Vamsi (MS, M.Ch Urology), leading Consultant Andrologist, Urologist & Robotic Surgeon at KIMS Hospital, Nellore. 10+ years experience, 5000+ patients treated.",
+    "Learn about Dr. G. Rakesh Vamsi (MS, M.Ch Urology), premier fellowship & clinically trained andrologist in Nellore, consultant urologist & robotic surgeon at KIMS Hospital. 10+ years experience, 5000+ patients treated.",
   keywords: [
+    "Trained Andrologist in Nellore",
+    "Best Trained Andrologist in Nellore",
+    "Fellowship Trained Andrologist Nellore",
     "About Dr Rakesh Vamsi",
     "Andrologist in Nellore",
     "Dr G Rakesh Vamsi qualifications",
@@ -24,9 +27,9 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/about`,
   },
   openGraph: {
-    title: "About Dr. Rakesh Vamsi | Andrologist & Urologist in Nellore",
+    title: "About Dr. Rakesh Vamsi | Trained Andrologist & Urologist in Nellore",
     description:
-      "Specialized training in andrology, male fertility, laser and robotic urology with over a decade of compassionate clinical excellence at KIMS Hospital Nellore.",
+      "Specialized fellowship training in andrology, male fertility, microsurgery, laser and robotic urology with over a decade of compassionate clinical excellence at KIMS Hospital Nellore.",
     url: `${siteUrl}/about`,
     type: "profile",
     images: [
@@ -34,15 +37,15 @@ export const metadata: Metadata = {
         url: "/images/dr-rakesh-vamsi.png",
         width: 1200,
         height: 630,
-        alt: "Dr. G. Rakesh Vamsi - Consultant Andrologist and Urologist",
+        alt: "Dr. G. Rakesh Vamsi - Trained Andrologist and Urologist in Nellore",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Dr. Rakesh Vamsi | Andrologist & Urologist in Nellore",
+    title: "About Dr. Rakesh Vamsi | Trained Andrologist & Urologist in Nellore",
     description:
-      "Qualifications and surgical milestones of Dr. G. Rakesh Vamsi, Consultant Andrologist & Urologist at KIMS Hospital Nellore.",
+      "Qualifications and surgical milestones of Dr. G. Rakesh Vamsi, Fellowship-Trained Andrologist & Urologist at KIMS Hospital Nellore.",
     images: ["/images/dr-rakesh-vamsi.png"],
   },
 };

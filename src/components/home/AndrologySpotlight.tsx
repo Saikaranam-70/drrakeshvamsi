@@ -98,7 +98,7 @@ export default function AndrologySpotlight() {
               <p className="text-base sm:text-lg text-[#3A5668] font-medium leading-relaxed">
                 {t(
                   "home.andrology.subtitle",
-                  "Dr. Rakesh Vamsi provides specialized, confidential, and evidence-based clinical solutions for ED management, penile implants, and male infertility at KIMS Hospital, Nellore."
+                  "Dr. Rakesh Vamsi is a premier trained andrologist in Nellore providing specialized, confidential, and evidence-based clinical solutions for ED management, penile implants, and male infertility at KIMS Hospital, Nellore."
                 )}
               </p>
             </div>

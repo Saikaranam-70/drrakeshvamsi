@@ -10,8 +10,9 @@ export const metadata: Metadata = {
     absolute: "Men's Health & Urology Blog | Dr. Rakesh Vamsi | Nellore",
   },
   description:
-  "Evidence-based medical articles on Male Infertility, Erectile Dysfunction, Kidney Stone Prevention & Robotic Surgery by Dr. G. Rakesh Vamsi, Consultant Andrologist & Urologist at KIMS Hospital, Nellore.",
+    "Evidence-based medical articles on Male Infertility, Erectile Dysfunction, Kidney Stone Prevention & Robotic Surgery by Dr. G. Rakesh Vamsi, Consultant Andrologist & Urologist at KIMS Hospital, Nellore.",
   keywords: [
+    "Trained Andrologist in Nellore",
     "Men's health blog Nellore",
     "Andrology articles Andhra Pradesh",
     "Male infertility causes and treatment",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Men's Health & Urology Blog | Dr. Rakesh Vamsi | Nellore",
     description:
-    "Expert medical guides on andrology, male fertility, kidney stones, and prostate health by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
+      "Expert medical guides on andrology, male fertility, kidney stones, and prostate health by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
     url: `${siteUrl}/blog`,
     type: "website",
     images: [

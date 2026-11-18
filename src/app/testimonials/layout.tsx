@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: "Patient Reviews & Testimonials | Dr. Rakesh Vamsi Nellore",
   },
   description:
-  "Read patient feedback and verified recovery stories for kidney stone laser treatments, prostate surgeries, and andrological care by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
+    "Read patient feedback and verified recovery stories for kidney stone laser treatments, prostate surgeries, and andrological care by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
   keywords: [
     "Dr Rakesh Vamsi reviews",
     "Andrologist in Nellore reviews",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Patient Reviews & Testimonials | Dr. Rakesh Vamsi Nellore",
     description:
-    "Real stories of recovery and clinical care from patients treated by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
+      "Real stories of recovery and clinical care from patients treated by Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore.",
     url: `${siteUrl}/testimonials`,
     type: "website",
     images: [

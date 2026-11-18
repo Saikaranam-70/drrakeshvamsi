@@ -45,7 +45,7 @@ export const doctorData: DoctorInfo = {
   name: "Dr. G. Rakesh Vamsi",
   prefix: "Dr.",
   fullName: "Dr. G. Rakesh Vamsi",
-  designation: "Consultant Urologist & Andrologist",
+  designation: "Trained Andrologist & Consultant Urologist",
   specialization: "Laparoscopic & Robotic Surgeon",
   experienceYears: "10+",
   patientsCount: "5000+",
@@ -69,9 +69,9 @@ export const doctorData: DoctorInfo = {
   quote:
     "My focus is to provide advanced, ethical and personalized urological care with the latest technology for better outcomes and improved quality of life.",
   shortBio:
-    "Dedicated to providing comprehensive urological and andrological care with a focus on advanced, minimally invasive and patient-centered treatment approaches.",
+    "Fellowship-trained andrologist in Nellore specializing in male infertility, erectile dysfunction, penile implants (IPP), and advanced laser and robotic urology at KIMS Hospital.",
   fullBio:
-    "Dr. Rakesh Vamsi is a distinguished Consultant Urologist, Andrologist, and Laparoscopic & Robotic Surgeon based at KIMS Hospital, Nellore. With extensive specialized surgical training and over a decade of clinical experience, Dr. Vamsi provides evidence-based, compassionate care for complex kidney, prostate, urinary, and male reproductive conditions. His surgical philosophy prioritizes minimally invasive laser, laparoscopic, and robotic techniques that ensure faster healing, minimal post-operative discomfort, and optimal clinical outcomes.",
+    "Dr. Rakesh Vamsi is a distinguished Consultant Urologist and formally trained Andrologist in Nellore based at KIMS Hospital. With dedicated super-specialty training in andrology, microsurgical varicocelectomy, and penile prosthesis surgery, Dr. Vamsi provides evidence-based, compassionate care for complex male reproductive, sexual wellness, and urological conditions. His surgical philosophy prioritizes minimally invasive laser, microscopic, and robotic techniques that ensure faster healing, minimal post-operative discomfort, and optimal clinical outcomes.",
   qualifications: [
     {
       degree: "MBBS",
@@ -90,6 +90,12 @@ export const doctorData: DoctorInfo = {
       institution: "Super-Specialty Institute of Medical Sciences",
       year: "Super-Specialty Surgical Degree",
       description: "Advanced surgical residency in adult and pediatric urology, endourology, and andrology.",
+    },
+    {
+      degree: "Specialized Training in Andrology & Male Infertility",
+      institution: "Premier Andrology & Reproductive Microsurgery Center",
+      year: "Super-Specialty Clinical Training",
+      description: "Advanced surgical & clinical training in male sexual dysfunction, penile implants (IPP), microsurgical varicocelectomy, and micro-TESE sperm extraction.",
     },
     {
       degree: "Fellowship in Laparoscopy & Robotic Surgery",

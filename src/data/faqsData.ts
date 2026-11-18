@@ -7,6 +7,13 @@ export interface FaqItem {
 
 export const faqsList: FaqItem[] = [
   {
+    id: "trained-andrologist-nellore",
+    category: "consultation",
+    question: "Who is the best trained andrologist in Nellore for male fertility and sexual wellness?",
+    answer:
+      "Dr. G. Rakesh Vamsi (MS, M.Ch Urology) is a premier fellowship and clinically trained andrologist in Nellore practicing at KIMS Hospital. He has advanced surgical training in andrology, specializing in male infertility (Micro-TESE, microsurgical varicocelectomy), erectile dysfunction treatments (including penile implants / IPP), Peyronie's disease, and hormonal optimization with 100% confidential consultations.",
+  },
+  {
     id: "when-to-see",
     category: "consultation",
     question: "When should I see a urologist?",

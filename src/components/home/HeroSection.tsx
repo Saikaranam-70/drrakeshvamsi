@@ -135,10 +135,16 @@ export default function HeroSection() {
           {/* LEFT COLUMN: Location, Headlines, Doctor Card, CTAs */}
           {/* ---------------------------------------------------- */}
           <div className="lg:col-span-6 space-y-4 sm:space-y-5 text-left">
-            {/* Location Pill */}
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/90 border border-[#DCD5C9] shadow-2xs text-xs font-semibold text-[#17364B]">
-              <MapPin className="w-3.5 h-3.5 text-[#B99A62]" />
-              <span>{doctor.hospital.name}, {doctor.hospital.city}</span>
+            {/* Location & Specialty Badges */}
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/90 border border-[#DCD5C9] shadow-2xs text-xs font-semibold text-[#17364B]">
+                <MapPin className="w-3.5 h-3.5 text-[#B99A62]" />
+                <span>{doctor.hospital.name}, {doctor.hospital.city}</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E5EFF0] border border-[#CCDDE0] text-xs font-bold text-[#17364B]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B99A62]" />
+                <span>Trained Andrologist in Nellore</span>
+              </div>
             </div>
 
             {/* Main Headline */}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     absolute: "Terms & Conditions | Dr. Rakesh Vamsi Nellore",
   },
   description:
-  "Terms of use and medical disclaimer for Dr. G. Rakesh Vamsi's official medical and andrology portal.",
+    "Terms of use and medical disclaimer for Dr. G. Rakesh Vamsi's official medical and andrology portal.",
   alternates: {
     canonical: `${siteUrl}/terms-and-conditions`,
   },

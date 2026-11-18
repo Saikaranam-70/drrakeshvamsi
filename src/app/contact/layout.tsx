@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: "Contact & Clinic Location in Nellore | Dr. Rakesh Vamsi",
   },
   description:
-  "Contact Dr. G. Rakesh Vamsi at KIMS Hospital, SP Nagar, Nellore. Call +91 76740 08057 for appointments, location directions, consultation hours, and inquiries.",
+    "Contact Dr. G. Rakesh Vamsi at KIMS Hospital, SP Nagar, Nellore. Call +91 76740 08057 for appointments, location directions, consultation hours, and inquiries.",
   keywords: [
     "Dr Rakesh Vamsi contact number",
     "Andrologist in Nellore contact",

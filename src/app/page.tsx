@@ -17,11 +17,16 @@ const siteUrl = "https://www.drrakeshvamsi.com";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Andrologist in Nellore | Dr. Rakesh Vamsi | Best Urologist & Male Fertility Specialist",
+    absolute: "Trained Andrologist in Nellore | Dr. Rakesh Vamsi | Best Urologist & Male Fertility Specialist",
   },
   description:
-    "Consult Dr. G. Rakesh Vamsi — Leading Andrologist in Nellore & Consultant Urologist at KIMS Hospital. Expert care for Male Infertility, Erectile Dysfunction, Laser Kidney Stone Treatment & Robotic Surgery. Book appointment online.",
+    "Looking for a trained andrologist in Nellore? Consult Dr. G. Rakesh Vamsi (MS, M.Ch Urology) at KIMS Hospital. Expert care for Male Infertility, Erectile Dysfunction, Penile Implants, Laser Kidney Stone Treatment & Robotic Surgery. Book appointment online.",
   keywords: [
+    "Trained Andrologist in Nellore",
+    "Trained Andrologist",
+    "Best Trained Andrologist in Nellore",
+    "Specialist Trained Andrologist in Nellore",
+    "Fellowship Trained Andrologist Nellore",
     "Andrologist in Nellore",
     "Best Andrologist in Nellore",
     "Andrologist Doctor in Nellore",
@@ -47,24 +52,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: siteUrl,
-    siteName: "Dr. G. Rakesh Vamsi | Andrologist & Urologist in Nellore",
-    title: "Andrologist in Nellore | Dr. Rakesh Vamsi | Best Urologist & Male Fertility Specialist",
+    siteName: "Dr. G. Rakesh Vamsi | Trained Andrologist & Urologist in Nellore",
+    title: "Trained Andrologist in Nellore | Dr. Rakesh Vamsi | Best Urologist & Male Fertility Specialist",
     description:
-      "Consult Dr. G. Rakesh Vamsi — Leading Andrologist in Nellore & Consultant Urologist at KIMS Hospital. Expert in Male Infertility, ED, Laser Stone Removal & Robotic Surgery.",
+      "Consult Dr. G. Rakesh Vamsi — Premier Trained Andrologist in Nellore & Consultant Urologist at KIMS Hospital. Expert in Male Infertility, ED, Laser Stone Removal & Robotic Surgery.",
     images: [
       {
         url: "/images/dr-rakesh-vamsi.png",
         width: 1200,
         height: 630,
-        alt: "Dr. G. Rakesh Vamsi - Andrologist & Urologist in Nellore",
+        alt: "Dr. G. Rakesh Vamsi - Trained Andrologist & Urologist in Nellore",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Andrologist in Nellore | Dr. Rakesh Vamsi",
+    title: "Trained Andrologist in Nellore | Dr. Rakesh Vamsi",
     description:
-      "Leading Andrologist & Urologist in Nellore at KIMS Hospital. Expert in Male Infertility, ED, Laser Kidney Stone Surgery.",
+      "Premier Trained Andrologist & Urologist in Nellore at KIMS Hospital. Expert in Male Infertility, ED, Penile Implants, Laser Kidney Stone Surgery.",
     images: ["/images/dr-rakesh-vamsi.png"],
   },
 };

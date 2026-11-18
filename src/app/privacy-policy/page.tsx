@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     absolute: "Privacy Policy | Dr. Rakesh Vamsi Nellore",
   },
   description:
-  "Patient privacy policy and health data protection guidelines for Dr. G. Rakesh Vamsi's clinical practice at KIMS Hospital, Nellore.",
+    "Patient privacy policy and health data protection guidelines for Dr. G. Rakesh Vamsi's clinical practice at KIMS Hospital, Nellore.",
   alternates: {
     canonical: `${siteUrl}/privacy-policy`,
   },

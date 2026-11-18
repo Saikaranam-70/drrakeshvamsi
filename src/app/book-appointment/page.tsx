@@ -10,8 +10,10 @@ export const metadata: Metadata = {
     absolute: "Book Andrologist & Urologist Appointment | Dr. Rakesh Vamsi Nellore",
   },
   description:
-  "Book an in-person hospital visit or confidential consultation with Dr. G. Rakesh Vamsi, Consultant Andrologist & Urologist at KIMS Hospital, Nellore. Quick, instant slot confirmation.",
+    "Book an in-person hospital visit or confidential consultation with Dr. G. Rakesh Vamsi, Consultant Andrologist & Urologist at KIMS Hospital, Nellore. Quick, instant slot confirmation.",
   keywords: [
+    "Trained Andrologist in Nellore",
+    "Trained andrologist appointment Nellore",
     "Book andrologist appointment Nellore",
     "Book urologist appointment Nellore",
     "Dr Rakesh Vamsi appointment booking",
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Book Andrologist & Urologist Appointment | Dr. Rakesh Vamsi Nellore",
     description:
-    "Schedule a consultation with Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore. Instant appointment confirmation for hospital visits.",
+      "Schedule a consultation with Dr. G. Rakesh Vamsi at KIMS Hospital, Nellore. Instant appointment confirmation for hospital visits.",
     url: `${siteUrl}/book-appointment`,
     type: "website",
     images: [

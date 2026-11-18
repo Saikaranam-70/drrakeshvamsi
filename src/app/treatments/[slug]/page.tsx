@@ -48,6 +48,7 @@ const treatmentKeywordOverrides: Record<
   "male-infertility": {
     title: "Male Infertility Specialist in Nellore | Dr. Rakesh Vamsi",
     keywords: [
+      "Trained Andrologist in Nellore",
       "Male Infertility Specialist in Nellore",
       "Male Fertility Doctor in Nellore",
       "Best Andrologist in Nellore",
@@ -60,6 +61,7 @@ const treatmentKeywordOverrides: Record<
   "erectile-dysfunction": {
     title: "Erectile Dysfunction Treatment in Nellore | Dr. Rakesh Vamsi",
     keywords: [
+      "Trained Andrologist in Nellore",
       "Erectile Dysfunction Treatment in Nellore",
       "ED Specialist Doctor Nellore",
       "Best Andrologist in Nellore ED",
@@ -72,6 +74,7 @@ const treatmentKeywordOverrides: Record<
   "penile-implants": {
     title: "Penile Implant Surgeon in Andhra Pradesh & Nellore | Dr. Rakesh Vamsi",
     keywords: [
+      "Trained Andrologist in Nellore",
       "Penile Implant Surgeon in Andhra Pradesh",
       "Penile Prosthesis Surgery Nellore",
       "Malleable Penile Implant India",
@@ -201,10 +204,10 @@ export default function TreatmentDetailPage({ params }: Props) {
     treatment.relatedSlugs?.includes(t.slug)
   );
 
-    const treatmentSchema = generateTreatmentSchema({
-      title: treatment.title,
-      slug: treatment.slug,
-      description: treatment.shortDescription,
+  const treatmentSchema = generateTreatmentSchema({
+    title: treatment.title,
+    slug: treatment.slug,
+    description: treatment.shortDescription,
     treatmentOptions: treatment.treatmentOptions,
     symptoms: treatment.symptoms,
   });
@@ -217,8 +220,8 @@ export default function TreatmentDetailPage({ params }: Props) {
 
   const faqSchema =
     treatment.faqs && treatment.faqs.length > 0
-        ? generateFaqSchema(treatment.faqs)
-        : null;
+      ? generateFaqSchema(treatment.faqs)
+      : null;
 
   return (
     <>
