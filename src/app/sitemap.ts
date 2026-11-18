@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { treatmentsData } from "@/data/treatmentsData";
 import { blogArticles } from "@/data/blogData";
 
-const baseUrl = "https://drrakeshvamsi.com";
+const baseUrl = "https://www.drrakeshvamsi.com";
 
 // Content modification dates grounded in actual clinical publication & review schedule
 const corePageDates: Record<string, string> = {

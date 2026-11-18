@@ -2,7 +2,7 @@ import { doctorData } from "@/data/doctorData";
 import { hospitalData } from "@/data/hospitalData";
 import { treatmentsData } from "@/data/treatmentsData";
 
-const siteUrl = "https://drrakeshvamsi.com";
+const siteUrl = "https://www.drrakeshvamsi.com";
 
 /**
  * Production-ready Schema.org JSON-LD structured data for Google Medical Knowledge Graph,

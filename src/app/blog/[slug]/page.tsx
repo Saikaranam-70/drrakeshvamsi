@@ -15,7 +15,7 @@ interface Props {
   };
 }
 
-const siteUrl = "https://drrakeshvamsi.com";
+const siteUrl = "https://www.drrakeshvamsi.com";
 
 const blogKeywordMap: Record<string, string[]> = {
   "kidney-stones-causes-symptoms-treatment": [

@@ -3,5 +3,5 @@ Allow: /
 Disallow: /api/
 Disallow: /appointment-confirmation
 
-Host: https://drrakeshvamsi.com
-Sitemap: https://drrakeshvamsi.com/sitemap.xml
+Host: https://www.drrakeshvamsi.com
+Sitemap: https://www.drrakeshvamsi.com/sitemap.xml

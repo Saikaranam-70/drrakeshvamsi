@@ -1,7 +1,7 @@
 # Website Handover & Client Operations Manual
 
 **Project Name:** Dr. G. Rakesh Vamsi — Consultant Urologist & Andrologist Medical Portal  
-**Primary Brand / Domain:** [drrakeshvamsi.com](https://drrakeshvamsi.com)
+**Primary Brand / Domain:** [drrakeshvamsi.com](https://www.drrakeshvamsi.com)
 **Client / Clinic:** Dr. G. Rakesh Vamsi (Consultant Urologist & Andrologist, KIMS Hospital, Nellore)  
 **Deliverable Date:** November 2026  
 **Document Version:** 1.0.0  
@@ -213,8 +213,8 @@ The platform is fortified with **medical-grade Search Engine Optimization (SEO)*
 ### 7.4 Steps for the Client to Claim #1 Spot on Google:
 1. **Google Search Console Verification:**
    * Go to `search.google.com/search-console`.
-   * Add property: `https://drrakeshvamsi.com` (or practice domain).
-   * Submit sitemap link: `https://drrakeshvamsi.com/sitemap.xml`.
+   * Add property: `https://www.drrakeshvamsi.com` (or practice domain).
+   * Submit sitemap link: `https://www.drrakeshvamsi.com/sitemap.xml`.
 2. **Google Business Profile (Google Maps) Link:**
    * Link the official website URL directly in the doctor's Google Business Profile profile.
    * Ensure clinic name, phone (`+91 76740 08057`), and hospital address match the structured data schema.
