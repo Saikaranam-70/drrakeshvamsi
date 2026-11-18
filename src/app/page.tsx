@@ -13,7 +13,7 @@ import HomeFaqSection from "@/components/home/HomeFaqSection";
 import { generateFaqSchema } from "@/lib/structuredData";
 import { faqsList } from "@/data/faqsData";
 
-const siteUrl = "https://drrakeshvamsi.com";
+const siteUrl = "https://www.drrakeshvamsi.com";
 
 export const metadata: Metadata = {
   title: {

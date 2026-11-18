@@ -7,7 +7,7 @@ import SitePreloader from "@/components/ui/SitePreloader";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { generateClinicSchema, generatePhysicianSchema, generateWebSiteSchema } from "@/lib/structuredData";
 
-const siteUrl = "https://drrakeshvamsi.com";
+const siteUrl = "https://www.drrakeshvamsi.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

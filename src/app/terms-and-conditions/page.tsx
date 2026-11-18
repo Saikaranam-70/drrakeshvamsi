@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import TermsAndConditionsClient from "./TermsAndConditionsClient";
 import { generateBreadcrumbSchema } from "@/lib/structuredData";
 
-const siteUrl = "https://drrakeshvamsi.com";
+const siteUrl = "https://www.drrakeshvamsi.com";
 
 export const metadata: Metadata = {
   title: {

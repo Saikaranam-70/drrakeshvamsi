@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { generateBreadcrumbSchema } from "@/lib/structuredData";
 
-const siteUrl = "https://drrakeshvamsi.com";
+const siteUrl = "https://www.drrakeshvamsi.com";
 
 export const metadata: Metadata = {
   title: {

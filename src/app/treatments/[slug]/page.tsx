@@ -16,7 +16,7 @@ interface Props {
   };
 }
 
-const siteUrl = "https://drrakeshvamsi.com";
+const siteUrl = "https://www.drrakeshvamsi.com";
 
 const treatmentKeywordOverrides: Record<
   string,
